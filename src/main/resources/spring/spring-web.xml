@@ -28,7 +28,7 @@
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/jsp/"/>
         <property name="suffix" value=".jsp"/>
-    </bean>
+    </bean>123
 
     <!--4.扫描web相关的bean-->
     <context:component-scan base-package="com.youtu.web"/>
