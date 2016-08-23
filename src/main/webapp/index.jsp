@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>欢迎</title>
+    <title>欢迎光临</title>
 </head>
 <body>
 <form method="post" action="login">
