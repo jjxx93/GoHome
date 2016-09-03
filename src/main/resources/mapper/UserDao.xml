@@ -3,8 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.youtu.dao.UserDao">
-    <select id="validation" resultType="String">
-        SELECT id
+    <select id="validation" parameterType="com.youtu.entity.User" resultType="com.youtu.entity.User">
+        SELECT *
         FROM user
         WHERE user_uuid = #{user_uuid} AND password = #{password};
     </select>

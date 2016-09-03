@@ -1,6 +1,5 @@
-package com.youtu.service;
+package com.youtu.dao;
 
-import com.youtu.dao.UserDao;
 import com.youtu.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,11 +11,12 @@ import javax.annotation.Resource;
 import static org.junit.Assert.*;
 
 /**
- * Created by jiax on 2016/8/23.
+ * Created by jiax on 2016/9/3.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring/spring-dao.xml","classpath:spring/spring-service.xml"})
-public class UserServiceTest {
+//告诉junit spring配置文件
+@ContextConfiguration({"classpath:spring/spring-dao.xml"})
+public class UserDaoTest {
     @Resource
     private UserDao userDao;
 
