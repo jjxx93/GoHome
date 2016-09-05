@@ -7,6 +7,7 @@ public class User {
     private int id;
     private String user_uuid;
     private String password;
+    private String validateCode;
 
     public int getId() {
         return id;
@@ -32,12 +33,21 @@ public class User {
         this.password = password;
     }
 
+    public String getValidateCode() {
+        return validateCode;
+    }
+
+    public void setValidateCode(String validateCode) {
+        this.validateCode = validateCode;
+    }
+
     @Override
     public String toString() {
-        return "UserDao{" +
+        return "User{" +
                 "id=" + id +
                 ", user_uuid='" + user_uuid + '\'' +
                 ", password='" + password + '\'' +
+                ", validateCode='" + validateCode + '\'' +
                 '}';
     }
 }

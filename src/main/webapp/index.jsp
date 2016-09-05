@@ -22,6 +22,13 @@
             <td><input type="password" name="password"></td>
         </tr>
         <tr>
+            <td>验证码：</td>
+            <td><input type="text" name="validateCode" placeholder="验证码"></td>
+            <td><a href="#" onclick="loadImage();">
+                <img src="getValidateCode" id="validateImg" height="32" alt="验证码">
+            </a></td>
+        </tr>
+        <tr>
             <td><input type="submit" value="Submit"/></td>
         </tr>
     </table>
@@ -31,6 +38,10 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
 <script type="text/javascript">
+    function loadImage() {
+        $("#validateImg").attr("src", 'getValidateCode');
+    }
+
     $(document).ready(function () {
         var baseUrl='<%=basePath%>';
 
