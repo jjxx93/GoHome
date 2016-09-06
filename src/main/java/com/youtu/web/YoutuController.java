@@ -31,6 +31,7 @@ import java.util.Map;
 public class YoutuController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+//    容器管理
     @Autowired
     HttpServletRequest request;
 
