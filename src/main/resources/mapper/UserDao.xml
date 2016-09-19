@@ -5,13 +5,19 @@
 <mapper namespace="com.youtu.dao.UserDao">
     <insert id="addUser" parameterType="String">
         INSERT INTO user
-        (user_name,password) VALUES
-        (#{userName}, #{password})
+        (user_name,password,user_uuid) VALUES
+        (#{userName}, #{password}, #{userUuid})
     </insert>
 
     <select id="queryByUsernameAndPassword" parameterType="String" resultType="com.youtu.entity.User">
-        SELECT id,user_name,user_uuid,password
+        SELECT user_name,user_uuid,password
         FROM user
         WHERE user_name = #{userName} AND password = #{password};
+    </select>
+
+    <select id="queryByUserName" parameterType="String" resultType="String">
+        SELECT user_uuid,user_name
+        FROM user
+        WHERE user_name = #{userName};
     </select>
 </mapper>

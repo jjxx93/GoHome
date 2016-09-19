@@ -1,5 +1,6 @@
 package com.youtu.service.impl;
 
+import com.youtu.common.GetUUIDNumber;
 import com.youtu.dao.UserDao;
 import com.youtu.entity.User;
 import com.youtu.service.UserService;
@@ -22,16 +23,27 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User addUserNameAndPassword(String userName, String password) {
-        userDao.addUser(userName, password);
+        String UserUuid = GetUUIDNumber.createUUIDNumber();
+        userDao.addUser(userName, password, GetUUIDNumber.createUUIDNumber());
         User user = new User();
         user.setUserName(userName);
         user.setPassword(password);
+        user.setUserUuid(UserUuid);
         return user;
     }
 
     @Override
     public User validation(String userName, String password) {
-        return userDao.queryByUsernameAndPassword(userName, password);
+        return userDao.queryByUserNameAndPassword(userName, password);
+    }
+
+    @Override
+    public Boolean isUserNameExisted(String userName) {
+        if (userDao.queryByUserName(userName) != null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 

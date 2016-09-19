@@ -1,6 +1,7 @@
 package com.youtu.service;
 
 import com.youtu.dao.UserDao;
+import com.youtu.dao.UserDaoTest;
 import com.youtu.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,11 +23,8 @@ public class UserServiceTest {
 
     @Test
     public void validation() throws Exception {
-        User user = new User();
-        System.out.println(userDao.validation(user));
-        user.setUser_uuid("0");
-        user.setPassword("1");
-        System.out.println(userDao.validation(user));
+        UserDaoTest test = new UserDaoTest();
+        test.validation();
     }
 
 }

@@ -14,7 +14,7 @@ public interface UserDao {
      * @param userName
      * @param password
      */
-    void addUser(@Param("userName")String userName, @Param("password")String password);
+    void addUser(@Param("userName")String userName, @Param("password")String password, @Param("userUuid")String userUuid);
 
     /**
      * 验证账号密码是否匹配
@@ -22,5 +22,12 @@ public interface UserDao {
      * @param password
      * @return
      */
-    User queryByUsernameAndPassword(@Param("userName")String userName, @Param("password")String password);
+    User queryByUserNameAndPassword(@Param("userName")String userName, @Param("password")String password);
+
+    /**
+     * 根据用户名查数据
+     * @param userName
+     * @return
+     */
+    User queryByUserName(@Param("userName")String userName);
 }

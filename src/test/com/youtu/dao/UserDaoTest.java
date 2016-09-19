@@ -23,10 +23,10 @@ public class UserDaoTest {
     @Test
     public void validation() throws Exception {
         User user = new User();
-        System.out.println(userDao.validation(user));
-        user.setUser_uuid("0");
-        user.setPassword("1");
-        System.out.println(userDao.validation(user));
+        System.out.println(userDao.queryByUserNameAndPassword(user.getUserName(), user.getPassword()));
+        user.setUserName("admin");
+        user.setPassword("1226");
+        System.out.println(userDao.queryByUserNameAndPassword(user.getUserName(), user.getPassword()));
     }
 
 }

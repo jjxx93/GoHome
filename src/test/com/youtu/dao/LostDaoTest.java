@@ -26,7 +26,7 @@ public class LostDaoTest {
     public void queryById() throws Exception {
         int id = 1;
         Lost lost = lostDao.queryById(id);
-        System.out.println(lost.getLost_uuid());
+        System.out.println(lost.getLostUuid());
         System.out.println(lost);
     }
 

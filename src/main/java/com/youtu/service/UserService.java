@@ -22,4 +22,11 @@ public interface UserService {
      * @return
      */
     User validation(String userName, String password);
+
+    /**
+     * 查询用户名是否存在
+     * @param userName
+     * @return
+     */
+    Boolean isUserNameExisted (String userName);
 }

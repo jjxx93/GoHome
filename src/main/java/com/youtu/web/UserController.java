@@ -1,5 +1,6 @@
 package com.youtu.web;
 
+import com.youtu.common.YoutuConstants;
 import com.youtu.entity.User;
 import com.youtu.service.UserService;
 import org.slf4j.Logger;
@@ -42,9 +43,9 @@ public class UserController {
         User rUser = userService.validation(userName, password);
 
         if (rUser == null) {
-            jsonMap.put("result", "用户名或密码错误");
+            jsonMap.put("result", YoutuConstants.LOGIN_PASSWORD_ERROR);
         } else {
-            jsonMap.put("result", "验证通过");
+            jsonMap.put("result", YoutuConstants.LOGIN_SUCCESS);
             jsonMap.put("username", rUser.getUserName());
             jsonMap.put("password", rUser.getPassword());
             jsonMap.put("userUuid", rUser.getUserUuid());
@@ -65,22 +66,19 @@ public class UserController {
         //if (userService.isEmailExisted(user.getEmail())) {
         //    jsonMap.put("result", spwConstants.REGISTE_EMAIL_EXIST);
         //} else
-        //if (userService.isUsernameExisted(user.getUsername())) {
-        //    jsonMap.put("result", spwConstants.REGISTE_USERNAME_EXIST); // 账号是否已注册
-        //} else {
-        //    if (user.getUsername() == null) {
-        //        user.setUsername(user.getEmail());
-        //    }
+        if (userService.isUserNameExisted(userName)) {
+            jsonMap.put("result", YoutuConstants.REGISTE_USERNAME_EXIST); // 账号是否已注册
+        } else {
             User rUser = userService.addUserNameAndPassword(userName, password);
             if (rUser != null) {
                 jsonMap.put("username", rUser.getUserName());
                 jsonMap.put("password", rUser.getPassword());
                 jsonMap.put("userUuid", rUser.getUserUuid());
-                jsonMap.put("result", "注册成功");
+                jsonMap.put("result", YoutuConstants.REGISTE_SUCCESS);
             } else {
-                jsonMap.put("result", "注册失败");
+                jsonMap.put("result", YoutuConstants.REGISTE_FAIL);
             }
-        //}
+        }
 
         return jsonMap;
     }
