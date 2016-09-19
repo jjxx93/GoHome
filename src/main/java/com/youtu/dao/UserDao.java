@@ -1,6 +1,7 @@
 package com.youtu.dao;
 
 import com.youtu.entity.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -8,11 +9,18 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserDao {
+    /**
+     * 新增用户行
+     * @param userName
+     * @param password
+     */
+    void addUser(@Param("userName")String userName, @Param("password")String password);
 
     /**
      * 验证账号密码是否匹配
-     * @param user
+     * @param userName
+     * @param password
      * @return
      */
-    User validation(User user);
+    User queryByUsernameAndPassword(@Param("userName")String userName, @Param("password")String password);
 }

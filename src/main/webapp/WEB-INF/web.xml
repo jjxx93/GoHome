@@ -21,7 +21,7 @@
 
     <servlet-mapping>
         <servlet-name>youtu-dispatcher</servlet-name>
-        <!--默认匹配所有的请求-->
+        <!--匹配不带后缀的请求-->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
@@ -39,6 +39,6 @@
     </filter>
     <filter-mapping>
         <filter-name>CharacterEncodingFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/*</url-pattern>   <!-- 过滤所有请求 -->
     </filter-mapping>
 </web-app>

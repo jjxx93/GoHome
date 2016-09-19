@@ -21,11 +21,18 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Override
-    public User validation(User user) {
-        if (!user.getUser_uuid().equals("") && user.getPassword() != null) {
-            User mUser = userDao.validation(user);
-            return mUser;
-        }
-        return null;
+    public User addUserNameAndPassword(String userName, String password) {
+        userDao.addUser(userName, password);
+        User user = new User();
+        user.setUserName(userName);
+        user.setPassword(password);
+        return user;
     }
+
+    @Override
+    public User validation(String userName, String password) {
+        return userDao.queryByUsernameAndPassword(userName, password);
+    }
+
+
 }

@@ -5,29 +5,29 @@ package com.youtu.entity;
  */
 public class Lost {
     private int id;
-    private int lost_uuid;
+    private String lostUuid;
 
     public int getId() {
         return id;
     }
 
-    public int getLost_uuid() {
-        return lost_uuid;
+    public String getLostUuid() {
+        return lostUuid;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setLost_uuid(int lost_uuid) {
-        this.lost_uuid = lost_uuid;
+    public void setLostUuid(String lostUuid) {
+        this.lostUuid = lostUuid;
     }
 
     @Override
     public String toString() {
         return "Lost{" +
                 "id=" + id +
-                ", lost_uuid=" + lost_uuid +
+                ", lostUuid=" + lostUuid +
                 '}';
     }
 }

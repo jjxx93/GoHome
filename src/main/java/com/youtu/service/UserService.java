@@ -8,9 +8,18 @@ import com.youtu.entity.User;
 public interface UserService {
 
     /**
-     * 验证账号密码
-     * @param user
+     * 新增用户
+     * @param userName
+     * @param password
      * @return
      */
-    User validation(User user);
+    User addUserNameAndPassword (String userName, String password);
+
+    /**
+     * 验证账号密码
+     * @param userName
+     * @param password
+     * @return
+     */
+    User validation(String userName, String password);
 }

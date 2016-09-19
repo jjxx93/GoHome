@@ -51,29 +51,17 @@ public class YoutuController {
         return "getLostList";      //  /jsp/getLostList.jsp
     }
 
-    //登录操作
-    @RequestMapping(value = "/login")
-    @ResponseBody   //直接将返回值输出到页面
-    public Map<String, Object> MLogin(User user, HttpSession session)  {
+    //获取列表页
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
+    @ResponseBody
+    //String 指定返回的视图页面名称，结合设置的返回地址路径加上页面名称后缀即可访问到
+    public Map<String, Object> getLost(Model model) {
         Map<String, Object> jsonMap = new HashMap<String, Object>();
-        //获取正确验证码
-        String validateCode = (String) session.getAttribute(Constants.KAPTCHA_SESSION_KEY);
-
-        if (user.getValidateCode().toUpperCase().equals(validateCode)) {
-            User rUser = userService.validation(user);
-            if (rUser == null) {
-                jsonMap.put("msg", "用户名或密码错误");
-            } else {
-                jsonMap.put("msg", "验证通过");
-                jsonMap.put("user", rUser);
-                session.setAttribute("user", rUser);
-            }
-        } else {
-            jsonMap.put("msg", "验证码错误");
-        }
-
-        return jsonMap;
+        jsonMap.put("msg", "验证通过");
+        //list.jsp + model = ModelAndView
+        return jsonMap;      //  /jsp/getLostList.jsp
     }
+
 
     // 获取验证码
     private Producer captchaProducer = null;
@@ -106,7 +94,7 @@ public class YoutuController {
         BufferedImage bi = captchaProducer.createImage(capText);
         ServletOutputStream out = response.getOutputStream();
         // write the data out
-        ImageIO.write(bi, "jpg", out);
+        ImageIO.write(bi, "jpeg", out);
         try {
             out.flush();
         } finally {
