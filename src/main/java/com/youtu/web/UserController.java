@@ -34,7 +34,7 @@ public class UserController {
     //登录操作
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody   //直接将返回值输出到页面
-    public Map<String, Object> login(String userName, String password, HttpSession session)  {
+    public Map<String, Object> login(String userName, String password)  {
         Map<String, Object> jsonMap = new HashMap<String, Object>();
         //获取正确验证码
         //String validateCode = (String) session.getAttribute(Constants.KAPTCHA_SESSION_KEY);
@@ -46,11 +46,13 @@ public class UserController {
             jsonMap.put("result", YoutuConstants.LOGIN_PASSWORD_ERROR);
         } else {
             jsonMap.put("result", YoutuConstants.LOGIN_SUCCESS);
-            jsonMap.put("username", rUser.getUserName());
+            jsonMap.put("userName", rUser.getUserName());
             jsonMap.put("password", rUser.getPassword());
             jsonMap.put("userUuid", rUser.getUserUuid());
+            jsonMap.put("userStatus", userService.validationUserUuid(rUser.getUserUuid()));
             //session.setAttribute("user", rUser);
         }
+
 //        } else {
 //            jsonMap.put("msg", "验证码错误");
 //        }
@@ -71,13 +73,30 @@ public class UserController {
         } else {
             User rUser = userService.addUserNameAndPassword(userName, password);
             if (rUser != null) {
-                jsonMap.put("username", rUser.getUserName());
+                jsonMap.put("userName", rUser.getUserName());
                 jsonMap.put("password", rUser.getPassword());
                 jsonMap.put("userUuid", rUser.getUserUuid());
                 jsonMap.put("result", YoutuConstants.REGISTE_SUCCESS);
             } else {
-                jsonMap.put("result", YoutuConstants.REGISTE_FAIL);
+                jsonMap.put("result", YoutuConstants.REGISTE_FAILURE);
             }
+        }
+
+        return jsonMap;
+    }
+
+    @RequestMapping(value = "/logout", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> logout(String userName, String password)  {
+        Map<String, Object> jsonMap = new HashMap<String, Object>();
+        User rUser = userService.validation(userName, password);
+
+        if (rUser == null) {
+            jsonMap.put("result", YoutuConstants.LOGOUT_FAILURE);
+        } else {
+            jsonMap.put("result", YoutuConstants.LOGOUT_SUCCESS);
+            jsonMap.put("userName", rUser.getUserName());
+            jsonMap.put("userUuid", rUser.getUserUuid());
         }
 
         return jsonMap;

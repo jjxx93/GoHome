@@ -9,15 +9,27 @@
         (#{userName}, #{password}, #{userUuid})
     </insert>
 
-    <select id="queryByUsernameAndPassword" parameterType="String" resultType="com.youtu.entity.User">
+    <select id="queryByUserName" parameterType="String" resultType="com.youtu.entity.User">
+        SELECT user_uuid,user_name
+        FROM user
+        WHERE user_name = #{userName};
+    </select>
+
+    <select id="queryByUserUuid" parameterType="String" resultType="com.youtu.entity.User">
+        SELECT user_uuid,user_name,examine_state
+        FROM user
+        WHERE user_uuid = #{userUuid};
+    </select>
+
+    <select id="queryByUserNameAndPassword" parameterType="String" resultType="com.youtu.entity.User">
         SELECT user_name,user_uuid,password
         FROM user
         WHERE user_name = #{userName} AND password = #{password};
     </select>
 
-    <select id="queryByUserName" parameterType="String" resultType="String">
-        SELECT user_uuid,user_name
+    <select id="queryByUserUuidAndPassword" parameterType="String" resultType="com.youtu.entity.User">
+        SELECT user_name,user_uuid
         FROM user
-        WHERE user_name = #{userName};
+        WHERE user_uuid = #{userUuid} AND password = #{password};
     </select>
 </mapper>

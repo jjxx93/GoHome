@@ -17,6 +17,20 @@ public interface UserDao {
     void addUser(@Param("userName")String userName, @Param("password")String password, @Param("userUuid")String userUuid);
 
     /**
+     * 根据用户名查数据
+     * @param userName
+     * @return
+     */
+    User queryByUserName(@Param("userName")String userName);
+
+    /**
+     * 根据用户id查数据
+     * @param userUuid
+     * @return
+     */
+    User queryByUserUuid(@Param("userUuid")String userUuid);
+
+    /**
      * 验证账号密码是否匹配
      * @param userName
      * @param password
@@ -25,9 +39,10 @@ public interface UserDao {
     User queryByUserNameAndPassword(@Param("userName")String userName, @Param("password")String password);
 
     /**
-     * 根据用户名查数据
-     * @param userName
+     * 验证用户id和密码是否匹配
+     * @param userUuid
+     * @param password
      * @return
      */
-    User queryByUserName(@Param("userName")String userName);
+    User queryByUserUuidAndPassword(@Param("userUuid")String userUuid, @Param("password")String password);
 }

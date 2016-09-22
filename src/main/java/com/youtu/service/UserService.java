@@ -24,6 +24,13 @@ public interface UserService {
     User validation(String userName, String password);
 
     /**
+     * 验证账号密码
+     * @param userUuid
+     * @return
+     */
+    int validationUserUuid(String userUuid);
+
+    /**
      * 查询用户名是否存在
      * @param userName
      * @return

@@ -1,6 +1,7 @@
 package com.youtu.service.impl;
 
 import com.youtu.common.GetUUIDNumber;
+import com.youtu.common.YoutuConstants;
 import com.youtu.dao.UserDao;
 import com.youtu.entity.User;
 import com.youtu.service.UserService;
@@ -35,6 +36,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public User validation(String userName, String password) {
         return userDao.queryByUserNameAndPassword(userName, password);
+    }
+
+    @Override
+    public int validationUserUuid(String userUuid) {
+        User user = userDao.queryByUserUuid(userUuid);
+        if (user == null) {
+            return YoutuConstants.USER_NOT_EXIST;
+        } else {
+            return Integer.valueOf(user.getExamineState());
+        }
     }
 
     @Override

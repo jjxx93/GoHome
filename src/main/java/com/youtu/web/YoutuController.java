@@ -2,9 +2,6 @@ package com.youtu.web;
 
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
-import com.youtu.entity.Lost;
-import com.youtu.entity.User;
-import com.youtu.service.LostService;
 import com.youtu.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +17,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -36,20 +32,8 @@ public class YoutuController {
     HttpServletRequest request;
 
     @Autowired
-    private LostService lostService;
-
-    @Autowired
     private UserService userService;
 
-    //获取列表页
-    @RequestMapping(value = "/getLostList", method = RequestMethod.GET)
-    //String 指定返回的视图页面名称，结合设置的返回地址路径加上页面名称后缀即可访问到
-    public String getLostList(Model model) {
-        List<Lost> list = lostService.getLostList();
-        model.addAttribute("list", list);
-        //list.jsp + model = ModelAndView
-        return "getLostList";      //  /jsp/getLostList.jsp
-    }
 
     //获取列表页
     @RequestMapping(value = "/getList", method = RequestMethod.GET)
