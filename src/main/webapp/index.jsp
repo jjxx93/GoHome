@@ -15,6 +15,9 @@
 <table>
     <tr><td><a href="register.html">注册</a></td></tr>
     <tr><td><a href="login.html">登录</a></td></tr>
+    <tr>
+        <td><a href="picture.html">图片处理</a></td>
+    </tr>
 </table>
 </center>
 </body>

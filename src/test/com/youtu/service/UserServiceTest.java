@@ -45,6 +45,10 @@ public class UserServiceTest {
 
     }
 
-
+    @Test
+    public void changeHeadImg() throws Exception {
+        String headImgUrl = "http://odqvl1oxn.bkt.clouddn.com/2.jpg";
+        System.out.println(userService.changeHeadImg("2f667d326b7041feac4e2ccf57fc4c84", headImgUrl));
+    }
 
 }

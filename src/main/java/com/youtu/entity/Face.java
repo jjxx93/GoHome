@@ -8,16 +8,59 @@ public class Face {
     private int imgHeight;
     private int imgWidth;
     private int gender;
-    private int maxAge;
-    private int minAge;
+    private int age;
+    private int range;
+    private String faceUrl;
+    private int similarity;
 
-    public Face(String faceId, int imgHeight, int imgWidth, int gender, int maxAge, int minAge) {
+    public Face(String faceId, int imgHeight, int imgWidth, int gender, int age, int range, String faceUrl, int similarity) {
         this.faceId = faceId;
         this.imgHeight = imgHeight;
         this.imgWidth = imgWidth;
         this.gender = gender;
-        this.maxAge = maxAge;
-        this.minAge = minAge;
+        this.age = age;
+        this.range = range;
+        this.faceUrl = faceUrl;
+        this.similarity = similarity;
+    }
+
+    @Override
+    public String toString() {
+        return "Face{" +
+                "faceId='" + faceId + '\'' +
+                ", imgHeight=" + imgHeight +
+                ", imgWidth=" + imgWidth +
+                ", gender=" + gender +
+                ", age=" + age +
+                ", range=" + range +
+                ", faceUrl='" + faceUrl + '\'' +
+                ", similarity=" + similarity +
+                '}';
+    }
+
+    public String getFaceUrl() {
+        return faceUrl;
+    }
+
+    public void setFaceUrl(String faceUrl) {
+        this.faceUrl = faceUrl;
+    }
+
+    public int getSimilarity() {
+        return similarity;
+    }
+
+    public void setSimilarity(int similarity) {
+        this.similarity = similarity;
+    }
+
+    public Face(String faceId, int imgHeight, int imgWidth, int gender, int age, int range) {
+        this.faceId = faceId;
+        this.imgHeight = imgHeight;
+        this.imgWidth = imgWidth;
+        this.gender = gender;
+        this.age = age;
+        this.range = range;
     }
 
     public String getFaceId() {
@@ -52,31 +95,19 @@ public class Face {
         this.gender = gender;
     }
 
-    public int getMaxAge() {
-        return maxAge;
+    public int getAge() {
+        return age;
     }
 
-    public void setMaxAge(int maxAge) {
-        this.maxAge = maxAge;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public int getMinAge() {
-        return minAge;
+    public int getRange() {
+        return range;
     }
 
-    public void setMinAge(int minAge) {
-        this.minAge = minAge;
-    }
-
-    @Override
-    public String toString() {
-        return "Face{" +
-                "faceId='" + faceId + '\'' +
-                ", imgHeight=" + imgHeight +
-                ", imgWidth=" + imgWidth +
-                ", gender=" + gender +
-                ", maxAge=" + maxAge +
-                ", minAge=" + minAge +
-                '}';
+    public void setRange(int range) {
+        this.range = range;
     }
 }

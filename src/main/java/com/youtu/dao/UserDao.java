@@ -45,4 +45,11 @@ public interface UserDao {
      * @return
      */
     User queryByUserUuidAndPassword(@Param("userUuid")String userUuid, @Param("password")String password);
+
+    /**
+     * 修改头像
+     *
+     * @param headImg
+     */
+    int updateHeadImg(@Param("userUuid") String userUuid, @Param("headImg") String headImg);
 }

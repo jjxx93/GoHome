@@ -3,7 +3,7 @@ package com.youtu.common;
 /**
  * Created by jiax on 2016/9/19.
  */
-public class YoutuConstants {
+public class Constants {
     //常量
     public final static int ZERO = 0;
     public final static int ONE = 1;
@@ -32,9 +32,9 @@ public class YoutuConstants {
     public final static int LOGIN_PASSWORD_ERROR = 1;
     public final static int LOGIN_VALIDATECODE_ERROR = 2;
 
-    // 注销返回值
-    public final static int LOGOUT_SUCCESS = 0;
-    public final static int LOGOUT_FAILURE = 1;
+    // 改头像返回值
+    public final static int CHANGE_HEAD_IMG_SUCCESS = 0;
+    public final static int CHANGE_HEAD_IMG_FAILURE = 1;
 
     // 优图账号信息
     public static final String APP_ID = "10034230";
@@ -45,4 +45,9 @@ public class YoutuConstants {
     // Face++账号信息
     public static final String API_Key = "582834e7e818df89f4078877ef892edd";
     public static final String API_Secret = "I1ErzPdGeY3jC7kL-14VTl0-sz4dTF0C";
+
+    // 七牛账号信息
+    public static final String Qiniu_ACCESS_KEY = "NrZVEweKI24oovDg2o1gjpr8zAuwDGo8mBsbfVOf";
+    public static final String Qiniu_SECRET_KEY = "rZMwav3DMV7wZcH2xtr2qyxQSphYn5UIHZ__JVbU";
+    public static String Qiniu_Youtu_Upload_Token = "NrZVEweKI24oovDg2o1gjpr8zAuwDGo8mBsbfVOf:fSUg2nmKR06Md_Tn1RnVSPwSL2c=:eyJzY29wZSI6InlvdXR1IiwiZGVhZGxpbmUiOjE0NzUwNjk2ODR9";
 }

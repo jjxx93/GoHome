@@ -13,7 +13,7 @@ public interface UserService {
      * @param password
      * @return
      */
-    User addUserNameAndPassword (String userName, String password);
+    User addUser(String userName, String password);
 
     /**
      * 验证账号密码
@@ -36,4 +36,12 @@ public interface UserService {
      * @return
      */
     Boolean isUserNameExisted (String userName);
+
+    /**
+     * 修改用户头像
+     *
+     * @param headImg
+     * @return
+     */
+    Boolean changeHeadImg(String userUuid, String headImg);
 }
