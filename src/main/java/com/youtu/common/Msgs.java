@@ -7,7 +7,7 @@ public class Msgs {
     // 用户状态
     public static final String USER_NORMAL = "账号状态正常";
     public static final String USER_DISABLE = "该账号被禁用";
-    public static final String USER_NOT_EXIST = "改账号不存在";
+    public static final String USER_NOT_EXIST = "该账号不存在";
 
     // 注册返回值
     public final static String REGISTE_SUCCESS = "注册成功";

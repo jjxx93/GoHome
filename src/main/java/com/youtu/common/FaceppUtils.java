@@ -14,7 +14,7 @@ import java.io.File;
  */
 public class FaceppUtils {
     public static Face detectUrl(String url) throws FaceppParseException, JSONException {
-        HttpRequests httpRequests = new HttpRequests(YoutuConstants.API_Key, YoutuConstants.API_Secret, true, true);
+        HttpRequests httpRequests = new HttpRequests(Constants.API_Key, Constants.API_Secret, true, true);
         PostParameters postParameters = new PostParameters().setUrl(url);
 
         JSONObject result = httpRequests.detectionDetect(postParameters);
@@ -46,7 +46,7 @@ public class FaceppUtils {
     }
 
     public static Face detectImg(File img) throws FaceppParseException, JSONException {
-        HttpRequests httpRequests = new HttpRequests(YoutuConstants.API_Key, YoutuConstants.API_Secret, true, true);
+        HttpRequests httpRequests = new HttpRequests(Constants.API_Key, Constants.API_Secret, true, true);
         PostParameters postParameters = new PostParameters().setImg(img);
 
         JSONObject result = httpRequests.detectionDetect(postParameters);
@@ -81,7 +81,8 @@ public class FaceppUtils {
         Face face1 = FaceppUtils.detectUrl(url1);
         Face face2 = FaceppUtils.detectUrl(url2);
 
-        HttpRequests httpRequests = new HttpRequests(YoutuConstants.API_Key, YoutuConstants.API_Secret, true, true);;
+        HttpRequests httpRequests = new HttpRequests(Constants.API_Key, Constants.API_Secret, true, true);
+        ;
         PostParameters postParameters = new PostParameters().setFaceId1(face1.getFaceId());
         postParameters.setFaceId2(face2.getFaceId());
 

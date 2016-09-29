@@ -37,7 +37,7 @@ public class GetUUIDNumber {
             e.printStackTrace(pw);
             logger.warn(sw.toString());
         }
-        String date = YoutuConstants.TWO + Long.valueOf(new Date().getTime()).toString();
+        String date = Constants.TWO + Long.valueOf(new Date().getTime()).toString();
         return date;
     }
 
