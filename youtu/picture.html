@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片处理</title>
+</head>
+<body>
+<form name="uploadPicForm" method="post" enctype="multipart/form-data" action="/user/changeHeadImg">
+    <table>
+        <h4>修改头像</h4>
+        <tbody>
+        <tr>
+            <td>userUuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td>headImg：</td>
+            <td><input type="text" name="headImg"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="上传"/></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<hr/>
+<form name="uploadPicForm" method="post" enctype="multipart/form-data" action="/photo/uploadPic">
+    <table>
+        <h4>上传后台</h4>
+        <tbody>
+        <tr>
+            <td>filecontent：</td>
+            <td><input type="file" name="file"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="上传"/></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<hr/>
+<form name="uploadQiniuPicForm" method="post" enctype="multipart/form-data" action="/photo/uploadQiniuPic">
+    <table>
+        <h4>上传七牛云</h4>
+        <tbody>
+        <tr>
+            <td>filecontent：</td>
+            <td><input type="file" name="file"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="上传"/></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<hr/>
+</body>
+</html>
