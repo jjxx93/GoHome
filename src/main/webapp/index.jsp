@@ -7,6 +7,7 @@
 %>
 <html>
 <head>
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
     <base href="<%=basePath%>">
     <title>欢迎光临</title>
 </head>
@@ -19,7 +20,7 @@
         <td><a href="picture.html">图片处理</a></td>
     </tr>
     <tr>
-        <td><a href="/photo/getUploadToken">获取上传token</a></td>
+        <td><a href="/photo/getUploadToken">获取上传图片Token</a></td>
     </tr>
 </table>
 </center>

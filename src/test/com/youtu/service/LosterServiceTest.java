@@ -2,23 +2,16 @@ package com.youtu.service;
 
 import com.facepp.http.HttpRequests;
 import com.facepp.http.PostParameters;
+import com.youtu.common.Constants;
 import com.youtu.common.FaceppUtils;
-import com.youtu.common.YoutuConstants;
-import com.youtu.dao.LosterDao;
 import com.youtu.entity.Face;
-import org.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import javax.annotation.Resource;
-
-import java.io.File;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by jiax on 2016/9/21.
@@ -48,7 +41,7 @@ public class LosterServiceTest {
         for (int i = 0; i < length; i++) {
             Face face2 = FaceppUtils.detectUrl(list.get(i));
             if (face2 == null) continue;
-            HttpRequests httpRequests = new HttpRequests(YoutuConstants.API_Key, YoutuConstants.API_Secret, true, true);
+            HttpRequests httpRequests = new HttpRequests(Constants.API_Key, Constants.API_Secret, true, true);
 
             PostParameters postParameters = new PostParameters().setFaceId1(face1.getFaceId());
             postParameters.setFaceId2(face2.getFaceId());
