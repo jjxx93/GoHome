@@ -23,7 +23,7 @@
             <td><a href="picture.html">图片处理</a></td>
         </tr>
         <tr>
-            <td><a href="/photo/getUploadToken">获取上传token</a></td>
+            <td><a href="/photo/getUploadToken">获取上传图片token</a></td>
         </tr>
     </table>
 </center>
