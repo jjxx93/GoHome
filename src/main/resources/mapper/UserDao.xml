@@ -23,7 +23,7 @@
     </select>
 
     <select id="queryByUserNameAndPassword" parameterType="String" resultType="com.youtu.entity.User">
-        SELECT user_name,user_uuid,password,head_img
+        SELECT user_name,user_uuid,head_img
         FROM user
         WHERE user_name = #{userName} AND password = #{password};
     </select>

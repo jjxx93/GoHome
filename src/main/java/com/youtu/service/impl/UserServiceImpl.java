@@ -1,7 +1,9 @@
 package com.youtu.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.youtu.common.Constants;
 import com.youtu.common.GetUUIDNumber;
+import com.youtu.common.Msgs;
 import com.youtu.dao.UserDao;
 import com.youtu.entity.User;
 import com.youtu.service.UserService;
@@ -27,7 +29,6 @@ public class UserServiceImpl implements UserService {
         userDao.addUser(userName, password, GetUUIDNumber.createUUIDNumber());
         User user = new User();
         user.setUserName(userName);
-        user.setPassword(password);
         user.setUserUuid(UserUuid);
         return user;
     }
@@ -38,13 +39,24 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int validationUserUuid(String userUuid) {
+    public JSONObject validationUserUuid(String userUuid) {
+        JSONObject jsonObject = new JSONObject();
         User user = userDao.queryByUserUuid(userUuid);
+
         if (user == null) {
-            return Constants.USER_NOT_EXIST;
+            jsonObject.put("result", Constants.USER_NOT_EXIST);
+            jsonObject.put("msg", Msgs.USER_NOT_EXIST);
+            return jsonObject;
         } else {
-            return Integer.valueOf(user.getExamineState());
+            int userState = Integer.valueOf(user.getExamineState());
+            if (userState == 1) {
+                jsonObject.put("result", Constants.USER_DISABLE);
+                jsonObject.put("msg", Msgs.USER_DISABLE);
+                return jsonObject;
+            }
         }
+
+        return null;
     }
 
     @Override

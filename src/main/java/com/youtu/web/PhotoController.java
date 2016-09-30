@@ -11,12 +11,15 @@ import com.facepp.http.HttpRequests;
 import com.facepp.http.PostParameters;
 import com.qiniu.util.Auth;
 import com.youtu.common.FaceppUtils;
+import com.youtu.common.Msgs;
 import com.youtu.entity.Face;
 import com.youtu.service.LosterService;
+import com.youtu.service.UserService;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -35,6 +38,8 @@ import static org.apache.coyote.http11.Constants.a;
 @Controller
 @RequestMapping("/photo")
 public class PhotoController {
+    @Autowired
+    private UserService userService;
 
     @Autowired
     private LosterService losterService;
@@ -145,7 +150,7 @@ public class PhotoController {
             System.out.println(r.toString());
             try {
                 if (r.bodyString().contains("bad token")) {
-                    Auth auth = Auth.create(Constants.Qiniu_ACCESS_KEY, Constants.Qiniu_ACCESS_KEY);
+                    Auth auth = Auth.create(Constants.Qiniu_ACCESS_KEY, Constants.Qiniu_SECRET_KEY);
                     Constants.Qiniu_Youtu_Upload_Token = auth.uploadToken("youtu");
                     new UploadManager().put(targetFile, remoteFilePath, Constants.Qiniu_Youtu_Upload_Token);
                 }
@@ -155,4 +160,21 @@ public class PhotoController {
 
         return;
     }
+
+    @RequestMapping(value = "/getUploadToken", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getUploadToken(String userUuid) {
+        JSONObject jsonObject = userService.validationUserUuid(userUuid);
+
+        if (jsonObject == null) {
+            jsonObject = new JSONObject();
+            Auth auth = Auth.create(Constants.Qiniu_ACCESS_KEY, Constants.Qiniu_SECRET_KEY);
+            Constants.Qiniu_Youtu_Upload_Token = auth.uploadToken("youtu", null, 864000L, null);
+            jsonObject.put("result", Constants.GET_UPDATE_TOKEN_SUCCESS);
+            jsonObject.put("uploadToken", Constants.Qiniu_Youtu_Upload_Token);
+        }
+
+        return jsonObject;
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.youtu.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.youtu.entity.User;
 
 /**
@@ -28,7 +29,7 @@ public interface UserService {
      * @param userUuid
      * @return
      */
-    int validationUserUuid(String userUuid);
+    JSONObject validationUserUuid(String userUuid);
 
     /**
      * 查询用户名是否存在

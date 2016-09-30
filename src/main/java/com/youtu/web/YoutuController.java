@@ -46,7 +46,6 @@ public class YoutuController {
         return jsonMap;      //  /jsp/getLostList.jsp
     }
 
-
     // 获取验证码
     private Producer captchaProducer = null;
 

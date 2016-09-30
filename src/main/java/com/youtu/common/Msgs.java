@@ -23,4 +23,7 @@ public class Msgs {
     // 改头像返回值
     public final static String CHANGE_HEAD_IMG_SUCCESS = "修改成功";
     public final static String CHANGE_HEAD_IMG_FAILURE = "修改失败";
+
+    // 获取上传图片Token返回值
+    public final static String GET_UPDATE_TOKEN_SUCCESS = "获取成功";
 }

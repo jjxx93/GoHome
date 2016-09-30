@@ -42,12 +42,15 @@ public class UserController {
             jsonObject.put("result", Constants.LOGIN_PASSWORD_ERROR);
             jsonObject.put("msg", Msgs.LOGIN_PASSWORD_ERROR);
         } else {
-            jsonObject.put("result", Constants.LOGIN_SUCCESS);
-            jsonObject.put("msg", Msgs.LOGIN_SUCCESS);
-            jsonObject.put("userName", rUser.getUserName());
-            jsonObject.put("password", rUser.getPassword());
-            jsonObject.put("userUuid", rUser.getUserUuid());
-            jsonObject.put("userStatus", userService.validationUserUuid(rUser.getUserUuid()));
+            jsonObject = userService.validationUserUuid(rUser.getUserUuid());
+            if (jsonObject == null) {
+                jsonObject = new JSONObject();
+                jsonObject.put("result", Constants.LOGIN_SUCCESS);
+                jsonObject.put("msg", Msgs.LOGIN_SUCCESS);
+                jsonObject.put("userUuid", rUser.getUserUuid());
+                jsonObject.put("userName", rUser.getUserName());
+                jsonObject.put("headImg", rUser.getHeadImg());
+            }
         }
 
         return jsonObject;
@@ -65,7 +68,6 @@ public class UserController {
             User rUser = userService.addUser(userName, password);
             if (rUser != null) {
                 jsonObject.put("userName", rUser.getUserName());
-                jsonObject.put("password", rUser.getPassword());
                 jsonObject.put("userUuid", rUser.getUserUuid());
                 jsonObject.put("result", Constants.REGISTE_SUCCESS);
                 jsonObject.put("msg", Msgs.REGISTE_SUCCESS);
@@ -81,26 +83,17 @@ public class UserController {
     @RequestMapping(value = "/changeHeadImg", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> changeHeadImg(String userUuid, String headImg) {
-        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject = userService.validationUserUuid(userUuid);
 
-        int userState = userService.validationUserUuid(userUuid);
-
-        if (userState == 1) {
-            jsonObject.put("result", Constants.USER_DISABLE);
-            jsonObject.put("msg", Msgs.USER_DISABLE);
-            return jsonObject;
-        } else if (userState == 2) {
-            jsonObject.put("result", Constants.USER_NOT_EXIST);
-            jsonObject.put("msg", Msgs.USER_NOT_EXIST);
-            return jsonObject;
-        }
-
-        if (userService.changeHeadImg(userUuid, headImg)) {
-            jsonObject.put("result", Constants.CHANGE_HEAD_IMG_SUCCESS);
-            jsonObject.put("msg", Msgs.CHANGE_HEAD_IMG_SUCCESS);
-        } else {
-            jsonObject.put("result", Constants.CHANGE_HEAD_IMG_FAILURE);
-            jsonObject.put("msg", Msgs.CHANGE_HEAD_IMG_FAILURE);
+        if (jsonObject == null) {
+            jsonObject = new JSONObject();
+            if (userService.changeHeadImg(userUuid, headImg)) {
+                jsonObject.put("result", Constants.CHANGE_HEAD_IMG_SUCCESS);
+                jsonObject.put("msg", Msgs.CHANGE_HEAD_IMG_SUCCESS);
+            } else {
+                jsonObject.put("result", Constants.CHANGE_HEAD_IMG_FAILURE);
+                jsonObject.put("msg", Msgs.CHANGE_HEAD_IMG_FAILURE);
+            }
         }
 
         return jsonObject;
