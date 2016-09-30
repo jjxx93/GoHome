@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.youtu.dao.UserDao">
+    <insert id="addUser" parameterType="String">
+        INSERT INTO user
+        (user_name,password,user_uuid) VALUES
+        (#{userName}, #{password}, #{userUuid})
+    </insert>
+
+    <select id="queryByUserName" parameterType="String" resultType="com.youtu.entity.User">
+        SELECT user_uuid,user_name
+        FROM user
+        WHERE user_name = #{userName};
+    </select>
+
+    <select id="queryByUserUuid" parameterType="String" resultType="com.youtu.entity.User">
+        SELECT user_uuid,user_name,examine_state
+        FROM user
+        WHERE user_uuid = #{userUuid};
+    </select>
+
+    <select id="queryByUserNameAndPassword" parameterType="String" resultType="com.youtu.entity.User">
+        SELECT user_name,user_uuid,head_img
+        FROM user
+        WHERE user_name = #{userName} AND password = #{password};
+    </select>
+
+    <select id="queryByUserUuidAndPassword" parameterType="String" resultType="com.youtu.entity.User">
+        SELECT user_name,user_uuid
+        FROM user
+        WHERE user_uuid = #{userUuid} AND password = #{password};
+    </select>
+
+    <update id="updateHeadImg" parameterType="String">
+        UPDATE user
+        SET head_img = #{headImg}
+        WHERE user_uuid = #{userUuid};
+    </update>
+</mapper>
