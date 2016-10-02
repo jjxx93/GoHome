@@ -26,9 +26,6 @@ public class UserController {
 
     //容器管理
     @Autowired
-    HttpServletRequest request;
-
-    @Autowired
     private UserService userService;
 
     //登录操作

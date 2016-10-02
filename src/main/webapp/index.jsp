@@ -22,6 +22,9 @@
     <tr>
         <td><a href="/photo/getUploadToken">获取上传图片Token</a></td>
     </tr>
+    <tr>
+        <td><a href="uploadLoster.html">上传走失者信息</a></td>
+    </tr>
 </table>
 </center>
 </body>

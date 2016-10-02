@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User addUser(String userName, String password) {
         String UserUuid = GetUUIDNumber.createUUIDNumber();
-        userDao.addUser(userName, password, GetUUIDNumber.createUUIDNumber());
+        userDao.insertUser(userName, password, GetUUIDNumber.createUUIDNumber());
         User user = new User();
         user.setUserName(userName);
         user.setUserUuid(UserUuid);

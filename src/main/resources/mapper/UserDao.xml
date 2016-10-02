@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.youtu.dao.UserDao">
-    <insert id="addUser" parameterType="String">
+    <insert id="insertUser" parameterType="String">
         INSERT INTO user
         (user_name,password,user_uuid) VALUES
         (#{userName}, #{password}, #{userUuid})

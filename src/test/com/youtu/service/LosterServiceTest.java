@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.time.Year;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -50,4 +52,9 @@ public class LosterServiceTest {
 
     }
 
+    @Test
+    public void addLoster() throws Exception {
+        System.out.println(losterService.addLoster("孙立鑫", "1993-10-10", "女", 250, "2013-10-10",
+                "http://123.456.78", "中国", "无"));
+    }
 }

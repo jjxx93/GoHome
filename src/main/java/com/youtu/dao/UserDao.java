@@ -14,7 +14,7 @@ public interface UserDao {
      * @param userName
      * @param password
      */
-    void addUser(@Param("userName")String userName, @Param("password")String password, @Param("userUuid")String userUuid);
+    void insertUser(@Param("userName") String userName, @Param("password") String password, @Param("userUuid") String userUuid);
 
     /**
      * 根据用户名查数据

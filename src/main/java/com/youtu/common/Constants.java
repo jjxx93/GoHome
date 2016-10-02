@@ -39,6 +39,10 @@ public class Constants {
     // 获取上传图片Token返回值
     public final static int GET_UPDATE_TOKEN_SUCCESS = 3;
 
+    // 上传走失者信息
+    public final static int ADD_LOSTER_SUCCESS = 3;
+    public final static int ADD_LOSTER_FAIL = 4;
+
     // 优图账号信息
     public static final String APP_ID = "10034230";
     public static final String SECRET_ID = "AKIDcwnh2zRMOmTg8ZGLngGRUwxaimYKtKwV";
