@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传疑似走失者信息</title>
+</head>
+<body>
+<form name="BefounderForm" method="post" action="/volunteer/addBefounder">
+    <table>
+        <tr>
+            <td>用户uuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td>拍摄地点：</td>
+            <td><input type="text" name="foundLocation"></td>
+        </tr>
+        <tr>
+            <td>拍摄时间：</td>
+            <td><input type="datetime-local" name="foundTime"></td>
+        </tr>
+        <tr>
+            <td>照片：</td>
+            <td><input type="text" name="picture"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

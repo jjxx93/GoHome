@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传走失者信息</title>
+</head>
+<body>
+<form name="LosterForm" method="post" action="/relative/addLoster">
+    <table>
+        <tr>
+            <td>用户uuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td>姓名：</td>
+            <td><input type="text" name="losterName"></td>
+        </tr>
+        <tr>
+            <td>生日：</td>
+            <td><input type="date" name="losterBirthday"></td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td><input type="radio" name="gender" value="男"/> 男</td>
+            <td><input type="radio" name="gender" value="女"/> 女</td>
+        </tr>
+        <tr>
+            <td>身高：</td>
+            <td><input type="text" name="height"></td>
+            <td>cm</td>
+        </tr>
+        <tr>
+            <td>走失日期：</td>
+            <td><input type="date" name="lostDate"></td>
+        </tr>
+        <tr>
+            <td>照片：</td>
+            <td><input type="text" name="picture"></td>
+        </tr>
+        <tr>
+            <td>走失地点：</td>
+            <td><input type="text" name="lostLocation"></td>
+        </tr>
+        <tr>
+            <td>特点：</td>
+            <td><textarea name="characteristic" rows="3"></textarea>></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
