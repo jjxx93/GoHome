@@ -2,6 +2,7 @@ package com.youtu.service.impl;
 
 import com.youtu.common.GetUUIDNumber;
 import com.youtu.dao.LosterDao;
+import com.youtu.entity.Loster;
 import com.youtu.service.LosterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,12 +21,7 @@ public class LosterServiceImpl implements LosterService {
 
     @Override
     public List<String> getUrl(int age, int gender) {
-        return losterDao.queryByAgeAndGender(age, String.valueOf(gender));
-    }
-
-    @Override
-    public List<String> getUrl(int minAge, int maxAge, int gender) {
-        return losterDao.queryByMaxMinAgeAndGender(minAge, maxAge, String.valueOf(gender));
+        return losterDao.queryPictureByAgeAndGender(age, String.valueOf(gender));
     }
 
     @Override
@@ -43,5 +39,21 @@ public class LosterServiceImpl implements LosterService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public List<Loster> matchLosterByAgeAndGender(int age, int ageRange, int gender) {
+        // 计算年龄范围
+        int minAge = age - ageRange;
+        if (minAge < 1) {
+            minAge = 1;
+        }   // 最小年龄为1
+        int maxAge = age + ageRange;
+        if (age <= 5) {
+            maxAge = age + age;
+        }    // 考虑到年龄越小，判断的年龄范围应越小
+
+        //String genderStr = String.valueOf(gender);
+        return losterDao.queryPictureByMaxMinAgeAndGender(minAge, maxAge, String.valueOf(gender));
     }
 }

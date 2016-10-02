@@ -5,6 +5,7 @@ package com.youtu.entity;
  */
 public class Face {
     private String faceId;
+    private String losterUuid;
     private int imgHeight;
     private int imgWidth;
     private int gender;
@@ -28,6 +29,7 @@ public class Face {
     public String toString() {
         return "Face{" +
                 "faceId='" + faceId + '\'' +
+                ", losterUuid='" + losterUuid + '\'' +
                 ", imgHeight=" + imgHeight +
                 ", imgWidth=" + imgWidth +
                 ", gender=" + gender +
@@ -36,6 +38,14 @@ public class Face {
                 ", faceUrl='" + faceUrl + '\'' +
                 ", similarity=" + similarity +
                 '}';
+    }
+
+    public String getLosterUuid() {
+        return losterUuid;
+    }
+
+    public void setLosterUuid(String losterUuid) {
+        this.losterUuid = losterUuid;
     }
 
     public String getFaceUrl() {

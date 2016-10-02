@@ -4,13 +4,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.youtu.dao.LosterDao">
     <select id="queryPictureByAgeAndGender" resultType="String">
-        SELECT picture
+        SELECT Loster_uuid, picture
         FROM loster
         WHERE age = #{age} AND gender = #{gender};
     </select>
 
-    <select id="queryPictureByMaxMinAgeAndGender" resultType="String">
-        SELECT picture
+    <select id="queryPictureByMaxMinAgeAndGender" resultType="com.youtu.entity.Loster">
+        SELECT picture, loster_uuid
         FROM loster
         WHERE age >= #{minAge} AND age <![CDATA[ <= ]]> #{maxAge} AND gender = #{gender};
     </select>
@@ -19,7 +19,7 @@
         INSERT INTO loster
         (loster_uuid, loster_name, age, loster_birthday, gender, height, lost_date, picture, lost_location,
          characteristic, datasource) VALUES
-            (#{losterUuid}, #{losterName}, #{age}, #{losterBirthday}, #{gender}, #{height}, #{lostDate}, #{picture},
+        (#{losterUuid}, #{losterName}, #{age}, #{losterBirthday}, #{gender}, #{height}, #{lostDate}, #{picture},
                             #{lostLocation}, #{characteristic}, #{datasource})
     </insert>
 </mapper>

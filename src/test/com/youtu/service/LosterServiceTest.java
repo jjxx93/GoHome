@@ -34,22 +34,6 @@ public class LosterServiceTest {
 //        File file = new File(img);
 //        PostParameters postParameters = new PostParameters().setImg(file);
 //        System.out.println(httpRequests.detectionDetect(postParameters));
-        String urlA = "http://www.baobeihuijia.com/photo/water/water_199375.jpg";
-
-        Face face1 = FaceppUtils.detectUrl(urlA);
-        List<String> list = losterService.getUrl(face1.getAge(), face1.getAge(), face1.getGender());
-        int length = list.size();
-
-        for (int i = 0; i < length; i++) {
-            Face face2 = FaceppUtils.detectUrl(list.get(i));
-            if (face2 == null) continue;
-            HttpRequests httpRequests = new HttpRequests(Constants.API_Key, Constants.API_Secret, true, true);
-
-            PostParameters postParameters = new PostParameters().setFaceId1(face1.getFaceId());
-            postParameters.setFaceId2(face2.getFaceId());
-            System.out.println(httpRequests.recognitionCompare(postParameters).getInt("similarity"));
-        }
-
     }
 
     @Test

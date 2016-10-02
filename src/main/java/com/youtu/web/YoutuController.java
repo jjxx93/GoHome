@@ -25,7 +25,6 @@ public class YoutuController {
     @Autowired
 LosterService losterService;
 
-
     //获取列表页
     @RequestMapping(value = "/getList", method = RequestMethod.GET)
     @ResponseBody
@@ -35,7 +34,4 @@ LosterService losterService;
         jsonObject.put("msg", "验证通过");
         return jsonObject;
     }
-
-
-
 }

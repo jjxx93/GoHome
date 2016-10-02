@@ -43,6 +43,35 @@ public class Constants {
     public final static int ADD_LOSTER_SUCCESS = 3;
     public final static int ADD_LOSTER_FAIL = 4;
 
+    // 上传疑似走失者信息
+    public final static int ADD_BEFOUNDER_SUCCESS = 3;
+    public final static int ADD_BEFOUNDER_FAIL = 4;
+
+    // 获取疑似走失者信息
+    public final static int GET_BEFOUNDER_SUCCESS = 3;
+    public final static int GET_BEFOUNDER_FAIL = 4;
+
+    // 修改疑似走失者照片信息
+    public final static int MODIFY_BEFOUNDER_SUCCESS = 3;
+    public final static int MODIFY_BEFOUNDER_FAIL = 4;
+    public final static int MODIFY_BEFOUNDER_NOPHOTO = 5;
+
+    // 分析疑似走失者照片
+    public final static int DETECT_BEFOUNDER_SUCCESS = 3;
+    public final static int DETECT_BEFOUNDER_FAIL = 4;
+    public final static int DETECT_BEFOUNDER_NOPHOTO = 5;
+
+    // 匹配疑似走失者照片
+    public final static int MATCH_BEFOUNDER_SUCCESS = 3;
+    public final static int MATCH_BEFOUNDER_FAIL = 4;
+    public final static int MATCH_BEFOUNDER_NOPHOTO = 5;
+    public final static int MATCH_BEFOUNDER_NODETECT = 5;
+    public final static int MATCH_BEFOUNDER_NOLOSTER = 6;
+
+    // 获取匹配表信息
+    public final static int GET_MATCCHES_SUCCESS = 3;
+    public final static int GET_MATCHES_FAIL = 4;
+
     // 优图账号信息
     public static final String APP_ID = "10034230";
     public static final String SECRET_ID = "AKIDcwnh2zRMOmTg8ZGLngGRUwxaimYKtKwV";

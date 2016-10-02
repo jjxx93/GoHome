@@ -82,7 +82,18 @@ public class FaceppUtils {
         Face face2 = FaceppUtils.detectUrl(url2);
 
         HttpRequests httpRequests = new HttpRequests(Constants.API_Key, Constants.API_Secret, true, true);
-        ;
+
+        PostParameters postParameters = new PostParameters().setFaceId1(face1.getFaceId());
+        postParameters.setFaceId2(face2.getFaceId());
+
+        return httpRequests.recognitionCompare(postParameters).getInt("similarity");
+    }
+
+    public static int getSimilarity(Face face1, String url) throws FaceppParseException, JSONException {
+        Face face2 = FaceppUtils.detectUrl(url);
+
+        HttpRequests httpRequests = new HttpRequests(Constants.API_Key, Constants.API_Secret, true, true);
+
         PostParameters postParameters = new PostParameters().setFaceId1(face1.getFaceId());
         postParameters.setFaceId2(face2.getFaceId());
 

@@ -1,5 +1,6 @@
 package com.youtu.dao;
 
+import com.youtu.entity.Loster;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -25,11 +26,10 @@ public interface LosterDao {
      * @param gender
      * @return
      */
-    List<String> queryPictureByMaxMinAgeAndGender(@Param("minAge") int minAge, @Param("maxAge") int maxAge, @Param("gender") String gender);
+    List<Loster> queryPictureByMaxMinAgeAndGender(@Param("minAge") int minAge, @Param("maxAge") int maxAge, @Param("gender") String gender);
 
     /**
      * 插入新丢失用户数据
-     *
      * @param losterUuid
      * @param losterName
      * @param age

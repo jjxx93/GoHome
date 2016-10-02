@@ -30,4 +30,33 @@ public class Msgs {
     // 上传走失者信息
     public final static String ADD_LOSTER_SUCCESS = "上传走失者信息成功";
     public final static String ADD_LOSTER_FAIL = "上传走失者信息失败";
+
+    // 上传疑似走失者信息
+    public final static String ADD_BEFOUNDER_SUCCESS = "上传疑似走失者信息成功";
+    public final static String ADD_BEFOUNDER_FAIL = "上传疑似走失者信息失败";
+
+    // 获取疑似走失者信息
+    public final static String GET_BEFOUNDER_SUCCESS = "获取疑似走失者信息成功";
+    public final static String GET_BEFOUNDER_FAIL = "无疑似走失者信息";
+
+    // 修改疑似走失者照片信息
+    public final static String MODIFY_BEFOUNDER_SUCCESS = "修改疑似走失者照片信息成功";
+    public final static String MODIFY_BEFOUNDER_FAIL = "修改疑似走失者照片信息失败";
+    public final static String MODIFY_BEFOUNDER_NOPHOTO = "无此疑似走失者照片";
+
+    // 分析疑似走失者照片
+    public final static String DETECT_BEFOUNDER_SUCCESS = "分析疑似走失者照片成功";
+    public final static String DETECT_BEFOUNDER_FAIL = "分析疑似走失者照片失败";
+    public final static String DETECT_BEFOUNDER_NOPHOTO = "无此疑似走失者照片";
+
+    // 匹配疑似走失者照片
+    public final static String MATCH_BEFOUNDER_SUCCESS = "匹配疑似走失者照片成功";
+    public final static String MATCH_BEFOUNDER_FAIL = "匹配疑似走失者照片失败";
+    public final static String MATCH_BEFOUNDER_NOPHOTO = "无此疑似走失者信息";
+    public final static String MATCH_BEFOUNDER_NODETECT = "此走失者信息未经过分析";
+    public final static String MATCH_BEFOUNDER_NOLOSTER = "数据库中无匹配人员";
+
+    // 获取匹配表信息
+    public final static String GET_MATCCHES_SUCCESS = "获取匹配信息成功";
+    public final static String GET_MATCHES_FAIL = "无匹配信息";
 }

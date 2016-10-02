@@ -20,10 +20,16 @@
         <td><a href="picture.html">上传图片</a></td>
     </tr>
     <tr>
-        <td><a href="/photo/getUploadToken">获取上传图片Token</a></td>
+        <td><a href="uploadLoster.html">上传走失者信息</a></td>
     </tr>
     <tr>
-        <td><a href="uploadLoster.html">上传走失者信息</a></td>
+        <td><a href="uploadBefounder.html">上传疑似走失者信息</a></td>
+    </tr>
+    <tr>
+        <td><a href="getInformation.html">获取信息</a></td>
+    </tr>
+    <tr>
+        <td><a href="modifyBefounder.html">修改疑似走失者信息</a></td>
     </tr>
 </table>
 </center>
