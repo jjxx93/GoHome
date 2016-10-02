@@ -26,10 +26,10 @@
         <td><a href="uploadBefounder.html">上传疑似走失者信息</a></td>
     </tr>
     <tr>
-        <td><a href="getInformation.html">获取信息</a></td>
+        <td><a href="modifyBefounder.html">修改疑似走失者信息</a></td>
     </tr>
     <tr>
-        <td><a href="modifyBefounder.html">修改疑似走失者信息</a></td>
+        <td><a href="getInformation.html">获取信息</a></td>
     </tr>
 </table>
 </center>
