@@ -1,5 +1,6 @@
 package com.youtu.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.youtu.entity.Loster;
 
 import java.util.List;
@@ -33,11 +34,18 @@ public interface LosterService {
 
     /**
      * 根据年龄和性别信息匹配走失者
-     *
      * @param age
      * @param ageRange
      * @param gender
      * @return
      */
     List<Loster> matchLosterByAgeAndGender(int age, int ageRange, int gender);
+
+    /**
+     * 根据照片、年龄和性别信息匹配走失者
+     *
+     * @param picture
+     * @return
+     */
+    JSONObject matchLosterByPictureAgeAndGender(String picture, LosterService losterService);
 }

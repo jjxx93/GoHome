@@ -181,60 +181,8 @@ public class VolunteerController {
                 jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_NODETECT);
                 return jsonObject;
             } else {
-                List<Loster> losterList = losterService.matchLosterByAgeAndGender(befounder.getAge(), befounder.getRange(), befounder.getGender());
-                System.out.println(losterList);
-
-                if (losterList.isEmpty()) {       // 数据库中无匹配信息
-                    jsonObject.put("result", Constants.MATCH_BEFOUNDER_NOLOSTER);
-                    jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_NOLOSTER);
-                    return jsonObject;
-                } else {
-                    try {
-                        Face face1 = FaceppUtils.detectUrl(befounder.getPicture());
-
-                        // 循环检测相关图片相似度
-                        JSONArray jsonArray = new JSONArray();
-                        for (Loster loster : losterList) {
-                            Face face2 = FaceppUtils.detectUrl(loster.getPicture());
-                            if (face2 == null) continue;
-                            HttpRequests httpRequests = new HttpRequests(Constants.API_Key, Constants.API_Secret, true, true);
-
-                            PostParameters postParameters = new PostParameters().setFaceId1(face1.getFaceId());
-                            postParameters.setFaceId2(face2.getFaceId());
-
-                            int similarity = httpRequests.recognitionCompare(postParameters).getInt("similarity");
-
-                            if (similarity > 50) {          // 只取相似度大于50的值
-                                // 添加数据到json对象
-                                face2.setLosterUuid(loster.getLosterUuid());
-                                face2.setFaceUrl(loster.getPicture());
-                                face2.setSimilarity(similarity);
-                                jsonArray.add(face2);
-
-                                // 添加数据到match表
-                                matchesService.addMatches(userUuid, uuid, loster.getLosterUuid(), similarity, "0");
-                            }
-                        }
-
-                        if (jsonArray == null) {    // 数据库中无相似度大于50的匹配信息
-                            jsonObject.put("result", Constants.MATCH_BEFOUNDER_NOLOSTER);
-                            jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_NOLOSTER);
-                            return jsonObject;
-                        } else {
-                            jsonObject.put("result", Constants.MATCH_BEFOUNDER_SUCCESS);
-                            jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_SUCCESS);
-                            jsonObject.put("ListLength", jsonArray.size());
-                            jsonObject.put("SourceFace", face1);
-                            jsonObject.put("faceArray", jsonArray);
-                            return jsonObject;
-                        }
-                    } catch (JSONException | FaceppParseException e) {
-                        e.printStackTrace();
-                        jsonObject.put("result", Constants.MATCH_BEFOUNDER_FAIL);
-                        jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_FAIL);
-                        return jsonObject;
-                    }
-                }
+                // 在数据库中匹配相似脸
+                return losterService.matchLosterByPictureAgeAndGender(befounder.getPicture(), losterService);
             }
         }
 
@@ -262,6 +210,24 @@ public class VolunteerController {
                 jsonObject.put("msg", Msgs.GET_MATCCHES_SUCCESS);
                 jsonObject.put("length", matchesList.size());
                 jsonObject.put("matchesList", matchesList);
+            }
+        }
+
+        return jsonObject;
+    }
+
+    //查找匹配表信息
+    @RequestMapping(value = "/match", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> match(String userUuid, String picture, String userType) {
+        // 检查用户uuid
+        JSONObject jsonObject = userService.validationUserUuid(userUuid);
+
+        if (jsonObject == null) {   // 检查用户uuid通过
+            if (userType.equals("0")) {
+                return losterService.matchLosterByPictureAgeAndGender(picture, losterService);
+            } else {
+                return befounderService.matchBefounderByPictureAgeAndGender(picture, befounderService);
             }
         }
 
