@@ -37,4 +37,10 @@
         SET age = #{age}, age_range = #{ageRange}, gender = #{gender}, state = #{state}
         WHERE uuid = #{uuid};
     </update>
+
+    <select id="queryPictureByMaxMinAgeAndGender" resultType="com.youtu.entity.Befounder">
+        SELECT picture, uuid
+        FROM befounder
+        WHERE age >= #{minAge} AND age <![CDATA[ <= ]]> #{maxAge} AND gender = #{gender};
+    </select>
 </mapper>
