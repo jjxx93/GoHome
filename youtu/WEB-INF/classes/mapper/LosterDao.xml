@@ -18,8 +18,20 @@
     <insert id="insertLoster">
         INSERT INTO loster
         (loster_uuid, loster_name, age, loster_birthday, gender, height, lost_date, picture, lost_location,
-         characteristic, datasource) VALUES
+         remarks, datasource, source_id, update_time) VALUES
         (#{losterUuid}, #{losterName}, #{age}, #{losterBirthday}, #{gender}, #{height}, #{lostDate}, #{picture},
-                            #{lostLocation}, #{characteristic}, #{datasource})
+                            #{lostLocation}, #{remarks}, #{datasource}, #{sourceId}, #{updateTime})
     </insert>
+
+    <select id="queryBySourceId" resultType="com.youtu.entity.Loster">
+        SELECT loster_uuid, loster_name, picture
+        FROM loster
+        WHERE source_id = #{sourceId};
+    </select>
+
+    <select id="queryByLosterUuid" resultType="com.youtu.entity.Loster">
+        SELECT *
+        FROM loster
+        WHERE loster_uuid = #{losterUuid};
+    </select>
 </mapper>
