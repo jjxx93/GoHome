@@ -24,7 +24,7 @@
     </insert>
 
     <select id="queryBySourceId" resultType="com.youtu.entity.Loster">
-        SELECT loster_uuid, loster_name, picture
+        SELECT loster_uuid, loster_name, picture, remarks
         FROM loster
         WHERE source_id = #{sourceId};
     </select>
