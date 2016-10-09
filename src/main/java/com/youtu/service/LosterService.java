@@ -26,11 +26,11 @@ public interface LosterService {
      * @param lostDate
      * @param picture
      * @param lostLocation
-     * @param characteristic
+     * @param remarks
      * @return
      */
-    boolean addLoster(String losterName, String losterBirthday, String gender, int height, String lostDate,
-                      String picture, String lostLocation, String characteristic);
+    boolean addLoster(String userUuid, String losterName, String losterBirthday, String gender, int height, String lostDate,
+                      String picture, String lostLocation, String remarks);
 
     /**
      * 根据年龄和性别信息匹配走失者
@@ -43,9 +43,50 @@ public interface LosterService {
 
     /**
      * 根据照片、年龄和性别信息匹配走失者
-     *
      * @param picture
      * @return
      */
     JSONObject matchLosterByPictureAgeAndGender(String picture, LosterService losterService);
+
+    /**
+     * 根据上传者uuid查数据
+     *
+     * @param userUuid
+     * @return
+     */
+    List<Loster> getLosterByUserUuid(String userUuid);
+
+    /**
+     * 根据走失者uuid查数据
+     *
+     * @param losterUuid
+     * @return
+     */
+    Loster getLosterByLosterUuid(String losterUuid);
+
+    /**
+     * 根据走失者uuid修改数据
+     *
+     * @param userUuid
+     * @param losterName
+     * @param losterBirthday
+     * @param gender
+     * @param height
+     * @param lostDate
+     * @param picture
+     * @param lostLocation
+     * @param remarks
+     * @return
+     */
+    Boolean modifyLosterByLosterUuid(String userUuid, String losterUuid, String losterName, String losterBirthday, String gender, int height, String lostDate,
+                                     String picture, String lostLocation, String remarks);
+
+    /**
+     * 根据uuid删除数据
+     *
+     * @param userUuid
+     * @param losterUuid
+     * @return
+     */
+    Boolean deleteLoster(String userUuid, String losterUuid);
 }

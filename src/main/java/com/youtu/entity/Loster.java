@@ -14,9 +14,10 @@ public class Loster {
     private String lostDate;
     private String picture;
     private String lostLocation;
-    private String characteristic;
+    private String remarks;
     private int datasource;
     private String sourceId;
+    private String updateTime;
 
     @Override
     public String toString() {
@@ -31,9 +32,10 @@ public class Loster {
                 ", lostDate='" + lostDate + '\'' +
                 ", picture='" + picture + '\'' +
                 ", lostLocation='" + lostLocation + '\'' +
-                ", characteristic='" + characteristic + '\'' +
+                ", remarks='" + remarks + '\'' +
                 ", datasource=" + datasource +
                 ", sourceId='" + sourceId + '\'' +
+                ", updateTime='" + updateTime + '\'' +
                 '}';
     }
 
@@ -117,14 +119,6 @@ public class Loster {
         this.lostLocation = lostLocation;
     }
 
-    public String getCharacteristic() {
-        return characteristic;
-    }
-
-    public void setCharacteristic(String characteristic) {
-        this.characteristic = characteristic;
-    }
-
     public int getDatasource() {
         return datasource;
     }
@@ -139,5 +133,21 @@ public class Loster {
 
     public void setSourceId(String sourceId) {
         this.sourceId = sourceId;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 }

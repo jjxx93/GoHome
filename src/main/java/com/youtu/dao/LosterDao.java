@@ -39,13 +39,49 @@ public interface LosterDao {
      * @param lostDate
      * @param picture
      * @param lostLocation
-     * @param characteristic
+     * @param remarks
      * @param datasource
      * @return
      */
     int insertLoster(@Param("losterUuid") String losterUuid, @Param("losterName") String losterName, @Param("age") int age,
-                     @Param("losterBirthday") String losterBirthday, @Param("gender") Character gender, @Param("height") int height,
+                     @Param("losterBirthday") String losterBirthday, @Param("gender") String gender, @Param("height") int height,
                      @Param("lostDate") String lostDate, @Param("picture") String picture, @Param("lostLocation") String lostLocation,
-                     @Param("characteristic") String characteristic, @Param("datasource") Character datasource);
+                     @Param("remarks") String remarks, @Param("datasource") Character datasource, @Param("sourceId") String sourceId,
+                     @Param("updateTime") String updateTime);
 
+    /**
+     * 根据上传者uuid查数据
+     *
+     * @param sourceId
+     * @return
+     */
+    List<Loster> queryBySourceId(@Param("sourceId") String sourceId);
+
+    /**
+     * 根据走失者uuid查数据
+     *
+     * @param losterUuid
+     * @return
+     */
+    Loster queryByLosterUuid(@Param("losterUuid") String losterUuid);
+
+    /**
+     * 根据uuid更新数据
+     *
+     * @param losterUuid
+     * @return
+     */
+    int updateLoster(@Param("losterUuid") String losterUuid, @Param("losterName") String losterName, @Param("age") int age,
+                     @Param("losterBirthday") String losterBirthday, @Param("gender") String gender, @Param("height") int height,
+                     @Param("lostDate") String lostDate, @Param("picture") String picture, @Param("lostLocation") String lostLocation,
+                     @Param("remarks") String remarks, @Param("sourceId") String sourceId, @Param("updateTime") String updateTime);
+
+    /**
+     * 根据uuid删除数据
+     *
+     * @param losterUuid
+     * @param sourceId
+     * @return
+     */
+    int deleteLoster(@Param("losterUuid") String losterUuid, @Param("sourceId") String sourceId);
 }

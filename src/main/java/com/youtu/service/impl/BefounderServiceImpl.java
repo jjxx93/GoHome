@@ -102,8 +102,8 @@ public class BefounderServiceImpl implements BefounderService {
                     jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_NOLOSTER);
                     return jsonObject;
                 } else {
-                    jsonObject.put("ListLength", jsonArray.size());
-                    jsonObject.put("SourceFace", face1);
+                    jsonObject.put("arrayLength", jsonArray.size());
+                    jsonObject.put("sourceFace", face1);
                     jsonObject.put("faceArray", jsonArray);
                     jsonObject.put("result", Constants.MATCH_BEFOUNDER_SUCCESS);
                     jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_SUCCESS);

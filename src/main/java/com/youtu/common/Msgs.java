@@ -31,6 +31,18 @@ public class Msgs {
     public final static String ADD_LOSTER_SUCCESS = "上传走失者信息成功";
     public final static String ADD_LOSTER_FAIL = "上传走失者信息失败";
 
+    // 查询走失者信息
+    public final static String GET_LOSTER_SUCCESS = "查询走失者信息成功";
+    public final static String GET_LOSTER_FAIL = "未查询到走失者信息";
+
+    // 修改走失者信息
+    public final static String MODIFY_LOSTER_SUCCESS = "修改走失者信息成功";
+    public final static String MODIFY_LOSTER_FAIL = "修改走失者信息失败";
+
+    // 删除走失者信息
+    public final static String DELETE_LOSTER_SUCCESS = "删除走失者信息成功";
+    public final static String DELETE_LOSTER_FAIL = "删除走失者信息失败";
+
     // 上传疑似走失者信息
     public final static String ADD_BEFOUNDER_SUCCESS = "上传疑似走失者信息成功";
     public final static String ADD_BEFOUNDER_FAIL = "上传疑似走失者信息失败";

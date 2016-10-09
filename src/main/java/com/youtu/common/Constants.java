@@ -43,6 +43,18 @@ public class Constants {
     public final static int ADD_LOSTER_SUCCESS = 3;
     public final static int ADD_LOSTER_FAIL = 4;
 
+    // 查询走失者信息
+    public final static int GET_LOSTER_SUCCESS = 3;
+    public final static int GET_LOSTER_FAIL = 4;
+
+    // 修改走失者信息
+    public final static int MODIFY_LOSTER_SUCCESS = 3;
+    public final static int MODIFY_LOSTER_FAIL = 4;
+
+    // 删除走失者信息
+    public final static int DELETE_LOSTER_SUCCESS = 3;
+    public final static int DELETE_LOSTER_FAIL = 4;
+
     // 上传疑似走失者信息
     public final static int ADD_BEFOUNDER_SUCCESS = 3;
     public final static int ADD_BEFOUNDER_FAIL = 4;
