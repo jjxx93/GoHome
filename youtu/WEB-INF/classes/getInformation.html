@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取信息</title>
+</head>
+<body>
+<form name="GetUploadTokenForm" method="get" action="/photo/getUploadToken">
+    <table>
+        <thead><h3>上传Token</h3></thead>
+        <tr>
+            <td>用户uuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+</form>
+<hr/>
+<form name="GetUploadTokenForm" method="get" action="/volunteer/getBefounder">
+    <table>
+        <thead><h3>获取疑似走失者</h3></thead>
+        <tr>
+            <td>用户uuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+</form>
+<hr/>
+<form name="DetectBefounderForm" method="post" action="/volunteer/detectBefounder">
+    <table>
+        <thead><h3>分析疑似走失者照片</h3></thead>
+        <tr>
+            <td>用户uuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td>信息uuid：</td>
+            <td><input type="text" name="uuid"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+</form>
+<hr/>
+<form name="DetectBefounderForm" method="post" action="/volunteer/matchBefounder">
+    <table>
+        <thead><h3>在数据库中匹配疑似走失者照片</h3></thead>
+        <tr>
+            <td>用户uuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td>信息uuid：</td>
+            <td><input type="text" name="uuid"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+</form>
+<hr/>
+<form name="GetMatchForm" method="get" action="/volunteer/getMatch">
+    <table>
+        <thead><h3>查找Match表</h3></thead>
+        <tr>
+            <td>用户uuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td>信息uuid：</td>
+            <td><input type="text" name="uuid"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+</form>
+<hr/>
+<form name="DetectBefounderForm" method="post" action="/volunteer/match">
+    <table>
+        <thead><h3>上传匹配走失者照片</h3></thead>
+        <tr>
+            <td>用户uuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td>照片：</td>
+            <td><input type="text" name="picture"></td>
+        </tr>
+        <tr>
+            <td>用户类别：</td>
+            <td><input type="radio" name="userType" value="0"/>志愿者</td>
+            <td><input type="radio" name="userType" value="1"/>寻亲者</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+</form>
+<hr/>
+
+<form name="GetLostersForm" method="get" action="/relative/getLosters">
+    <table>
+        <thead><h3>获取上传的走失者信息</h3></thead>
+        <tr>
+            <td>用户uuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+</form>
+<hr/>
+
+<form name="GetLosterForm" method="get" action="/relative/getLoster">
+    <table>
+        <thead><h3>获取上传的走失者信息</h3></thead>
+        <tr>
+            <td>用户uuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td>走失者uuid：</td>
+            <td><input type="text" name="losterUuid"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+</form>
+<hr/>
+</body>
+</html>
