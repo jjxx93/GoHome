@@ -11,7 +11,6 @@ import com.facepp.http.HttpRequests;
 import com.facepp.http.PostParameters;
 import com.qiniu.util.Auth;
 import com.youtu.common.FaceppUtils;
-import com.youtu.common.Msgs;
 import com.youtu.entity.Face;
 import com.youtu.service.LosterService;
 import com.youtu.service.UserService;
@@ -29,8 +28,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
-
-import static org.apache.coyote.http11.Constants.a;
 
 /**
  * Created by jiax on 2016/9/22.

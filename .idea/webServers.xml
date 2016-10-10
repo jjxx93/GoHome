@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9e831bf0-7c4b-4901-8562-eb773ee663f6" name="Q-cloud" url="http://119.29.201.164">
+        <fileTransfer host="119.29.201.164" port="22" privateKey="F:\Q-cloud\qcloud" rootFolder="/usr/tomcat8/webapps" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
