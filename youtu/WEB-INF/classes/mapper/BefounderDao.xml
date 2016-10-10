@@ -39,6 +39,12 @@
         WHERE uuid = #{uuid};
     </update>
 
+    <update id="uploadBefounder">
+        UPDATE befounder
+        SET age = #{age}, age_range = #{ageRange}, gender = #{gender}, remarks = #{remarks}, state = #{state}
+        WHERE uuid = #{uuid};
+    </update>
+
     <select id="queryPictureByMaxMinAgeAndGender" resultType="com.youtu.entity.Befounder">
         SELECT
         picture,
