@@ -1,17 +1,13 @@
 package com.youtu.web;
 
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.facepp.error.FaceppParseException;
-import com.facepp.http.HttpRequests;
-import com.facepp.http.PostParameters;
 import com.youtu.common.Constants;
 import com.youtu.common.FaceppUtils;
 import com.youtu.common.Msgs;
 import com.youtu.dao.BefounderDao;
 import com.youtu.entity.Befounder;
 import com.youtu.entity.Face;
-import com.youtu.entity.Loster;
 import com.youtu.entity.Matches;
 import com.youtu.service.BefounderService;
 import com.youtu.service.LosterService;
