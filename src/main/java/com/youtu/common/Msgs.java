@@ -56,6 +56,11 @@ public class Msgs {
     public final static String MODIFY_BEFOUNDER_FAIL = "修改疑似走失者照片信息失败";
     public final static String MODIFY_BEFOUNDER_NOPHOTO = "无此疑似走失者照片";
 
+    // 删除疑似走失者信息
+    public final static String DELETE_BEFOUNDER_SUCCESS = "删除疑似走失者信息成功";
+    ;
+    public final static String DELETE_BEFOUNDER_FAIL = "删除疑似走失者信息失败";
+
     // 分析疑似走失者照片
     public final static String DETECT_BEFOUNDER_SUCCESS = "分析疑似走失者照片成功";
     public final static String DETECT_BEFOUNDER_FAIL = "分析疑似走失者照片失败";

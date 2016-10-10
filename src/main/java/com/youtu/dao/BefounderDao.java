@@ -20,7 +20,8 @@ public interface BefounderDao {
      * @return
      */
     int insertBefounder(@Param("uuid") String uuid, @Param("founderUuid") String founderUuid, @Param("foundLocation") String foundLocation,
-                        @Param("foundTime") String foundTime, @Param("picture") String picture, @Param("remarks") String remarks, @Param("state") String state);
+                        @Param("foundTime") String foundTime, @Param("picture") String picture,
+                        @Param("remarks") String remarks, @Param("state") String state);
 
     /**
      * 根据用户uuid查找疑似走失者信息
@@ -31,13 +32,12 @@ public interface BefounderDao {
     List<Befounder> queryByFounderUuid(@Param("founderUuid") String founderUuid);
 
     /**
-     * 根据用户uuid和uuid查找疑似走失者照片
+     * 根据用户uuid和uuid查找疑似走失者
      *
      * @param uuid
-     * @param founderUuid
      * @return
      */
-    Befounder queryByUuidAndFounderUuid(@Param("uuid") String uuid, @Param("founderUuid") String founderUuid);
+    Befounder queryByUuid(@Param("uuid") String uuid);
 
     /**
      * 添加年龄和性别信息
@@ -73,4 +73,13 @@ public interface BefounderDao {
      * @return
      */
     List<Befounder> queryPictureByMaxMinAgeAndGender(@Param("minAge") int minAge, @Param("maxAge") int maxAge, @Param("gender") String gender);
+
+    /**
+     * 删除一条意思走失者数据
+     *
+     * @param uuid
+     * @param founderUuid
+     * @return
+     */
+    int deleteBefounder(@Param("uuid") String uuid, @Param("founderUuid") String founderUuid);
 }

@@ -10,11 +10,10 @@ import com.youtu.common.FaceppUtils;
 import com.youtu.common.GetUUIDNumber;
 import com.youtu.common.Msgs;
 import com.youtu.dao.BefounderDao;
+import com.youtu.dao.MatchesDao;
 import com.youtu.entity.Befounder;
 import com.youtu.entity.Face;
-import com.youtu.entity.Loster;
 import com.youtu.service.BefounderService;
-import com.youtu.service.LosterService;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +28,9 @@ public class BefounderServiceImpl implements BefounderService {
     @Autowired      //自动注入
     private BefounderDao befounderDao;
 
+    @Autowired      //自动注入
+    private MatchesDao matchesDao;
+
     @Override
     public Boolean addBefounder(String founderUuid, String foundLocation, String foundTime, String picture,
                                 String remarks, String state) {
@@ -40,8 +42,37 @@ public class BefounderServiceImpl implements BefounderService {
     }
 
     @Override
-    public List<Befounder> getBefounder(String founderUuid) {
+    public List<Befounder> getBefounders(String founderUuid) {
         return befounderDao.queryByFounderUuid(founderUuid);
+    }
+
+    @Override
+    public Befounder getBefounder(String uuid) {
+        return befounderDao.queryByUuid(uuid);
+    }
+
+    @Override
+    public Boolean deleteBefounderAndMatches(String userUuid, String uuid) {
+        if (befounderDao.deleteBefounder(userUuid, uuid) > 0 && matchesDao.deleteMatches(userUuid, uuid) > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean modifyBefounder(String uuid, int age, int ageRange, String gender, String remarks, String state) {
+        if (befounderDao.uploadBefounder(uuid, age, ageRange, gender, remarks, state) > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean modifyAgeAndGender(String uuid, int age, int ageRange, String gender, String state) {
+        if (befounderDao.uploadAgeAndGender(uuid, age, ageRange, gender, state) > 0) {
+            return true;
+        }
+        return false;
     }
 
     @Override

@@ -47,7 +47,8 @@ public class VolunteerController {
     // 添加疑似走失者
     @RequestMapping(value = "/addBefounder", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> addBefounder(String userUuid, String foundLocation, String foundTime, String picture, String remarks) {
+    public Map<String, Object> addBefounder(String userUuid, String foundLocation, String foundTime, String picture,
+                                            String remarks) {
         JSONObject jsonObject = userService.validationUserUuid(userUuid);
 
         if (jsonObject == null) {
@@ -72,7 +73,7 @@ public class VolunteerController {
         if (jsonObject == null) {
             jsonObject = new JSONObject();
 
-            List<Befounder> befounderList = befounderService.getBefounder(userUuid);    // 获取疑似走失者数据
+            List<Befounder> befounderList = befounderService.getBefounders(userUuid);    // 获取疑似走失者数据
             if (befounderList.isEmpty()) {        // 未获取到疑似走失者数据
                 jsonObject.put("result", Constants.GET_BEFOUNDER_FAIL);
                 jsonObject.put("msg", Msgs.GET_BEFOUNDER_FAIL);
@@ -98,19 +99,14 @@ public class VolunteerController {
         if (jsonObject == null) {
             jsonObject = new JSONObject();
 
-            String picture = befounderDao.queryByUuidAndFounderUuid(uuid, userUuid).getPicture(); // 获得照片
-            if (picture == null) {           // 获取不到照片
+            Befounder befounder = befounderService.getBefounder(uuid); // 获得照片
+            if (befounder == null) {           // 获取不到照片
                 jsonObject.put("result", Constants.MODIFY_BEFOUNDER_NOPHOTO);
                 jsonObject.put("msg", Msgs.MODIFY_BEFOUNDER_NOPHOTO);
                 return jsonObject;
             }
 
-            String genderInt = "0";
-            if (gender.equals("女")) {
-                genderInt = "1";
-            }
-
-            if (befounderDao.uploadBefounder(uuid, age, ageRange, genderInt, remarks, "1") > 0) {     // 修改成功
+            if (befounderService.modifyBefounder(uuid, age, ageRange, gender, remarks, "1")) {     // 修改成功
                 jsonObject.put("result", Constants.MODIFY_BEFOUNDER_SUCCESS);
                 jsonObject.put("msg", Msgs.MODIFY_BEFOUNDER_SUCCESS);
             } else {
@@ -131,7 +127,7 @@ public class VolunteerController {
         if (jsonObject == null) {
             jsonObject = new JSONObject();
 
-            Befounder befounder = befounderDao.queryByUuidAndFounderUuid(uuid, userUuid); // 获得照片
+            Befounder befounder = befounderService.getBefounder(uuid); // 获得照片
             if (befounder == null) {           // 获取不到照片
                 jsonObject.put("result", Constants.DETECT_BEFOUNDER_NOPHOTO);
                 jsonObject.put("msg", Msgs.DETECT_BEFOUNDER_NOPHOTO);
@@ -144,7 +140,7 @@ public class VolunteerController {
                 Face face = FaceppUtils.detectUrl(picture);     // 分析查到的信息
                 String gender = String.valueOf(face.getGender());
 
-                if (befounderDao.uploadAgeAndGender(uuid, face.getAge(), face.getRange(), gender, "2") > 0) {
+                if (befounderService.modifyAgeAndGender(uuid, face.getAge(), face.getRange(), gender, "2")) {
                     jsonObject.put("result", Constants.DETECT_BEFOUNDER_SUCCESS);
                     jsonObject.put("msg", Msgs.DETECT_BEFOUNDER_SUCCESS);
                     jsonObject.put("face", face);
@@ -169,7 +165,7 @@ public class VolunteerController {
         if (jsonObject == null) {   // 检查用户uuid通过
             jsonObject = new JSONObject();
 
-            Befounder befounder = befounderDao.queryByUuidAndFounderUuid(uuid, userUuid);   // 找出相关疑似者信息
+            Befounder befounder = befounderService.getBefounder(uuid);   // 找出相关疑似者信息
             if (befounder == null) {            // 无相关疑似者信息
                 jsonObject.put("result", Constants.MATCH_BEFOUNDER_NOPHOTO);
                 jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_NOPHOTO);
@@ -226,6 +222,28 @@ public class VolunteerController {
                 return losterService.matchLosterByPictureAgeAndGender(picture, losterService);
             } else {
                 return befounderService.matchBefounderByPictureAgeAndGender(picture, befounderService);
+            }
+        }
+
+        return jsonObject;
+    }
+
+    // 删除疑似走失者信息
+    @RequestMapping(value = "/deleteBefounder", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> deleteBefounder(String userUuid, String uuid) {
+        JSONObject jsonObject = userService.validationUserUuid(userUuid);   // 检查用户uuid
+
+        if (jsonObject == null) {   // 检查用户uuid通过
+            jsonObject = new JSONObject();
+
+            if (befounderService.deleteBefounderAndMatches(userUuid, uuid)) {          // 删除成功
+                jsonObject.put("result", Constants.DELETE_BEFOUNDER_SUCCESS);
+                jsonObject.put("msg", Msgs.DELETE_BEFOUNDER_SUCCESS);
+                return jsonObject;
+            } else {                                                        // 删除失败
+                jsonObject.put("result", Constants.DELETE_BEFOUNDER_FAIL);
+                jsonObject.put("msg", Msgs.DELETE_BEFOUNDER_FAIL);
             }
         }
 

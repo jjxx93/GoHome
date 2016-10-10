@@ -68,6 +68,10 @@ public class Constants {
     public final static int MODIFY_BEFOUNDER_FAIL = 4;
     public final static int MODIFY_BEFOUNDER_NOPHOTO = 5;
 
+    // 删除疑似走失者信息
+    public final static int DELETE_BEFOUNDER_SUCCESS = 3;
+    public final static int DELETE_BEFOUNDER_FAIL = 4;
+
     // 分析疑似走失者照片
     public final static int DETECT_BEFOUNDER_SUCCESS = 3;
     public final static int DETECT_BEFOUNDER_FAIL = 4;

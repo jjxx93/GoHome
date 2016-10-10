@@ -31,4 +31,13 @@ public interface MatchesDao {
      * @return
      */
     List<Matches> queryByUserUuidBefounderUuid(@Param("userUuid") String userUuid, @Param("befounderUuid") String befounderUuid);
+
+    /**
+     * 删除疑似走失者信息
+     *
+     * @param userUuid
+     * @param befounderUuid
+     * @return
+     */
+    int deleteMatches(@Param("userUuid") String userUuid, @Param("befounderUuid") String befounderUuid);
 }

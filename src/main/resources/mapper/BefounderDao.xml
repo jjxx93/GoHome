@@ -6,7 +6,7 @@
     <insert id="insertBefounder">
         INSERT INTO befounder
         (uuid, founder_uuid, found_location, found_time, picture, remarks, state) VALUES
-        (#{uuid}, #{founderUuid}, #{foundLocation}, #{foundTime}, #{remarks}, #{picture}, #{state})
+        (#{uuid}, #{founderUuid}, #{foundLocation}, #{foundTime}, #{picture}, #{remarks}, #{state})
     </insert>
 
     <select id="queryByFounderUuid" resultType="com.youtu.entity.Befounder">
@@ -23,14 +23,10 @@
         WHERE founder_uuid = #{founderUuid};
     </select>
 
-    <select id="queryByUuidAndFounderUuid" resultType="com.youtu.entity.Befounder">
-        SELECT
-            picture,
-            age,
-            age_range,
-            gender
+    <select id="queryByUuid" resultType="com.youtu.entity.Befounder">
+        SELECT *
         FROM befounder
-        WHERE uuid = #{uuid} AND founder_uuid = #{founderUuid};
+        WHERE uuid = #{uuid};
     </select>
 
     <update id="uploadAgeAndGender">
@@ -52,4 +48,9 @@
         FROM befounder
         WHERE age >= #{minAge} AND age <![CDATA[ <= ]]> #{maxAge} AND gender = #{gender};
     </select>
+
+    <delete id="deleteBefounder">
+        DELETE befounder
+        WHERE uuid = #{uuid} AND founder_uuid = #{founderUuid};
+    </delete>
 </mapper>
