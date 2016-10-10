@@ -28,7 +28,7 @@ window.matchMedia = window.matchMedia || (function (doc, undefined) {
             return {
                 matches: bool,
                 media: q
-            };
+    };
 
         };
 
