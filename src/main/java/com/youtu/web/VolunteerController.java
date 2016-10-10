@@ -95,7 +95,8 @@ public class VolunteerController {
     // 修改疑似走失者信息
     @RequestMapping(value = "/modifyBefounder", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> modifyBefounder(String userUuid, String uuid, int age, int ageRange, String gender) {
+    public Map<String, Object> modifyBefounder(String userUuid, String uuid, int age, int ageRange, String gender,
+                                               String remarks) {
         JSONObject jsonObject = userService.validationUserUuid(userUuid);
 
         if (jsonObject == null) {
@@ -113,7 +114,7 @@ public class VolunteerController {
                 genderInt = "1";
             }
 
-            if (befounderDao.uploadAgeAndGender(uuid, age, ageRange, genderInt, "1") > 0) {     // 修改成功
+            if (befounderDao.uploadBefounder(uuid, age, ageRange, genderInt, remarks, "1") > 0) {     // 修改成功
                 jsonObject.put("result", Constants.MODIFY_BEFOUNDER_SUCCESS);
                 jsonObject.put("msg", Msgs.MODIFY_BEFOUNDER_SUCCESS);
             } else {

@@ -41,7 +41,6 @@ public interface BefounderDao {
 
     /**
      * 添加年龄和性别信息
-     *
      * @param uuid
      * @param age
      * @param ageRange
@@ -50,6 +49,20 @@ public interface BefounderDao {
      */
     int uploadAgeAndGender(@Param("uuid") String uuid, @Param("age") int age, @Param("ageRange") int ageRange,
                            @Param("gender") String gender, @Param("state") String state);
+
+    /**
+     * 更新信息
+     *
+     * @param uuid
+     * @param age
+     * @param ageRange
+     * @param gender
+     * @param remarks
+     * @param state
+     * @return
+     */
+    int uploadBefounder(@Param("uuid") String uuid, @Param("age") int age, @Param("ageRange") int ageRange,
+                        @Param("gender") String gender, @Param("remarks") String remarks, @Param("state") String state);
 
     /**
      * 根据年龄性别查数据
