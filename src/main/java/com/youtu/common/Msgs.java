@@ -58,7 +58,6 @@ public class Msgs {
 
     // 删除疑似走失者信息
     public final static String DELETE_BEFOUNDER_SUCCESS = "删除疑似走失者信息成功";
-    ;
     public final static String DELETE_BEFOUNDER_FAIL = "删除疑似走失者信息失败";
 
     // 分析疑似走失者照片

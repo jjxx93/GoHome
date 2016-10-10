@@ -53,7 +53,8 @@ public class BefounderServiceImpl implements BefounderService {
 
     @Override
     public Boolean deleteBefounderAndMatches(String userUuid, String uuid) {
-        if (befounderDao.deleteBefounder(userUuid, uuid) > 0 && matchesDao.deleteMatches(userUuid, uuid) > 0) {
+        if (befounderDao.deleteBefounder(uuid, userUuid) > 0) {
+            matchesDao.deleteMatches(userUuid, uuid);
             return true;
         }
         return false;
