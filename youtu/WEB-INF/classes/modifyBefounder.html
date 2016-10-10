@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改疑似走失者信息</title>
+</head>
+<body>
+<form name="ModifyBefounderForm" method="post" action="/volunteer/modifyBefounder">
+    <table>
+        <tr>
+            <td>用户uuid：</td>
+            <td><input type="text" name="userUuid"></td>
+        </tr>
+        <tr>
+            <td>uuid：</td>
+            <td><input type="text" name="uuid"></td>
+        </tr>
+        <tr>
+            <td>年龄：</td>
+            <td><input type="text" name="age"></td>
+        </tr>
+        <tr>
+            <td>范围：</td>
+            <td><input type="text" name="ageRange"></td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td><input type="radio" name="gender" value="男"/>男</td>
+            <td><input type="radio" name="gender" value="女"/>女</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"/></td>
+            <td><input type="reset" value="Reset"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

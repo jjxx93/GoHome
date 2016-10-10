@@ -1,0 +1,11 @@
+<root>
+    <item name='java.util.Comparator'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+    <item name='java.util.Scanner'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+    <item name='java.util.SortedSet'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
