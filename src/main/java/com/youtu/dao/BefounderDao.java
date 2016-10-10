@@ -20,7 +20,7 @@ public interface BefounderDao {
      * @return
      */
     int insertBefounder(@Param("uuid") String uuid, @Param("founderUuid") String founderUuid, @Param("foundLocation") String foundLocation,
-                        @Param("foundTime") String foundTime, @Param("picture") String picture, @Param("state") String state);
+                        @Param("foundTime") String foundTime, @Param("picture") String picture, @Param("remarks") String remarks, @Param("state") String state);
 
     /**
      * 根据用户uuid查找疑似走失者信息
@@ -50,4 +50,14 @@ public interface BefounderDao {
      */
     int uploadAgeAndGender(@Param("uuid") String uuid, @Param("age") int age, @Param("ageRange") int ageRange,
                            @Param("gender") String gender, @Param("state") String state);
+
+    /**
+     * 根据年龄性别查数据
+     *
+     * @param maxAge
+     * @param minAge
+     * @param gender
+     * @return
+     */
+    List<Befounder> queryPictureByMaxMinAgeAndGender(@Param("minAge") int minAge, @Param("maxAge") int maxAge, @Param("gender") String gender);
 }

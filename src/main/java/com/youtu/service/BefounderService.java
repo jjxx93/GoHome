@@ -19,7 +19,7 @@ public interface BefounderService {
      * @param picture
      * @return
      */
-    Boolean addBefounder(String founderUuid, String foundLocation, String foundTime, String picture, String state);
+    Boolean addBefounder(String founderUuid, String foundLocation, String foundTime, String picture, String remarks, String state);
 
     /**
      * 获取疑似走失者信息

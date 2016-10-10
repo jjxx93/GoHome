@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="YouTu:war">
-    <output-path>$PROJECT_DIR$/../</output-path>
-    <root id="archive" name="youtu.war">
-      <element id="artifact" artifact-name="YouTu:war exploded" />
-    </root>
-  </artifact>
-</component>

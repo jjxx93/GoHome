@@ -20,7 +20,7 @@ public class BefounderServiceTest {
     @Test
     public void addBefounder() throws Exception {
         System.out.println(befounderService.addBefounder("440f068e4e3649588994d7d627a1631b", "中国", "2008-08-08 10:10:10",
-                "http://odqvl1oxn.bkt.clouddn.com/jpg/1366_768_4605.jpg", "0"));
+                "http://odqvl1oxn.bkt.clouddn.com/jpg/1366_768_4605.jpg", "123", "0"));
     }
 
 }

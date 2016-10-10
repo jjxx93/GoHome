@@ -5,8 +5,8 @@
 <mapper namespace="com.youtu.dao.BefounderDao">
     <insert id="insertBefounder">
         INSERT INTO befounder
-        (uuid, founder_uuid, found_location, found_time, picture, state) VALUES
-            (#{uuid}, #{founderUuid}, #{foundLocation}, #{foundTime}, #{picture}, #{state})
+        (uuid, founder_uuid, found_location, found_time, picture, remarks, state) VALUES
+        (#{uuid}, #{founderUuid}, #{foundLocation}, #{foundTime}, #{remarks}, #{picture}, #{state})
     </insert>
 
     <select id="queryByFounderUuid" resultType="com.youtu.entity.Befounder">
@@ -17,7 +17,8 @@
             picture,
             age,
             age_range,
-            gender
+        gender,
+        remarks
         FROM befounder
         WHERE founder_uuid = #{founderUuid};
     </select>

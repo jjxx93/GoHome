@@ -30,9 +30,10 @@ public class BefounderServiceImpl implements BefounderService {
     private BefounderDao befounderDao;
 
     @Override
-    public Boolean addBefounder(String founderUuid, String foundLocation, String foundTime, String picture, String state) {
+    public Boolean addBefounder(String founderUuid, String foundLocation, String foundTime, String picture,
+                                String remarks, String state) {
         String uuid = GetUUIDNumber.createUUIDNumber();
-        if (befounderDao.insertBefounder(uuid, founderUuid, foundLocation, foundTime, picture, state) > 0) {
+        if (befounderDao.insertBefounder(uuid, founderUuid, foundLocation, foundTime, picture, remarks, state) > 0) {
             return true;
         }
         return false;

@@ -51,12 +51,12 @@ public class VolunteerController {
     // 添加疑似走失者
     @RequestMapping(value = "/addBefounder", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> addBefounder(String userUuid, String foundLocation, String foundTime, String picture) {
+    public Map<String, Object> addBefounder(String userUuid, String foundLocation, String foundTime, String picture, String remarks) {
         JSONObject jsonObject = userService.validationUserUuid(userUuid);
 
         if (jsonObject == null) {
             jsonObject = new JSONObject();
-            if (befounderService.addBefounder(userUuid, foundLocation, foundTime, picture, "0")) {
+            if (befounderService.addBefounder(userUuid, foundLocation, foundTime, picture, remarks, "0")) {
                 jsonObject.put("result", Constants.ADD_BEFOUNDER_SUCCESS);
                 jsonObject.put("msg", Msgs.ADD_BEFOUNDER_SUCCESS);
             } else {
