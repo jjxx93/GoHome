@@ -6,7 +6,7 @@
     <insert id="insertBefounder">
         INSERT INTO befounder
         (uuid, founder_uuid, found_location, found_time, picture, remarks, state) VALUES
-        (#{uuid}, #{founderUuid}, #{foundLocation}, #{foundTime}, #{remarks}, #{picture}, #{state})
+        (#{uuid}, #{founderUuid}, #{foundLocation}, #{foundTime}, #{picture}, #{remarks}, #{state})
     </insert>
 
     <select id="queryByFounderUuid" resultType="com.youtu.entity.Befounder">
