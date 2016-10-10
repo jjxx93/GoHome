@@ -50,7 +50,7 @@
     </select>
 
     <delete id="deleteBefounder">
-        DELETE befounder
+        DELETE FROM befounder
         WHERE uuid = #{uuid} AND founder_uuid = #{founderUuid};
     </delete>
 </mapper>
