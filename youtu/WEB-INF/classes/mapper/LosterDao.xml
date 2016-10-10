@@ -18,22 +18,32 @@
     <insert id="insertLoster">
         INSERT INTO loster
         (loster_uuid, loster_name, age, loster_birthday, gender, height, lost_date, picture, lost_location,
-         remarks, datasource, source_id, update_time) VALUES
+        remarks, datasource, source_id, update_time) VALUES
         (#{losterUuid}, #{losterName}, #{age}, #{losterBirthday}, #{gender}, #{height}, #{lostDate}, #{picture},
-                            #{lostLocation}, #{remarks}, #{datasource}, #{sourceId}, #{updateTime})
+        #{lostLocation}, #{remarks}, #{datasource}, #{sourceId}, #{updateTime})
     </insert>
 
     <select id="queryBySourceId" resultType="com.youtu.entity.Loster">
-        SELECT loster_uuid, loster_name, picture, remarks
+        SELECT
+        loster_uuid,
+        loster_name,
+        picture,
+        remarks
         FROM loster
         WHERE source_id = #{sourceId};
+    </select>
+
+    <select id="queryByLosterUuid" resultType="com.youtu.entity.Loster">
+        SELECT *
+        FROM loster
+        WHERE loster_uuid = #{losterUuid};
     </select>
 
     <update id="updateLoster">
         UPDATE loster
         SET loster_name = #{losterName}, age = #{age}, loster_birthday = #{losterBirthday}, gender = #{gender},
-            height = #{height}, lost_date = #{lostDate}, picture = #{picture}, lost_location = #{lostLocation},
-            remarks = #{remarks}, update_time = #{updateTime}
+            height      = #{height}, lost_date = #{lostDate}, picture = #{picture}, lost_location = #{lostLocation},
+            remarks     = #{remarks}, update_time = #{updateTime}
         WHERE loster_uuid = #{losterUuid} AND source_id = #{sourceId};
     </update>
 
