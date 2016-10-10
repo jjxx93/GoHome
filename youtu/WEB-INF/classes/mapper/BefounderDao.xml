@@ -52,4 +52,9 @@
         FROM befounder
         WHERE age >= #{minAge} AND age <![CDATA[ <= ]]> #{maxAge} AND gender = #{gender};
     </select>
+
+    <delete id="deleteBefounder">
+        DELETE befounder
+        WHERE uuid = #{uuid} AND founder_uuid = #{founderUuid};
+    </delete>
 </mapper>
