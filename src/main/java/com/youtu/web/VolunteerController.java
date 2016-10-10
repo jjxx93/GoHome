@@ -85,6 +85,7 @@ public class VolunteerController {
 
             jsonObject.put("result", Constants.GET_BEFOUNDER_SUCCESS);
             jsonObject.put("msg", Msgs.GET_BEFOUNDER_SUCCESS);
+            jsonObject.put("listLength", befounderList.size());
             jsonObject.put("list", befounderList);
         }
 
