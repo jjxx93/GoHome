@@ -10,9 +10,11 @@ public class Befounder {
     private String foundLocation;
     private String foundTime;
     private String picture;
+    private String remarks;
     private int age;
     private int range;
     private int gender;
+    private int state;
 
     @Override
     public String toString() {
@@ -23,9 +25,11 @@ public class Befounder {
                 ", foundLocation='" + foundLocation + '\'' +
                 ", foundTime='" + foundTime + '\'' +
                 ", picture='" + picture + '\'' +
+                ", remarks='" + remarks + '\'' +
                 ", age=" + age +
                 ", range=" + range +
                 ", gender=" + gender +
+                ", state=" + state +
                 '}';
     }
 
@@ -99,5 +103,21 @@ public class Befounder {
 
     public void setGender(int gender) {
         this.gender = gender;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
     }
 }
