@@ -23,14 +23,10 @@
         WHERE founder_uuid = #{founderUuid};
     </select>
 
-    <select id="queryByUuidAndFounderUuid" resultType="com.youtu.entity.Befounder">
-        SELECT
-        picture,
-        age,
-        age_range,
-        gender
+    <select id="queryByUuid" resultType="com.youtu.entity.Befounder">
+        SELECT *
         FROM befounder
-        WHERE uuid = #{uuid} AND founder_uuid = #{founderUuid};
+        WHERE uuid = #{uuid};
     </select>
 
     <update id="uploadAgeAndGender">

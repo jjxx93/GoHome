@@ -14,4 +14,9 @@
         FROM matches
         WHERE user_uuid = #{userUuid} AND befounder_uuid = #{befounderUuid}
     </select>
+
+    <delete id="deleteMatches">
+        DELETE matches
+        WHERE user_uuid = #{userUuid} AND befounder_uuid = #{befounderUuid}
+    </delete>
 </mapper>
