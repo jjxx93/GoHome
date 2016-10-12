@@ -43,9 +43,6 @@ public class VolunteerController {
     @Autowired
     private MatchesService matchesService;
 
-//    @Autowired      //自动注入
-//    private HttpResponse response;
-
     // 添加疑似走失者
     @RequestMapping(value = "/addBefounder", method = RequestMethod.POST)
     @ResponseBody
