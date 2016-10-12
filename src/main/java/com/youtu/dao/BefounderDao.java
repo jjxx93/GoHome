@@ -20,7 +20,8 @@ public interface BefounderDao {
      * @return
      */
     int insertBefounder(@Param("uuid") String uuid, @Param("founderUuid") String founderUuid, @Param("foundLocation") String foundLocation,
-                        @Param("foundTime") String foundTime, @Param("picture") String picture,
+                        @Param("foundTime") String foundTime, @Param("picture") String picture, @Param("age") int age,
+                        @Param("ageRange") int ageRange, @Param("gender") String gender,
                         @Param("remarks") String remarks, @Param("state") String state);
 
     /**

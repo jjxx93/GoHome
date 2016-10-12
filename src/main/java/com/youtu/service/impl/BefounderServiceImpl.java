@@ -14,6 +14,7 @@ import com.youtu.dao.MatchesDao;
 import com.youtu.entity.Befounder;
 import com.youtu.entity.Face;
 import com.youtu.service.BefounderService;
+import org.apache.http.HttpResponse;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,11 +32,14 @@ public class BefounderServiceImpl implements BefounderService {
     @Autowired      //自动注入
     private MatchesDao matchesDao;
 
+
     @Override
-    public Boolean addBefounder(String founderUuid, String foundLocation, String foundTime, String picture,
-                                String remarks, String state) {
+    public Boolean addBefounder(String founderUuid, String foundLocation, String foundTime, String picture, int age,
+                                int ageRange, String gender, String remarks, String state) {
         String uuid = GetUUIDNumber.createUUIDNumber();
-        if (befounderDao.insertBefounder(uuid, founderUuid, foundLocation, foundTime, picture, remarks, state) > 0) {
+
+        if (befounderDao.insertBefounder(uuid, founderUuid, foundLocation, foundTime, picture, age, ageRange, gender,
+                remarks, state) > 0) {
             return true;
         }
         return false;

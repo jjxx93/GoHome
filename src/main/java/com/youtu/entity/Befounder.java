@@ -12,7 +12,7 @@ public class Befounder {
     private String picture;
     private String remarks;
     private int age;
-    private int range;
+    private int ageRange;
     private int gender;
     private int state;
 
@@ -27,7 +27,7 @@ public class Befounder {
                 ", picture='" + picture + '\'' +
                 ", remarks='" + remarks + '\'' +
                 ", age=" + age +
-                ", range=" + range +
+                ", range=" + ageRange +
                 ", gender=" + gender +
                 ", state=" + state +
                 '}';
@@ -89,12 +89,12 @@ public class Befounder {
         this.age = age;
     }
 
-    public int getRange() {
-        return range;
+    public int getAgeRange() {
+        return ageRange;
     }
 
-    public void setRange(int range) {
-        this.range = range;
+    public void setAgeRange(int ageRange) {
+        this.ageRange = ageRange;
     }
 
     public int getGender() {

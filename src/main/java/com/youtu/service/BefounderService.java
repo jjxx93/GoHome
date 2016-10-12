@@ -20,8 +20,8 @@ public interface BefounderService {
      * @param picture
      * @return
      */
-    Boolean addBefounder(String founderUuid, String foundLocation, String foundTime, String picture,
-                         String remarks, String state);
+    Boolean addBefounder(String founderUuid, String foundLocation, String foundTime, String picture, int age,
+                         int ageRange, String gender, String remarks, String state);
 
     /**
      * 查找某用户上传的全部疑似走失者信息

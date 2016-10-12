@@ -78,7 +78,9 @@ public class LosterServiceImpl implements LosterService {
         JSONObject jsonObject = new JSONObject();
 
         try {
+            // 分析照片
             Face face1 = FaceppUtils.detectUrl(picture);
+            // 根据照片年龄和性别查找数据
             List<Loster> losterList = losterService.matchLosterByAgeAndGender(face1.getAge(), face1.getRange(), face1.getGender());
             //System.out.println(losterList);
 
