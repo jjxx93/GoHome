@@ -14,7 +14,6 @@ import com.youtu.dao.MatchesDao;
 import com.youtu.entity.Befounder;
 import com.youtu.entity.Face;
 import com.youtu.service.BefounderService;
-import org.apache.http.HttpResponse;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

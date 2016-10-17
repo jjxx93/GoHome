@@ -13,7 +13,6 @@ import com.youtu.dao.LosterDao;
 import com.youtu.entity.Face;
 import com.youtu.entity.Loster;
 import com.youtu.service.LosterService;
-import com.youtu.service.UserService;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
