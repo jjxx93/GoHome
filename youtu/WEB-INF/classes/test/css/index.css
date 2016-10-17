@@ -1,0 +1,25 @@
+body {
+    background: #e9ecf3;
+}
+
+.left-part {
+    width: 140px;
+    position: absolute;
+}
+
+.left-part img {
+    width: 100px;
+    height: 100px;
+    margin-top: -20px;
+}
+
+.right-part {
+    position: relative;
+    margin-left: 110px;
+    padding-left: 10px;
+    margin-top: -20px;
+}
+
+.right-part ul li {
+    padding-bottom: 10px;
+}
