@@ -35,26 +35,28 @@ public class YoutuController {
     //获取列表页
     @RequestMapping(value = "/losterList", method = RequestMethod.GET)
     @ResponseBody
-    //String 指定返回的视图页面名称，结合设置的返回地址路径加上页面名称后缀即可访问到
-    public Map<String, Object> getLosterList(@RequestParam(value = "updateTime", required = false) String updateTime,
+    public Map<String, Object> getLosterList(@RequestParam(value = "latestTime", required = false) String latestTime,
+                                             @RequestParam(value = "earliestTime", required = false) String earliestTime,
                                              @RequestParam(value = "rows", required = false, defaultValue = "10") int rows) {
         JSONObject jsonObject = new JSONObject();
         List<Loster> losterList;
 
-        if (updateTime == null) {           // 没有传入updateTime
-            losterList = losterService.getLosterList(rows);
+        if (latestTime != null) {           // 要查找最新消息
+            losterList = losterService.getLosterListByUpdateTime(rows, latestTime);
+        } else if (earliestTime != null) {  // 要查找earliestTime时间之前的消息
+            losterList = losterService.getLosterListByUpdateTime(earliestTime, rows);
         } else {
-            losterList = losterService.getLosterListByUpdateTime(updateTime, rows);
+            losterList = losterService.getLosterList(rows);
         }
 
         if (losterList.isEmpty()) {        // 未获取到消息
             jsonObject.put("result", Constants.GET_LOSTER_LIST_FAIL);
             jsonObject.put("msg", Msgs.GET_LOSTER_LIST_FAIL);
-        } else {                           // 获取到了消息
+        } else {                           // 获取到消息
             jsonObject.put("result", Constants.GET_LOSTER_LIST_SUCCESS);
             jsonObject.put("msg", Msgs.GET_LOSTER_LIST_SUCCESS);
             jsonObject.put("listLength", losterList.size());
-            jsonObject.put("latestUpdateTime", losterList.get(0).getUpdateTime());
+            //jsonObject.put("latestUpdateTime", losterList.get(0).getUpdateTime());
 
             JSONArray jsonArray = new JSONArray();
             for (Loster loster : losterList) {

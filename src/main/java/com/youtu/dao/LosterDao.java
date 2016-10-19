@@ -99,5 +99,13 @@ public interface LosterDao {
      * @return
      * @Param int rows
      */
-    List<Loster> queryLosterListByUpdateTime(@Param("updateTime") String updateTime, @Param("rows") int rows);
+    List<Loster> queryLosterListBeforeUpdateTime(@Param("updateTime") String updateTime, @Param("rows") int rows);
+
+    /**
+     * 获取最新的rows条走失者信息列表
+     *
+     * @return
+     * @Param int rows
+     */
+    List<Loster> queryLosterListAfterUpdateTime(@Param("updateTime") String updateTime, @Param("rows") int rows);
 }

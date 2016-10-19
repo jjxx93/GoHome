@@ -105,4 +105,12 @@ public interface LosterService {
      * @return
      */
     List<Loster> getLosterListByUpdateTime(String updateTime, int rows);
+
+    /**
+     * 获取updateTime时间之前的rows条走失者信息列表
+     *
+     * @param rows
+     * @return
+     */
+    List<Loster> getLosterListByUpdateTime(int rows, String updateTime);
 }

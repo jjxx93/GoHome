@@ -176,6 +176,11 @@ public class LosterServiceImpl implements LosterService {
 
     @Override
     public List<Loster> getLosterListByUpdateTime(String updateTime, int rows) {
-        return losterDao.queryLosterListByUpdateTime(updateTime, rows);
+        return losterDao.queryLosterListAfterUpdateTime(updateTime, rows);
+    }
+
+    @Override
+    public List<Loster> getLosterListByUpdateTime(int rows, String updateTime) {
+        return losterDao.queryLosterListBeforeUpdateTime(updateTime, rows);
     }
 }

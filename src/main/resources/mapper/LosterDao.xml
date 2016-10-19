@@ -58,9 +58,17 @@
         ORDER BY update_time DESC LIMIT #{rows};
     </select>
 
-    <select id="queryLosterListByUpdateTime" resultType="com.youtu.entity.Loster">
-        SELECT *
-        FROM loster WHERE datasource = '5' AND update_time <![CDATA[ < ]]> #{updateTime}
+    <select id="queryLosterListBeforeUpdateTime" resultType="com.youtu.entity.Loster">
+        SELECT * FROM loster
+        WHERE datasource = '5' AND update_time <![CDATA[ < ]]> #{updateTime}
         ORDER BY update_time DESC LIMIT ${rows};
+    </select>
+
+    <select id="queryLosterListAfterUpdateTime" resultType="com.youtu.entity.Loster">
+        SELECT *
+        FROM loster
+        WHERE datasource = '5' AND update_time <![CDATA[ > ]]> #{updateTime}
+        ORDER BY update_time DESC
+        LIMIT ${rows};
     </select>
 </mapper>

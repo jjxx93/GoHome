@@ -34,7 +34,8 @@ public class LosterDaoTest {
 
     @Test
     public void queryLosterListByUpdateTime() throws Exception {
-        List<Loster> losters = losterDao.queryLosterListByUpdateTime("2017-10-06 20:42:46-943", 5);
+        //List<Loster> losters = losterDao.queryLosterListBeforeUpdateTime("2016-10-06 20:42:46-943", 5);
+        List<Loster> losters = losterDao.queryLosterListAfterUpdateTime("2016-10-06 20:42:46-943", 5);
 
         for (Loster loster : losters) {
             System.out.println(loster.getUpdateTime());
