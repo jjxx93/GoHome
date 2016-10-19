@@ -52,4 +52,5 @@ public interface UserDao {
      * @param headImg
      */
     int updateHeadImg(@Param("userUuid") String userUuid, @Param("headImg") String headImg);
+
 }

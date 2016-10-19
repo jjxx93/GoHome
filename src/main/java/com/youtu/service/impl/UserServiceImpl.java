@@ -76,5 +76,8 @@ public class UserServiceImpl implements UserService {
         return false;
     }
 
-
+    @Override
+    public User getUserByUserUuid(String userUuid) {
+        return userDao.queryByUserUuid(userUuid);
+    }
 }

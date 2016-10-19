@@ -1,9 +1,11 @@
 package com.youtu.web;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.youtu.common.Constants;
 import com.youtu.common.Msgs;
 import com.youtu.entity.Loster;
+import com.youtu.entity.User;
 import com.youtu.service.LosterService;
 import com.youtu.service.UserService;
 import org.slf4j.Logger;
@@ -45,18 +47,30 @@ public class YoutuController {
             losterList = losterService.getLosterListByUpdateTime(updateTime, rows);
         }
 
-        if (losterList.isEmpty()) {
+        if (losterList.isEmpty()) {        // 未获取到消息
             jsonObject.put("result", Constants.GET_LOSTER_LIST_FAIL);
             jsonObject.put("msg", Msgs.GET_LOSTER_LIST_FAIL);
-        } else {
+        } else {                           // 获取到了消息
             jsonObject.put("result", Constants.GET_LOSTER_LIST_SUCCESS);
             jsonObject.put("msg", Msgs.GET_LOSTER_LIST_SUCCESS);
             jsonObject.put("listLength", losterList.size());
-            jsonObject.put("list", losterList);
             jsonObject.put("latestUpdateTime", losterList.get(0).getUpdateTime());
+
+            JSONArray jsonArray = new JSONArray();
+            for (Loster loster : losterList) {
+                if (loster.getDatasource() == Constants.USER) {              // 数据来源为用户，则返回用户信息
+                    User user = userService.getUserByUserUuid(loster.getSourceId());
+                    JSONObject tempJsonObject = new JSONObject();
+                    tempJsonObject.put("loster", loster);
+                    tempJsonObject.put("user", user);
+                    jsonArray.add(tempJsonObject);
+                } else {
+                    jsonArray.add(loster);
+                }
+            }
+
+            jsonObject.put("list", jsonArray);
         }
-
-
 
         return jsonObject;
     }

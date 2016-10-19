@@ -45,4 +45,11 @@ public interface UserService {
      * @return
      */
     Boolean changeHeadImg(String userUuid, String headImg);
+
+    /**
+     * 根据userUuid查找用户
+     *
+     * @return
+     */
+    User getUserByUserUuid(String userUuid);
 }

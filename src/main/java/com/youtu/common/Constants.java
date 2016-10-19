@@ -106,4 +106,9 @@ public class Constants {
     public static final String Qiniu_ACCESS_KEY = "NrZVEweKI24oovDg2o1gjpr8zAuwDGo8mBsbfVOf";
     public static final String Qiniu_SECRET_KEY = "rZMwav3DMV7wZcH2xtr2qyxQSphYn5UIHZ__JVbU";
     public static String Qiniu_Youtu_Upload_Token = "NrZVEweKI24oovDg2o1gjpr8zAuwDGo8mBsbfVOf:2YxWDF8aMP1nrTEKdYhxhCD4A6U=:eyJzY29wZSI6InlvdXR1IiwiZGVhZGxpbmUiOjUwNzUxMzYyOTZ9";
+
+    // 走失者数据来源
+    public final static int BAO_BEI_HUI_JIA = 0;
+    public final static int WAITING_FOR_ME = 1;
+    public final static int USER = 5;
 }
