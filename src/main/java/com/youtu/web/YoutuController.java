@@ -42,9 +42,9 @@ public class YoutuController {
         List<Loster> losterList;
 
         if (latestTime != null) {           // 要查找最新消息
-            losterList = losterService.getLosterListByUpdateTime(rows, latestTime);
+            losterList = losterService.getLosterListByUpdateTime(latestTime, rows);
         } else if (earliestTime != null) {  // 要查找earliestTime时间之前的消息
-            losterList = losterService.getLosterListByUpdateTime(earliestTime, rows);
+            losterList = losterService.getLosterListByUpdateTime(rows, earliestTime);
         } else {
             losterList = losterService.getLosterList(rows);
         }
