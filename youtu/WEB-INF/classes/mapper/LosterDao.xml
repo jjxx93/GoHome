@@ -65,8 +65,10 @@
     </select>
 
     <select id="queryLosterListAfterUpdateTime" resultType="com.youtu.entity.Loster">
-        SELECT * FROM loster
+        SELECT *
+        FROM loster
         WHERE datasource = '5' AND update_time <![CDATA[ > ]]> #{updateTime}
-        ORDER BY update_time DESC LIMIT ${rows};
+        ORDER BY update_time DESC
+        LIMIT ${rows};
     </select>
 </mapper>
