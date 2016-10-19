@@ -89,4 +89,20 @@ public interface LosterService {
      * @return
      */
     Boolean deleteLoster(String userUuid, String losterUuid);
+
+    /**
+     * 获取最新的rows条走失者信息列表
+     *
+     * @param rows
+     * @return
+     */
+    List<Loster> getLosterList(int rows);
+
+    /**
+     * 获取最新的rows条走失者信息列表
+     *
+     * @param rows
+     * @return
+     */
+    List<Loster> getLosterListByUpdateTime(String updateTime, int rows);
 }

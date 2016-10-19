@@ -35,6 +35,10 @@ public class Msgs {
     public final static String GET_LOSTER_SUCCESS = "查询走失者信息成功";
     public final static String GET_LOSTER_FAIL = "未查询到走失者信息";
 
+    // 查询走失者列表信息
+    public final static String GET_LOSTER_LIST_SUCCESS = "查询走失者列表信息成功";
+    public final static String GET_LOSTER_LIST_FAIL = "查询走失者列表信息失败";
+
     // 修改走失者信息
     public final static String MODIFY_LOSTER_SUCCESS = "修改走失者信息成功";
     public final static String MODIFY_LOSTER_FAIL = "修改走失者信息失败";

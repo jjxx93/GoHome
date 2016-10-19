@@ -52,7 +52,7 @@
 </div>
 <script>
     $(function () {
-        $.get("http://youtu.204d.cn/volunteer/getBefounder?userUuid=440f068e4e3649588994d7d627a1631b", function (data) {
+        $.get("http://youtu.204d.cn/volunteer/getBefounder?userUuid=440f068e4e3649588994d7d627a1631b&uuid=3fc169cc76844f459dbb85535671ed11", function (data) {
             $('#img').attr('src', data.befounder.picture);
             $('.gender').html(data.befounder.gender === 0 ? '女' : '男');
             $('.age').html(data.befounder.age);

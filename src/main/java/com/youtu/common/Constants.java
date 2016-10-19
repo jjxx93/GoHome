@@ -47,6 +47,10 @@ public class Constants {
     public final static int GET_LOSTER_SUCCESS = 3;
     public final static int GET_LOSTER_FAIL = 4;
 
+    // 查询走失者列表信息
+    public final static int GET_LOSTER_LIST_SUCCESS = 3;
+    public final static int GET_LOSTER_LIST_FAIL = 4;
+
     // 修改走失者信息
     public final static int MODIFY_LOSTER_SUCCESS = 3;
     public final static int MODIFY_LOSTER_FAIL = 4;

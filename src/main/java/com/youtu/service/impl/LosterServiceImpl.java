@@ -20,7 +20,6 @@ import org.springframework.stereotype.Service;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 
 /**
@@ -168,5 +167,15 @@ public class LosterServiceImpl implements LosterService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public List<Loster> getLosterList(int rows) {
+        return losterDao.queryLosterList(rows);
+    }
+
+    @Override
+    public List<Loster> getLosterListByUpdateTime(String updateTime, int rows) {
+        return losterDao.queryLosterListByUpdateTime(updateTime, rows);
     }
 }

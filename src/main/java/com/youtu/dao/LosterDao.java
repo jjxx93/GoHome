@@ -84,4 +84,20 @@ public interface LosterDao {
      * @return
      */
     int deleteLoster(@Param("losterUuid") String losterUuid, @Param("sourceId") String sourceId);
+
+    /**
+     * 获取最新的rows条走失者信息列表
+     *
+     * @param rows
+     * @return
+     */
+    List<Loster> queryLosterList(@Param("rows") int rows);
+
+    /**
+     * 获取最新的rows条走失者信息列表
+     *
+     * @return
+     * @Param int rows
+     */
+    List<Loster> queryLosterListByUpdateTime(@Param("updateTime") String updateTime, @Param("rows") int rows);
 }

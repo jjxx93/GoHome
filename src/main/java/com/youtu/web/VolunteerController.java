@@ -54,7 +54,7 @@ public class VolunteerController {
         if (jsonObject == null) {
             jsonObject = new JSONObject();
 
-            System.out.println(age + ' ' + ageRange + ' ' + gender + ' ' + remarks);
+            //System.out.println(age + ' ' + ageRange + ' ' + gender + ' ' + remarks);
             if (befounderService.addBefounder(userUuid, foundLocation, foundTime, picture, age, ageRange, gender,
                     remarks, "0")) {
                 jsonObject.put("result", Constants.ADD_BEFOUNDER_SUCCESS);
