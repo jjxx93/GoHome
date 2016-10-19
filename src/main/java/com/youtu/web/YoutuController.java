@@ -58,15 +58,18 @@ public class YoutuController {
 
             JSONArray jsonArray = new JSONArray();
             for (Loster loster : losterList) {
-                if (loster.getDatasource() == Constants.USER) {              // 数据来源为用户，则返回用户信息
-                    User user = userService.getUserByUserUuid(loster.getSourceId());
-                    JSONObject tempJsonObject = new JSONObject();
-                    tempJsonObject.put("loster", loster);
-                    tempJsonObject.put("user", user);
-                    jsonArray.add(tempJsonObject);
-                } else {
-                    jsonArray.add(loster);
-                }
+                User user = userService.getUserByUserUuid(loster.getSourceId());
+                JSONObject tempJsonObject = new JSONObject();
+                tempJsonObject.put("losterUuid", loster.getLosterUuid());
+                tempJsonObject.put("losterName", loster.getLosterName());
+                tempJsonObject.put("age", loster.getAge());
+                tempJsonObject.put("lostDate", loster.getLostDate());
+                tempJsonObject.put("picture", loster.getPicture());
+                tempJsonObject.put("remarks", loster.getRemarks());
+                tempJsonObject.put("updateTime", loster.getUpdateTime());
+                tempJsonObject.put("userName", user.getUserName());
+                tempJsonObject.put("userHeadImg", user.getHeadImg());
+                jsonArray.add(tempJsonObject);
             }
 
             jsonObject.put("list", jsonArray);

@@ -25,7 +25,7 @@ public class LosterDaoTest {
 
     @Test
     public void queryLosterList() throws Exception {
-        List<Loster> losters = losterDao.queryLosterList(5);
+        List<Loster> losters = losterDao.queryLosterList(10);
 
         for (Loster loster : losters) {
             System.out.println(loster.getUpdateTime());
