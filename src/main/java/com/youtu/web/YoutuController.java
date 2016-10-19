@@ -68,6 +68,7 @@ public class YoutuController {
                 tempJsonObject.put("remarks", loster.getRemarks());
                 tempJsonObject.put("updateTime", loster.getUpdateTime());
                 tempJsonObject.put("userName", user.getUserName());
+                tempJsonObject.put("userNickName", user.getNickName());
                 tempJsonObject.put("userHeadImg", user.getHeadImg());
                 jsonArray.add(tempJsonObject);
             }
