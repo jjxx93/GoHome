@@ -17,7 +17,7 @@
     </select>
 
     <select id="queryByUserUuid" parameterType="String" resultType="com.youtu.entity.User">
-        SELECT user_uuid,user_name,examine_state
+        SELECT *
         FROM user
         WHERE user_uuid = #{userUuid};
     </select>
