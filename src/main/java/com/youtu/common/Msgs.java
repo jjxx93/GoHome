@@ -79,4 +79,20 @@ public class Msgs {
     // 获取匹配表信息
     public final static String GET_MATCCHES_SUCCESS = "获取匹配信息成功";
     public final static String GET_MATCHES_FAIL = "无匹配信息";
+
+    // 新增talks
+    public final static String ADD_TALKS_SUCCESS = "插入数据成功";
+    public final static String ADD_TALKS_FAIL = "插入数据失败";
+
+    // 删除talks
+    public final static String DELETE_TALKS_SUCCESS = "删除成功";
+    public final static String DELETE_TALKS_FAIL = "删除失败";
+
+    // 修改talks
+    public final static String MODIFY_TALKS_SUCCESS = "修改成功";
+    public final static String MODIFY_TALKS_FAIL = "修改失败";
+
+    // 查找talks
+    public final static String GET_TALKS_SUCCESS = "查找成功";
+    public final static String GET_TALKS_FAIL = "查找失败";
 }

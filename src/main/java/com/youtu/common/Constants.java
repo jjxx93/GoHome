@@ -92,6 +92,22 @@ public class Constants {
     public final static int GET_MATCCHES_SUCCESS = 3;
     public final static int GET_MATCHES_FAIL = 4;
 
+    // 新增talks
+    public final static int ADD_TALKS_SUCCESS = 0;
+    public final static int ADD_TALKS_FAIL = 1;
+
+    // 删除talks
+    public final static int DELETE_TALKS_SUCCESS = 0;
+    public final static int DELETE_TALKS_FAIL = 1;
+
+    // 修改talks
+    public final static int MODIFY_TALKS_SUCCESS = 0;
+    public final static int MODIFY_TALKS_FAIL = 1;
+
+    // 查找talks
+    public final static int GET_TALKS_SUCCESS = 0;
+    public final static int GET_TALKS_FAIL = 1;
+
     // 优图账号信息
     public static final String APP_ID = "10034230";
     public static final String SECRET_ID = "AKIDcwnh2zRMOmTg8ZGLngGRUwxaimYKtKwV";

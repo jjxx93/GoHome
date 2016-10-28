@@ -19,7 +19,7 @@
 
     <!-- 映射静态资源 -->
     <!--后面img引用图片路径要这个静态映射-->
-    <mvc:resources location="img/" mapping="/img/**"/>
+    <mvc:resources location="resource/" mapping="/resource/**"/>
 
     <!--2.静态资源默认servlet配置-->
     <!--①加入对静态资源的处理：js、gif、png-->
