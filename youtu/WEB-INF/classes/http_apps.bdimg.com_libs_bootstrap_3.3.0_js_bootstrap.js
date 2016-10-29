@@ -1417,7 +1417,7 @@ if (typeof jQuery === 'undefined') {
                     .one('bsTransitionEnd', complete)
                     .emulateTransitionEnd(Tooltip.TRANSITION_DURATION) :
                 complete()
-        }
+    }
     }
 
     Tooltip.prototype.applyPlacement = function (offset, placement) {
