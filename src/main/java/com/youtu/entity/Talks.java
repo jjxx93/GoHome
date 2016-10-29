@@ -12,14 +12,17 @@ public class Talks {
     private String createTime;
     private String updateTime;
 
-    public Talks(int id, String uuid, String picture, String texts, String userUuid, String createTime, String updateTime) {
-        this.id = id;
-        Uuid = uuid;
-        this.picture = picture;
-        this.texts = texts;
-        this.userUuid = userUuid;
-        this.createTime = createTime;
-        this.updateTime = updateTime;
+    @Override
+    public String toString() {
+        return "Talks{" +
+                "id=" + id +
+                ", Uuid='" + Uuid + '\'' +
+                ", picture='" + picture + '\'' +
+                ", texts='" + texts + '\'' +
+                ", userUuid='" + userUuid + '\'' +
+                ", createTime='" + createTime + '\'' +
+                ", updateTime='" + updateTime + '\'' +
+                '}';
     }
 
     public int getId() {

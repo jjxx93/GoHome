@@ -32,10 +32,10 @@ public class TalksController {
         String uuid = GetUUIDNumber.createUUIDNumber();      // 获取TalkUuid
         talks.setUuid(uuid);                       // 设置TalkUuid
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String nowTime = simpleDateFormat.format(new Date());
-        talks.setCreateTime(nowTime);        // 设置CreateTime
-        talks.setUpdateTime(nowTime);        // 设置UpdateTime
+        SimpleDateFormat createTimeDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat updateTimeDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        talks.setCreateTime(createTimeDateFormat.format(new Date()));        // 设置CreateTime
+        talks.setUpdateTime(updateTimeDateFormat.format(new Date()));        // 设置UpdateTime
 
         if (talksService.addTalks(talks)) {
             jsonObject.put("result", Constants.ADD_TALKS_SUCCESS);
@@ -68,7 +68,7 @@ public class TalksController {
     public Map<String, Object> modifyTalk(Talks talks) {
         JSONObject jsonObject = new JSONObject();
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         talks.setUpdateTime(simpleDateFormat.format(new Date()));    // 设置CreateTime
 
         if (talksService.modifyTalks(talks)) {
