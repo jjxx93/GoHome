@@ -1,19 +1,11 @@
 package com.youtu.service;
 
-import com.facepp.http.HttpRequests;
-import com.facepp.http.PostParameters;
-import com.youtu.common.Constants;
-import com.youtu.common.FaceppUtils;
-import com.youtu.entity.Face;
+import cn.gohome.service.LosterService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.time.Year;
-import java.util.Calendar;
-import java.util.List;
 
 /**
  * Created by jiax on 2016/9/21.

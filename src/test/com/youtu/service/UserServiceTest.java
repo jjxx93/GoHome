@@ -1,16 +1,14 @@
 package com.youtu.service;
 
-import com.youtu.dao.UserDao;
+import cn.gohome.dao.UserDao;
+import cn.gohome.service.UserService;
 import com.youtu.dao.UserDaoTest;
-import com.youtu.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by jiax on 2016/8/23.

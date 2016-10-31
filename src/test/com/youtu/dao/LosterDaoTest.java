@@ -1,6 +1,7 @@
 package com.youtu.dao;
 
-import com.youtu.entity.Loster;
+import cn.gohome.dao.LosterDao;
+import cn.gohome.entity.Loster;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -9,8 +10,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by jiax on 2016/10/18.

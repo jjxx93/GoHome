@@ -3,32 +3,32 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.youtu.dao.UserDao">
+<mapper namespace="cn.gohome.dao.UserDao">
     <insert id="insertUser" parameterType="String">
         INSERT INTO user
         (user_name,password,user_uuid) VALUES
         (#{userName}, #{password}, #{userUuid})
     </insert>
 
-    <select id="queryByUserName" parameterType="String" resultType="com.youtu.entity.User">
+    <select id="queryByUserName" parameterType="String" resultType="cn.gohome.entity.User">
         SELECT user_uuid,user_name
         FROM user
         WHERE user_name = #{userName};
     </select>
 
-    <select id="queryByUserUuid" parameterType="String" resultType="com.youtu.entity.User">
+    <select id="queryByUserUuid" parameterType="String" resultType="cn.gohome.entity.User">
         SELECT *
         FROM user
         WHERE user_uuid = #{userUuid};
     </select>
 
-    <select id="queryByUserNameAndPassword" parameterType="String" resultType="com.youtu.entity.User">
+    <select id="queryByUserNameAndPassword" parameterType="String" resultType="cn.gohome.entity.User">
         SELECT user_name,user_uuid,head_img
         FROM user
         WHERE user_name = #{userName} AND password = #{password};
     </select>
 
-    <select id="queryByUserUuidAndPassword" parameterType="String" resultType="com.youtu.entity.User">
+    <select id="queryByUserUuidAndPassword" parameterType="String" resultType="cn.gohome.entity.User">
         SELECT user_name,user_uuid
         FROM user
         WHERE user_uuid = #{userUuid} AND password = #{password};

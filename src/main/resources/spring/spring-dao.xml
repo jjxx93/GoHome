@@ -41,7 +41,7 @@
         <!--classpath代指java,resource文件夹-->
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <!--扫描entity包 使用别名-->
-        <property name="typeAliasesPackage" value="com.youtu.entity"/>
+        <property name="typeAliasesPackage" value="cn.gohome.entity"/>
         <!--扫描sql配置文件:mapper需要的xml文件-->
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
     </bean>
@@ -51,7 +51,7 @@
         <!--注入sqlSessionFactory-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!--给出需要扫描DAO接口包，实现这些接口-->
-        <property name="basePackage" value="com.youtu.dao"/>
+        <property name="basePackage" value="cn.gohome.dao"/>
     </bean>
 
 </beans>
