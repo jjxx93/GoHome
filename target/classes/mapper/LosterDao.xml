@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gohome.dao.LosterDao">
+    <select id="queryPictureByAgeAndGender" resultType="String">
+        SELECT Loster_uuid, picture
+        FROM loster
+        WHERE age = #{age} AND gender = #{gender};
+    </select>
+
+    <select id="queryPictureByMaxMinAgeAndGender" resultType="cn.gohome.entity.Loster">
+        SELECT picture, loster_uuid
+        FROM loster
+        WHERE age >= #{minAge} AND age <![CDATA[ <= ]]> #{maxAge} AND gender = #{gender};
+    </select>
+
+    <insert id="insertLoster">
+        INSERT INTO loster
+        (loster_uuid, loster_name, age, loster_birthday, gender, height, lost_date, picture, lost_location,
+        remarks, datasource, source_id, update_time) VALUES
+        (#{losterUuid}, #{losterName}, #{age}, #{losterBirthday}, #{gender}, #{height}, #{lostDate}, #{picture},
+        #{lostLocation}, #{remarks}, #{datasource}, #{sourceId}, #{updateTime})
+    </insert>
+
+    <select id="queryBySourceId" resultType="cn.gohome.entity.Loster">
+        SELECT
+        loster_uuid,
+        loster_name,
+        picture,
+        remarks
+        FROM loster
+        WHERE source_id = #{sourceId};
+    </select>
+
+    <select id="queryByLosterUuid" resultType="cn.gohome.entity.Loster">
+        SELECT *
+        FROM loster
+        WHERE loster_uuid = #{losterUuid};
+    </select>
+
+    <update id="updateLoster">
+        UPDATE loster
+        SET loster_name = #{losterName}, age = #{age}, loster_birthday = #{losterBirthday}, gender = #{gender},
+            height      = #{height}, lost_date = #{lostDate}, picture = #{picture}, lost_location = #{lostLocation},
+            remarks     = #{remarks}, update_time = #{updateTime}
+        WHERE loster_uuid = #{losterUuid} AND source_id = #{sourceId};
+    </update>
+
+    <delete id="deleteLoster">
+        DELETE FROM loster
+        WHERE loster_uuid = #{losterUuid} AND source_id = #{sourceId};
+    </delete>
+
+    <select id="queryLosterList" resultType="cn.gohome.entity.Loster">
+        SELECT *
+        FROM loster WHERE datasource = '5'
+        ORDER BY update_time DESC LIMIT #{rows};
+    </select>
+
+    <select id="queryLosterListBeforeUpdateTime" resultType="cn.gohome.entity.Loster">
+        SELECT * FROM loster
+        WHERE datasource = '5' AND update_time <![CDATA[ < ]]> #{updateTime}
+        ORDER BY update_time DESC LIMIT ${rows};
+    </select>
+
+    <select id="queryLosterListAfterUpdateTime" resultType="cn.gohome.entity.Loster">
+        SELECT * FROM loster
+        WHERE datasource = '5' AND update_time <![CDATA[ > ]]> #{updateTime}
+        ORDER BY update_time DESC
+        LIMIT ${rows};
+    </select>
+</mapper>
