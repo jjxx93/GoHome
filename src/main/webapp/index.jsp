@@ -9,7 +9,7 @@
 <head>
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
     <base href="<%=basePath%>">
-    <title>欢迎光临</title>
+    <title>欢迎光临\(^o^)/~</title>
 </head>
 <body>
 <center>
