@@ -2,20 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/entity/Status.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/CommonService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/CommonServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/GohomeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/cn/gohome/service/CommonServiceTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/YoutuController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/YoutuController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/youtu/dao/LosterDaoTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/youtu/dao/UserDaoTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/youtu/service/BefounderServiceTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/youtu/service/LosterServiceTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/youtu/service/UserServiceTest.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/dao/BefounderDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/dao/BefounderDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/dao/LosterDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/dao/LosterDao.class" />
@@ -30,30 +16,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/TalksController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/TalksController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/UserController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/VolunteerController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/VolunteerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/TalksDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/TalksDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/entity/Befounder.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/entity/Befounder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/TalksServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/TalksServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/LosterDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/LosterDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/MatchDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MatchDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/TalksDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TalksDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/BefounderDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/BefounderDao.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/LosterDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/LosterDao.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/MatchDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/MatchDao.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/TalksDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/TalksDao.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/com/youtu/dao/LosterDaoTest.java" afterPath="$PROJECT_DIR$/src/test/cn/gohome/dao/LosterDaoTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/com/youtu/dao/UserDaoTest.java" afterPath="$PROJECT_DIR$/src/test/cn/gohome/dao/UserDaoTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/com/youtu/service/BefounderServiceTest.java" afterPath="$PROJECT_DIR$/src/test/cn/gohome/service/BefounderServiceTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/com/youtu/service/LosterServiceTest.java" afterPath="$PROJECT_DIR$/src/test/cn/gohome/service/LosterServiceTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/com/youtu/service/UserServiceTest.java" afterPath="$PROJECT_DIR$/src/test/cn/gohome/service/UserServiceTest.java" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -135,7 +103,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/common/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
@@ -143,6 +111,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -214,7 +192,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/main" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -225,7 +203,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/web/YoutuController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/web/GohomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/CommonService.java" />
@@ -245,6 +222,7 @@
         <option value="$PROJECT_DIR$/src/test/cn/gohome/service/CommonServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/CommonServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/common/Utils.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -951,7 +929,7 @@
       <workItem from="1478177500398" duration="31000" />
       <workItem from="1478177534690" duration="9210000" />
       <workItem from="1478330586028" duration="3203000" />
-      <workItem from="1478334748235" duration="2668000" />
+      <workItem from="1478334748235" duration="2727000" />
     </task>
     <task id="LOCAL-00001" summary="11.3 修改代码结构，增加注释">
       <created>1478177774145</created>
@@ -960,7 +938,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478177774145</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="11.5 新增首页联合三表查询接口">
+      <created>1478337462642</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1478337462642</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -996,7 +981,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15125000" />
+    <option name="totallyTimeSpent" value="15184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1692" height="1017" extended-state="0" />
@@ -1047,7 +1032,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="11.3 修改代码结构，增加注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="11.3 修改代码结构，增加注释" />
+    <MESSAGE value="11.5 新增首页联合三表查询接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.5 新增首页联合三表查询接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1142,13 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/LosterServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -1175,6 +1154,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1254,6 +1234,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1537">
           <caret line="68" column="57" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1277,6 +1260,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,6 +1268,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1291,6 +1276,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,6 +1284,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="794">
           <caret line="59" column="67" selection-start-line="59" selection-start-column="67" selection-end-line="59" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1507,6 +1494,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
