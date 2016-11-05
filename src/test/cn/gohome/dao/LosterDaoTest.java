@@ -1,4 +1,4 @@
-package com.youtu.dao;
+package cn.gohome.dao;
 
 import cn.gohome.dao.LosterDao;
 import cn.gohome.entity.Loster;

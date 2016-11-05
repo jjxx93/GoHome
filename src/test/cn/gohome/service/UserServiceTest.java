@@ -1,8 +1,7 @@
-package com.youtu.service;
+package cn.gohome.service;
 
 import cn.gohome.dao.UserDao;
-import cn.gohome.service.UserService;
-import com.youtu.dao.UserDaoTest;
+import cn.gohome.dao.UserDaoTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

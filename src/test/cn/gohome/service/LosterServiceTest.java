@@ -1,4 +1,4 @@
-package com.youtu.service;
+package cn.gohome.service;
 
 import cn.gohome.service.LosterService;
 import org.junit.Test;

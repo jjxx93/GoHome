@@ -1,4 +1,4 @@
-package com.youtu.dao;
+package cn.gohome.dao;
 
 import cn.gohome.dao.UserDao;
 import cn.gohome.entity.User;

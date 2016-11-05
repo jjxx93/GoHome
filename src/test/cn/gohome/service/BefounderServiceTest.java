@@ -1,4 +1,4 @@
-package com.youtu.service;
+package cn.gohome.service;
 
 import cn.gohome.service.BefounderService;
 import org.junit.Test;
