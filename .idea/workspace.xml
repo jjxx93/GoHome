@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/YoutuController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/YoutuController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/gohome/index.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Msgs.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Msgs.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" />
@@ -24,29 +19,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/TalksController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/TalksController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/UserController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/VolunteerController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/VolunteerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Msgs.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Msgs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/MatchesDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/MatchesDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/TalksDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/TalksDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/entity/Befounder.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/entity/Befounder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/BefounderService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/BefounderService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/TalksServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/TalksServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/GohomeController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/GohomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/PhotoController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/PhotoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/RelativeController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/RelativeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/TalksController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/TalksController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/VolunteerController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/VolunteerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/LosterDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/LosterDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/MatchDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MatchDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/TalksDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TalksDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/BefounderDao.xml" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/BefounderDao.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/LosterDao.xml" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/LosterDao.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/MatchDao.xml" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/MatchDao.xml" />
@@ -892,7 +867,7 @@
       <workItem from="1478177500398" duration="31000" />
       <workItem from="1478177534690" duration="9210000" />
       <workItem from="1478330586028" duration="3203000" />
-      <workItem from="1478334748235" duration="5287000" />
+      <workItem from="1478334748235" duration="5315000" />
     </task>
     <task id="LOCAL-00001" summary="11.3 修改代码结构，增加注释">
       <created>1478177774145</created>
@@ -951,7 +926,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17744000" />
+    <option name="totallyTimeSpent" value="17772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1692" height="1017" extended-state="0" />
