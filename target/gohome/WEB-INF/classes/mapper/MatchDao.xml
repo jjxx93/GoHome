@@ -9,14 +9,14 @@
         (#{uuid}, #{userUuid}, #{befounderUuid}, #{losterUuid}, #{similarity}, #{state})
     </insert>
 
+    <delete id="deleteMatches">
+        DELETE FROM matches
+        WHERE user_uuid = #{userUuid} AND befounder_uuid = #{befounderUuid}
+    </delete>
+
     <select id="queryByUserUuidBefounderUuid" resultType="cn.gohome.entity.Matches">
         SELECT uuid, user_uuid, befounder_uuid, loster_uuid, similarity, state
         FROM matches
         WHERE user_uuid = #{userUuid} AND befounder_uuid = #{befounderUuid}
     </select>
-
-    <delete id="deleteMatches">
-        DELETE FROM matches
-        WHERE user_uuid = #{userUuid} AND befounder_uuid = #{befounderUuid}
-    </delete>
 </mapper>

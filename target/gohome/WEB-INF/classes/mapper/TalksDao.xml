@@ -41,10 +41,18 @@
         LIMIT #{rows};
     </select>
 
-    <select id="queryTalksByLastUpdateTime" resultType="cn.gohome.entity.Talks">
+    <select id="queryTalksBeforeUpdateTime" resultType="cn.gohome.entity.Talks">
         SELECT *
         FROM talks
         WHERE update_time <![CDATA[ < ]]> #{updateTime}
+        ORDER BY update_time DESC
+        LIMIT #{rows};
+    </select>
+
+    <select id="queryTalksAfterUpdateTime" resultType="cn.gohome.entity.Talks">
+        SELECT *
+        FROM talks
+        WHERE update_time <![CDATA[ > ]]> #{updateTime}
         ORDER BY update_time DESC
         LIMIT #{rows};
     </select>

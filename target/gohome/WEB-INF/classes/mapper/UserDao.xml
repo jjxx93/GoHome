@@ -10,6 +10,12 @@
         (#{userName}, #{password}, #{userUuid})
     </insert>
 
+    <update id="updateHeadImg" parameterType="String">
+        UPDATE user
+        SET head_img = #{headImg}
+        WHERE user_uuid = #{userUuid};
+    </update>
+
     <select id="queryByUserName" parameterType="String" resultType="cn.gohome.entity.User">
         SELECT user_uuid,user_name
         FROM user
@@ -33,10 +39,4 @@
         FROM user
         WHERE user_uuid = #{userUuid} AND password = #{password};
     </select>
-
-    <update id="updateHeadImg" parameterType="String">
-        UPDATE user
-        SET head_img = #{headImg}
-        WHERE user_uuid = #{userUuid};
-    </update>
 </mapper>

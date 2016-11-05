@@ -10,6 +10,23 @@
         #{remarks}, #{state})
     </insert>
 
+    <delete id="deleteBefounder">
+        DELETE FROM befounder
+        WHERE uuid = #{uuid} AND founder_uuid = #{founderUuid};
+    </delete>
+
+    <update id="uploadAgeAndGender">
+        UPDATE befounder
+        SET age = #{age}, age_range = #{ageRange}, gender = #{gender}, state = #{state}
+        WHERE uuid = #{uuid};
+    </update>
+
+    <update id="uploadBefounder">
+        UPDATE befounder
+        SET age = #{age}, age_range = #{ageRange}, gender = #{gender}, remarks = #{remarks}, state = #{state}
+        WHERE uuid = #{uuid};
+    </update>
+
     <select id="queryByFounderUuid" resultType="cn.gohome.entity.Befounder">
         SELECT
             uuid,
@@ -30,18 +47,6 @@
         WHERE uuid = #{uuid};
     </select>
 
-    <update id="uploadAgeAndGender">
-        UPDATE befounder
-        SET age = #{age}, age_range = #{ageRange}, gender = #{gender}, state = #{state}
-        WHERE uuid = #{uuid};
-    </update>
-
-    <update id="uploadBefounder">
-        UPDATE befounder
-        SET age = #{age}, age_range = #{ageRange}, gender = #{gender}, remarks = #{remarks}, state = #{state}
-        WHERE uuid = #{uuid};
-    </update>
-
     <select id="queryPictureByMaxMinAgeAndGender" resultType="cn.gohome.entity.Befounder">
         SELECT
             picture,
@@ -50,8 +55,23 @@
         WHERE age >= #{minAge} AND age <![CDATA[ <= ]]> #{maxAge} AND gender = #{gender};
     </select>
 
-    <delete id="deleteBefounder">
-        DELETE FROM befounder
-        WHERE uuid = #{uuid} AND founder_uuid = #{founderUuid};
-    </delete>
+    <select id="queryBefounderList" resultType="cn.gohome.entity.Befounder">
+        SELECT *
+        FROM befounder
+        ORDER BY update_time DESC LIMIT #{rows};
+    </select>
+
+    <select id="queryBefounderListBeforeUpdateTime" resultType="cn.gohome.entity.Befounder">
+        SELECT *
+        FROM befounder
+        WHERE update_time <![CDATA[ < ]]> #{updateTime}
+        ORDER BY update_time DESC LIMIT #{rows};
+    </select>
+
+    <select id="queryBefounderListAfterUpdateTime" resultType="cn.gohome.entity.Befounder">
+        SELECT *
+        FROM befounder
+        WHERE update_time <![CDATA[ > ]]> #{updateTime}
+        ORDER BY update_time DESC LIMIT #{rows};
+    </select>
 </mapper>
