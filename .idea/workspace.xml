@@ -932,7 +932,7 @@
       <workItem from="1478334748235" duration="5711000" />
       <workItem from="1478344232931" duration="5000" />
       <workItem from="1478344707150" duration="2524000" />
-      <workItem from="1478405343963" duration="130000" />
+      <workItem from="1478405343963" duration="138000" />
     </task>
     <task id="LOCAL-00001" summary="11.3 修改代码结构，增加注释">
       <created>1478177774145</created>
@@ -976,7 +976,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478405467309</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="11.5 新增首页联合三表查询接口">
+      <created>1478405481868</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1478405481868</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1012,7 +1019,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20827000" />
+    <option name="totallyTimeSpent" value="20835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1692" height="1017" extended-state="0" />
