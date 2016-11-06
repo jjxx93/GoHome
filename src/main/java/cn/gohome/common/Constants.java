@@ -108,6 +108,10 @@ public class Constants {
     public final static int GET_TALKS_SUCCESS = 0;
     public final static int GET_TALKS_FAIL = 1;
 
+    // 查找新状态消息
+    public final static int GET_STATUS_SUCCESS = 0;
+    public final static int GET_STATUS_FAIL = 1;
+
     // 优图账号信息
     public static final String APP_ID = "10034230";
     public static final String SECRET_ID = "AKIDcwnh2zRMOmTg8ZGLngGRUwxaimYKtKwV";
@@ -127,4 +131,9 @@ public class Constants {
     public final static int BAO_BEI_HUI_JIA = 0;
     public final static int WAITING_FOR_ME = 1;
     public final static int USER = 5;
+
+    // Status Type
+    public final static int LOSTER = 0;
+    public final static int BEFOUNDER = 1;
+    public final static int TALKS = 2;
 }

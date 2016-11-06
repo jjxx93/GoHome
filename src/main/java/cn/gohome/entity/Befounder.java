@@ -15,6 +15,8 @@ public class Befounder {
     private int ageRange;
     private int gender;
     private int state;
+    private String createTime;
+    private String updateTime;
 
     @Override
     public String toString() {
@@ -27,9 +29,11 @@ public class Befounder {
                 ", picture='" + picture + '\'' +
                 ", remarks='" + remarks + '\'' +
                 ", age=" + age +
-                ", range=" + ageRange +
+                ", ageRange=" + ageRange +
                 ", gender=" + gender +
                 ", state=" + state +
+                ", createTime='" + createTime + '\'' +
+                ", updateTime='" + updateTime + '\'' +
                 '}';
     }
 
@@ -119,5 +123,21 @@ public class Befounder {
 
     public void setState(int state) {
         this.state = state;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 }

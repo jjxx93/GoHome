@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface MatchesDao {
     /**
-     * 插入match数据
+     * 增：插入match数据
      *
      * @param userUuid
      * @param befounderUuid
@@ -24,20 +24,20 @@ public interface MatchesDao {
                       @Param("similarity") int similarity, @Param("state") String state);
 
     /**
-     * 查找match数据
-     *
-     * @param userUuid
-     * @param befounderUuid
-     * @return
-     */
-    List<Matches> queryByUserUuidBefounderUuid(@Param("userUuid") String userUuid, @Param("befounderUuid") String befounderUuid);
-
-    /**
-     * 删除疑似走失者信息
+     * 删：删除疑似走失者信息
      *
      * @param userUuid
      * @param befounderUuid
      * @return
      */
     int deleteMatches(@Param("userUuid") String userUuid, @Param("befounderUuid") String befounderUuid);
+
+    /**
+     * 查：查找match数据
+     *
+     * @param userUuid
+     * @param befounderUuid
+     * @return
+     */
+    List<Matches> queryByUserUuidBefounderUuid(@Param("userUuid") String userUuid, @Param("befounderUuid") String befounderUuid);
 }

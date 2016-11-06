@@ -48,7 +48,7 @@ public interface UserService {
 
     /**
      * 根据userUuid查找用户
-     *
+     * @param userUuid
      * @return
      */
     User getUserByUserUuid(String userUuid);

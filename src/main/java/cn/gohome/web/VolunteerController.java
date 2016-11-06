@@ -41,7 +41,18 @@ public class VolunteerController {
     @Autowired
     private MatchesService matchesService;
 
-    // 添加疑似走失者
+    /**
+     * 新增疑似走失者
+     * @param userUuid
+     * @param foundLocation
+     * @param foundTime
+     * @param picture
+     * @param age
+     * @param ageRange
+     * @param gender
+     * @param remarks
+     * @return
+     */
     @RequestMapping(value = "/addBefounder", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> addBefounder(String userUuid, String foundLocation, String foundTime, String picture,
@@ -67,7 +78,11 @@ public class VolunteerController {
         return jsonObject;
     }
 
-    // 查找本用户上传的疑似走失者
+    /**
+     * 查找userUuid对应用户上传的疑似走失者列表
+     * @param userUuid
+     * @return
+     */
     @RequestMapping(value = "/getBefounders", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getBefounders(String userUuid) {
@@ -92,7 +107,12 @@ public class VolunteerController {
         return jsonObject;
     }
 
-    // 查找疑似走失者
+    /**
+     * 查找uuid对应疑似走失者
+     * @param userUuid
+     * @param uuid
+     * @return
+     */
     @RequestMapping(value = "/getBefounder", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getBefounder(String userUuid, String uuid) {
@@ -117,7 +137,16 @@ public class VolunteerController {
         return jsonObject;
     }
 
-    // 修改疑似走失者信息
+    /**
+     * 修改疑似走失者信息
+     * @param userUuid
+     * @param uuid
+     * @param age
+     * @param ageRange
+     * @param gender
+     * @param remarks
+     * @return
+     */
     @RequestMapping(value = "/modifyBefounder", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> modifyBefounder(String userUuid, String uuid, int age, int ageRange, String gender,
@@ -146,7 +175,12 @@ public class VolunteerController {
         return jsonObject;
     }
 
-    //分析疑似走失者信息
+    /**
+     * 使用Face++接口分析疑似走失者照片信息
+     * @param userUuid
+     * @param uuid
+     * @return
+     */
     @RequestMapping(value = "/detectBefounder", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> detectBefounder(String userUuid, String uuid) {
@@ -184,7 +218,12 @@ public class VolunteerController {
         return jsonObject;
     }
 
-    //匹配疑似走失者信息
+    /**
+     * 根据疑似走失者照片年龄性别等信息 匹配 走失者
+     * @param userUuid
+     * @param uuid
+     * @return
+     */
     @RequestMapping(value = "/matchBefounder", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> matchBefounder(String userUuid, String uuid) {
@@ -212,7 +251,12 @@ public class VolunteerController {
         return jsonObject;
     }
 
-    //查找匹配表信息
+    /**
+     * 查找匹配表信息
+     * @param userUuid
+     * @param uuid
+     * @return
+     */
     @RequestMapping(value = "/getMatch", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getMatch(String userUuid, String uuid) {
@@ -239,7 +283,15 @@ public class VolunteerController {
         return jsonObject;
     }
 
-    //查找匹配表信息
+    /**
+     * 匹配信息
+     * 家人操作：根据走失者照片、年龄、性别等信息 匹配 疑似走失者
+     * 志愿者操作：根据疑似走失者照片、年龄、性别等信息 匹配 走失者
+     * @param userUuid
+     * @param picture
+     * @param userType
+     * @return
+     */
     @RequestMapping(value = "/match", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> match(String userUuid, String picture, String userType) {
@@ -247,9 +299,9 @@ public class VolunteerController {
         JSONObject jsonObject = userService.validationUserUuid(userUuid);
 
         if (jsonObject == null) {   // 检查用户uuid通过
-            if (userType.equals("0")) {
+            if (userType.equals("0")) {     // 家人操作
                 return losterService.matchLosterByPictureAgeAndGender(picture, losterService);
-            } else {
+            } else {                        // 志愿者操作
                 return befounderService.matchBefounderByPictureAgeAndGender(picture, befounderService);
             }
         }
@@ -257,7 +309,12 @@ public class VolunteerController {
         return jsonObject;
     }
 
-    // 删除疑似走失者信息
+    /**
+     * 删除疑似走失者信息
+     * @param userUuid
+     * @param uuid
+     * @return
+     */
     @RequestMapping(value = "/deleteBefounder", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> deleteBefounder(String userUuid, String uuid) {

@@ -27,31 +27,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    //登录操作
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    @ResponseBody   //直接将返回值输出到页面
-    public Map<String, Object> login(String userName, String password)  {
-        JSONObject jsonObject = new JSONObject();
-        User rUser = userService.validation(userName, password);
-
-        if (rUser == null) {
-            jsonObject.put("result", Constants.LOGIN_PASSWORD_ERROR);
-            jsonObject.put("msg", Msgs.LOGIN_PASSWORD_ERROR);
-        } else {
-            jsonObject = userService.validationUserUuid(rUser.getUserUuid());
-            if (jsonObject == null) {
-                jsonObject = new JSONObject();
-                jsonObject.put("result", Constants.LOGIN_SUCCESS);
-                jsonObject.put("msg", Msgs.LOGIN_SUCCESS);
-                jsonObject.put("userUuid", rUser.getUserUuid());
-                jsonObject.put("userName", rUser.getUserName());
-                jsonObject.put("headImg", rUser.getHeadImg());
-            }
-        }
-
-        return jsonObject;
-    }
-
+    /**
+     * 注册
+     * @param userName，不可重复
+     * @param password
+     * @return
+     */
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> register(String userName, String password) {
@@ -76,6 +57,12 @@ public class UserController {
         return jsonObject;
     }
 
+    /**
+     * 修改用户头像
+     * @param userUuid
+     * @param headImg
+     * @return
+     */
     @RequestMapping(value = "/changeHeadImg", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> changeHeadImg(String userUuid, String headImg) {
@@ -89,6 +76,36 @@ public class UserController {
             } else {
                 jsonObject.put("result", Constants.CHANGE_HEAD_IMG_FAILURE);
                 jsonObject.put("msg", Msgs.CHANGE_HEAD_IMG_FAILURE);
+            }
+        }
+
+        return jsonObject;
+    }
+
+    /**
+     * 登录
+     * @param userName
+     * @param password
+     * @return
+     */
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @ResponseBody   //直接将返回值输出到页面
+    public Map<String, Object> login(String userName, String password)  {
+        JSONObject jsonObject = new JSONObject();
+        User rUser = userService.validation(userName, password);
+
+        if (rUser == null) {
+            jsonObject.put("result", Constants.LOGIN_PASSWORD_ERROR);
+            jsonObject.put("msg", Msgs.LOGIN_PASSWORD_ERROR);
+        } else {
+            jsonObject = userService.validationUserUuid(rUser.getUserUuid());
+            if (jsonObject == null) {
+                jsonObject = new JSONObject();
+                jsonObject.put("result", Constants.LOGIN_SUCCESS);
+                jsonObject.put("msg", Msgs.LOGIN_SUCCESS);
+                jsonObject.put("userUuid", rUser.getUserUuid());
+                jsonObject.put("userName", rUser.getUserName());
+                jsonObject.put("headImg", rUser.getHeadImg());
             }
         }
 

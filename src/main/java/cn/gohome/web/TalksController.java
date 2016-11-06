@@ -25,6 +25,11 @@ public class TalksController {
     @Autowired
     private TalksService talksService;
 
+    /**
+     * 新增一条talks
+     * @param talks
+     * @return
+     */
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public Map<String, Object> addTalk(Talks talks) {
         JSONObject jsonObject = new JSONObject();
@@ -49,6 +54,12 @@ public class TalksController {
         return jsonObject;
     }
 
+    /**
+     * 删除userUuid对应用户上传的uuid对应talks数据
+     * @param userUuid
+     * @param uuid
+     * @return
+     */
     @RequestMapping(value = "/delete/{userUuid}/{uuid}", method = RequestMethod.POST)
     public Map<String, Object> deleteTalk(@PathVariable("userUuid") String userUuid, @PathVariable("uuid") String uuid) {
         JSONObject jsonObject = new JSONObject();
@@ -64,6 +75,11 @@ public class TalksController {
         return jsonObject;
     }
 
+    /**
+     * 修改userUuid、uuid对应的talks数据
+     * @param talks
+     * @return
+     */
     @RequestMapping(value = "/modify", method = RequestMethod.POST)
     public Map<String, Object> modifyTalk(Talks talks) {
         JSONObject jsonObject = new JSONObject();
@@ -82,6 +98,11 @@ public class TalksController {
         return jsonObject;
     }
 
+    /**
+     * 根据uuid查talks数据
+     * @param uuid
+     * @return
+     */
     @RequestMapping(value = "/{uuid}", method = RequestMethod.GET)
     public Map<String, Object> getTalk(@PathVariable("uuid") String uuid) {
         JSONObject jsonObject = new JSONObject();
@@ -100,6 +121,11 @@ public class TalksController {
         return jsonObject;
     }
 
+    /**
+     * 查userUuid对应用户上传的talks数据
+     * @param userUuid
+     * @return
+     */
     @RequestMapping(value = "/list/{userUuid}", method = RequestMethod.GET)
     public Map<String, Object> getTalkList(@PathVariable("userUuid") String userUuid) {
         JSONObject jsonObject = new JSONObject();
@@ -119,6 +145,12 @@ public class TalksController {
         return jsonObject;
     }
 
+    /**
+     * 根据时间先后顺序查找所有talks数据
+     * @param updateTime
+     * @param rows
+     * @return
+     */
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public Map<String, Object> getTalks(@RequestParam(value = "updateTime", required = false) String updateTime,
                                         @RequestParam(value = "rows", required = false, defaultValue = "20") int rows) {

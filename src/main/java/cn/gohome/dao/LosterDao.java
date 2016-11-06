@@ -12,24 +12,7 @@ import java.util.List;
 @Repository
 public interface LosterDao {
     /**
-     * 根据年龄性别查数据
-     * @param age
-     * @param gender
-     * @return
-     */
-    List<String> queryPictureByAgeAndGender(@Param("age") int age, @Param("gender") String gender);
-
-    /**
-     * 根据年龄性别查数据
-     * @param maxAge
-     * @param minAge
-     * @param gender
-     * @return
-     */
-    List<Loster> queryPictureByMaxMinAgeAndGender(@Param("minAge") int minAge, @Param("maxAge") int maxAge, @Param("gender") String gender);
-
-    /**
-     * 插入新丢失用户数据
+     * 增：插入新丢失用户数据
      * @param losterUuid
      * @param losterName
      * @param age
@@ -50,23 +33,16 @@ public interface LosterDao {
                      @Param("updateTime") String updateTime);
 
     /**
-     * 根据上传者uuid查数据
+     * 删：根据uuid删除数据
      *
+     * @param losterUuid
      * @param sourceId
      * @return
      */
-    List<Loster> queryBySourceId(@Param("sourceId") String sourceId);
+    int deleteLoster(@Param("losterUuid") String losterUuid, @Param("sourceId") String sourceId);
 
     /**
-     * 根据走失者uuid查数据
-     *
-     * @param losterUuid
-     * @return
-     */
-    Loster queryByLosterUuid(@Param("losterUuid") String losterUuid);
-
-    /**
-     * 根据uuid更新数据
+     * 改：根据uuid更新数据
      *
      * @param losterUuid
      * @return
@@ -77,16 +53,40 @@ public interface LosterDao {
                      @Param("remarks") String remarks, @Param("sourceId") String sourceId, @Param("updateTime") String updateTime);
 
     /**
-     * 根据uuid删除数据
+     * 查：根据年龄性别查数据
+     * @param age
+     * @param gender
+     * @return
+     */
+    List<String> queryPictureByAgeAndGender(@Param("age") int age, @Param("gender") String gender);
+
+    /**
+     * 查：根据年龄性别查数据
+     * @param maxAge
+     * @param minAge
+     * @param gender
+     * @return
+     */
+    List<Loster> queryPictureByMaxMinAgeAndGender(@Param("minAge") int minAge, @Param("maxAge") int maxAge, @Param("gender") String gender);
+
+    /**
+     * 查：根据上传者uuid查数据
      *
-     * @param losterUuid
      * @param sourceId
      * @return
      */
-    int deleteLoster(@Param("losterUuid") String losterUuid, @Param("sourceId") String sourceId);
+    List<Loster> queryBySourceId(@Param("sourceId") String sourceId);
 
     /**
-     * 获取最新的rows条走失者信息列表
+     * 查：根据走失者uuid查数据
+     *
+     * @param losterUuid
+     * @return
+     */
+    Loster queryByLosterUuid(@Param("losterUuid") String losterUuid);
+
+    /**
+     * 查：获取最新的rows条走失者信息列表
      *
      * @param rows
      * @return
@@ -94,18 +94,18 @@ public interface LosterDao {
     List<Loster> queryLosterList(@Param("rows") int rows);
 
     /**
-     * 获取最新的rows条走失者信息列表
-     *
+     * 查：获取updateTime时间之前的rows条走失者信息列表
+     * @param updateTime
+     * @param rows
      * @return
-     * @Param int rows
      */
     List<Loster> queryLosterListBeforeUpdateTime(@Param("updateTime") String updateTime, @Param("rows") int rows);
 
     /**
-     * 获取最新的rows条走失者信息列表
-     *
+     * 查：获取updateTime之后的rows条走失者信息列表
+     * @param updateTime
+     * @param rows
      * @return
-     * @Param int rows
      */
     List<Loster> queryLosterListAfterUpdateTime(@Param("updateTime") String updateTime, @Param("rows") int rows);
 }

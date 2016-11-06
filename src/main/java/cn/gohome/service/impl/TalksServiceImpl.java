@@ -57,6 +57,6 @@ public class TalksServiceImpl implements TalksService {
 
     @Override
     public List<Talks> getTalks(int rows, String updateTime) {
-        return talksDao.queryTalksByLastUpdateTime(rows, updateTime);
+        return talksDao.queryTalksBeforeUpdateTime(updateTime, rows);
     }
 }

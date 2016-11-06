@@ -95,4 +95,8 @@ public class Msgs {
     // 查找talks
     public final static String GET_TALKS_SUCCESS = "查找成功";
     public final static String GET_TALKS_FAIL = "查找失败";
+
+    // 查找新状态消息
+    public final static String GET_STATUS_SUCCESS = "查找成功";
+    public final static String GET_STATUS_FAIL = "查找失败";
 }

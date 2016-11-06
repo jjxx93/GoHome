@@ -3,29 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="11.5 新增首页联合三表查询接口">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Msgs.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Msgs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/MatchesDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/MatchesDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/TalksDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/TalksDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/entity/Befounder.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/entity/Befounder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/BefounderService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/BefounderService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/TalksServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/TalksServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/PhotoController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/PhotoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/RelativeController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/RelativeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/TalksController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/TalksController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/VolunteerController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/VolunteerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/YoutuController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/YoutuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/LosterDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/LosterDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/MatchDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MatchDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/TalksDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TalksDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,8 +57,8 @@
       <file leaf-file-name="YoutuController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/YoutuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+            <state relative-caret-position="145">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -979,7 +956,7 @@
       <workItem from="1478334748235" duration="5711000" />
       <workItem from="1478344232931" duration="5000" />
       <workItem from="1478344707150" duration="2524000" />
-      <workItem from="1478405343963" duration="684000" />
+      <workItem from="1478405343963" duration="764000" />
     </task>
     <task id="LOCAL-00001" summary="11.3 修改代码结构，增加注释">
       <created>1478177774145</created>
@@ -1087,7 +1064,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21381000" />
+    <option name="totallyTimeSpent" value="21461000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1692" height="1017" extended-state="0" />
@@ -1574,8 +1551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/YoutuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        <state relative-caret-position="145">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding />
         </state>
       </provider>

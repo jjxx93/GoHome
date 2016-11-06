@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface BefounderService {
     /**
-     * 添加疑似走失者信息
+     * 增：添加疑似走失者信息
      *
      * @param founderUuid
      * @param foundLocation
@@ -22,7 +22,28 @@ public interface BefounderService {
                          int ageRange, String gender, String remarks, String state);
 
     /**
-     * 查找某用户上传的全部疑似走失者信息
+     * 删：删除疑似走失者信息与相关的匹配表信息
+     *
+     * @param userUuid
+     * @param uuid
+     * @return
+     */
+    Boolean deleteBefounderAndMatches(String userUuid, String uuid);
+
+    /**
+     * 改：修改年龄性别
+     *
+     * @param uuid
+     * @param age
+     * @param ageRange
+     * @param gender
+     * @param state
+     * @return
+     */
+    Boolean modifyAgeAndGender(String uuid, int age, int ageRange, String gender, String state);
+
+    /**
+     * 查：查找某用户上传的全部疑似走失者信息
      *
      * @param founderUuid
      * @return
@@ -30,7 +51,7 @@ public interface BefounderService {
     List<Befounder> getBefounders(String founderUuid);
 
     /**
-     * 查找某条走失者信息
+     * 查：查找某条走失者信息
      *
      * @param uuid
      * @return
@@ -38,7 +59,7 @@ public interface BefounderService {
     Befounder getBefounder(String uuid);
 
     /**
-     * 修改疑似走失者信息
+     * 改：修改疑似走失者信息
      *
      * @param uuid
      * @param age
@@ -51,28 +72,7 @@ public interface BefounderService {
     Boolean modifyBefounder(String uuid, int age, int ageRange, String gender, String remarks, String state);
 
     /**
-     * 删除疑似走失者信息与相关的匹配表信息
-     *
-     * @param userUuid
-     * @param uuid
-     * @return
-     */
-    Boolean deleteBefounderAndMatches(String userUuid, String uuid);
-
-    /**
-     * 修改年龄性别
-     *
-     * @param uuid
-     * @param age
-     * @param ageRange
-     * @param gender
-     * @param state
-     * @return
-     */
-    Boolean modifyAgeAndGender(String uuid, int age, int ageRange, String gender, String state);
-
-    /**
-     * 根据年龄和性别信息匹配走失者
+     * 查：根据年龄和性别信息匹配走失者
      *
      * @param age
      * @param ageRange
@@ -82,7 +82,7 @@ public interface BefounderService {
     List<Befounder> matchBefounderByAgeAndGender(int age, int ageRange, int gender);
 
     /**
-     * 根据照片、年龄和性别信息匹配走失者
+     * 查：根据照片、年龄和性别信息匹配走失者
      *
      * @param picture
      * @return

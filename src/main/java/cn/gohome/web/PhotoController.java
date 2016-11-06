@@ -30,6 +30,7 @@ import java.io.IOException;
 import java.util.*;
 
 /**
+ * 与图片有关的操作，现在没用
  * Created by jiax on 2016/9/22.
  */
 @Controller
@@ -41,6 +42,13 @@ public class PhotoController {
     @Autowired
     private LosterService losterService;
 
+    /**
+     * 上传图片（没用）
+     * @param file
+     * @param request
+     * @throws ServletException
+     * @throws IOException
+     */
     @RequestMapping("/uploadPic")
     @ResponseBody
     public void uploadPicture(@RequestParam(value = "file", required = false) MultipartFile file, HttpServletRequest request) throws ServletException, IOException {
@@ -69,6 +77,12 @@ public class PhotoController {
         return;
     }
 
+    /**
+     * 检测图片（没用）
+     * @return
+     * @throws FaceppParseException
+     * @throws JSONException
+     */
     @RequestMapping("/checkPic")
     @ResponseBody
     public String checkPicture() throws FaceppParseException, JSONException {
@@ -114,6 +128,13 @@ public class PhotoController {
         return jsonString;
     }
 
+    /**
+     * 上传图片到七牛云（没用）
+     * @param file
+     * @param request
+     * @throws ServletException
+     * @throws IOException
+     */
     @RequestMapping("/uploadQiniuPic")
     @ResponseBody
     public void uploadQiniuPicture(@RequestParam(value = "file", required = false) MultipartFile file, HttpServletRequest request) throws ServletException, IOException {
@@ -158,6 +179,11 @@ public class PhotoController {
         return;
     }
 
+    /**
+     * 获取七牛云的UploadToken
+     * @param userUuid
+     * @return
+     */
     @RequestMapping(value = "/getUploadToken", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getUploadToken(String userUuid) {

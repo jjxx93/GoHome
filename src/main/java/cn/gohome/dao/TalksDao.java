@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface TalksDao {
     /**
-     * 在数据库中插入新talks数据
+     * 增：在数据库中插入新talks数据
      *
      * @param talks
      * @return
@@ -18,7 +18,7 @@ public interface TalksDao {
     int insertTalks(Talks talks);
 
     /**
-     * 删除talks数据
+     * 删：删除talks数据
      *
      * @param userUuid
      * @param uuid
@@ -27,7 +27,7 @@ public interface TalksDao {
     int deleteTalks(@Param("userUuid") String userUuid, @Param("uuid") String uuid);
 
     /**
-     * 修改talks数据
+     * 改：修改talks数据
      *
      * @param talks
      * @return
@@ -35,7 +35,7 @@ public interface TalksDao {
     int updateTalks(Talks talks);
 
     /**
-     * 根据articleUuid查找talks数据
+     * 查：根据articleUuid查找talks数据
      *
      * @param uuid
      * @return
@@ -43,7 +43,7 @@ public interface TalksDao {
     Talks queryTalksByUuid(@Param("uuid") String uuid);
 
     /**
-     * 根据userUuid查找talks数据列表
+     * 查：根据userUuid查找talks数据列表
      *
      * @param userUuid
      * @return
@@ -51,7 +51,7 @@ public interface TalksDao {
     List<Talks> queryTalksByUserUuid(@Param("userUuid") String userUuid);
 
     /**
-     * 查找talks数据列表
+     * 查：查找最新的rows条talks数据
      *
      * @param rows
      * @return
@@ -59,12 +59,20 @@ public interface TalksDao {
     List<Talks> queryTalks(@Param("rows") int rows);
 
     /**
-     * 查找talks数据列表
+     * 查：查找UpdateTime时间前的rows条talks数据
      *
      * @param rows
      * @param updateTime
      * @return
      */
-    List<Talks> queryTalksByLastUpdateTime(@Param("rows") int rows, @Param("updateTime") String updateTime);
+    List<Talks> queryTalksBeforeUpdateTime(@Param("updateTime") String updateTime, @Param("rows") int rows);
 
+    /**
+     * 查：查找UpdateTime时间后的rows条talks数据
+     *
+     * @param rows
+     * @param updateTime
+     * @return
+     */
+    List<Talks> queryTalksAfterUpdateTime(@Param("updateTime") String updateTime, @Param("rows") int rows);
 }

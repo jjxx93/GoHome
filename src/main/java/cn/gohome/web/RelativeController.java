@@ -28,6 +28,110 @@ public class RelativeController {
     @Autowired
     LosterService losterService;
 
+    /**
+     * 新增走失者信息
+     * @param userUuid
+     * @param losterName
+     * @param losterBirthday
+     * @param gender
+     * @param height
+     * @param lostDate
+     * @param picture
+     * @param lostLocation
+     * @param remarks
+     * @return
+     */
+    @RequestMapping(value = "/addLoster", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> addLoster(String userUuid, String losterName, String losterBirthday, String gender, String height,
+                                         String lostDate, String picture, String lostLocation, String remarks) {
+        JSONObject jsonObject = userService.validationUserUuid(userUuid);
+
+        if (jsonObject == null) {
+            jsonObject = new JSONObject();
+            int heightInt = Integer.parseInt(height);
+
+            if (losterService.addLoster(userUuid, losterName, losterBirthday, gender, heightInt, lostDate,
+                    picture, lostLocation, remarks)) {
+                jsonObject.put("result", Constants.ADD_LOSTER_SUCCESS);
+                jsonObject.put("msg", Msgs.ADD_LOSTER_SUCCESS);
+            } else {
+                jsonObject.put("result", Constants.ADD_LOSTER_FAIL);
+                jsonObject.put("msg", Msgs.ADD_LOSTER_FAIL);
+            }
+        }
+
+        return jsonObject;
+    }
+
+    /**
+     * 根据userUuid和losterUuid删除对应用户上传的相关走失者信息
+     * @param userUuid
+     * @param losterUuid
+     * @return
+     */
+    @RequestMapping(value = "/deleteLoster", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> deleteLoster(String userUuid, String losterUuid) {
+        JSONObject jsonObject = userService.validationUserUuid(userUuid);
+
+        if (jsonObject == null) {
+            jsonObject = new JSONObject();
+
+            if (losterService.deleteLoster(userUuid, losterUuid)) {
+                jsonObject.put("result", Constants.DELETE_LOSTER_SUCCESS);
+                jsonObject.put("msg", Msgs.DELETE_LOSTER_SUCCESS);
+            } else {
+                jsonObject.put("result", Constants.DELETE_LOSTER_FAIL);
+                jsonObject.put("msg", Msgs.DELETE_LOSTER_FAIL);
+            }
+        }
+
+        return jsonObject;
+    }
+
+    /**
+     * 修改走失者信息
+     * @param userUuid
+     * @param losterUuid
+     * @param losterName
+     * @param losterBirthday
+     * @param gender
+     * @param height
+     * @param lostDate
+     * @param picture
+     * @param lostLocation
+     * @param remarks
+     * @return
+     */
+    @RequestMapping(value = "/modifyLoster", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> modifyLoster(String userUuid, String losterUuid, String losterName, String losterBirthday, String gender,
+                                            String height, String lostDate, String picture, String lostLocation, String remarks) {
+        JSONObject jsonObject = userService.validationUserUuid(userUuid);
+
+        if (jsonObject == null) {
+            jsonObject = new JSONObject();
+            int heightInt = Integer.parseInt(height);
+
+            if (losterService.modifyLosterByLosterUuid(userUuid, losterUuid, losterName, losterBirthday, gender,
+                    heightInt, lostDate, picture, lostLocation, remarks)) {
+                jsonObject.put("result", Constants.MODIFY_LOSTER_SUCCESS);
+                jsonObject.put("msg", Msgs.MODIFY_LOSTER_SUCCESS);
+            } else {
+                jsonObject.put("result", Constants.MODIFY_LOSTER_FAIL);
+                jsonObject.put("msg", Msgs.MODIFY_LOSTER_FAIL);
+            }
+        }
+
+        return jsonObject;
+    }
+
+    /**
+     * 根据userUuid获取对应用户上传的走失者信息列表
+     * @param userUuid
+     * @return
+     */
     @RequestMapping(value = "/getLosters", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getLosters(String userUuid) {
@@ -64,30 +168,12 @@ public class RelativeController {
         return jsonObject;
     }
 
-    // 新增丢失者信息
-    @RequestMapping(value = "/addLoster", method = RequestMethod.POST)
-    @ResponseBody
-    public Map<String, Object> addLoster(String userUuid, String losterName, String losterBirthday, String gender, String height,
-                                         String lostDate, String picture, String lostLocation, String remarks) {
-        JSONObject jsonObject = userService.validationUserUuid(userUuid);
-
-        if (jsonObject == null) {
-            jsonObject = new JSONObject();
-            int heightInt = Integer.parseInt(height);
-
-            if (losterService.addLoster(userUuid, losterName, losterBirthday, gender, heightInt, lostDate,
-                    picture, lostLocation, remarks)) {
-                jsonObject.put("result", Constants.ADD_LOSTER_SUCCESS);
-                jsonObject.put("msg", Msgs.ADD_LOSTER_SUCCESS);
-            } else {
-                jsonObject.put("result", Constants.ADD_LOSTER_FAIL);
-                jsonObject.put("msg", Msgs.ADD_LOSTER_FAIL);
-            }
-        }
-
-        return jsonObject;
-    }
-
+    /**
+     * 根据losterUuid查对应的走失者信息
+     * @param userUuid
+     * @param losterUuid
+     * @return
+     */
     @RequestMapping(value = "/getLoster", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getLoster(String userUuid, String losterUuid) {
@@ -107,51 +193,6 @@ public class RelativeController {
                 jsonObject.put("msg", Msgs.GET_LOSTER_SUCCESS);
 
                 jsonObject.put("loster", loster);
-            }
-        }
-
-        return jsonObject;
-    }
-
-    // 新增丢失者信息
-    @RequestMapping(value = "/modifyLoster", method = RequestMethod.POST)
-    @ResponseBody
-    public Map<String, Object> modifyLoster(String userUuid, String losterUuid, String losterName, String losterBirthday, String gender,
-                                            String height, String lostDate, String picture, String lostLocation, String remarks) {
-        JSONObject jsonObject = userService.validationUserUuid(userUuid);
-
-        if (jsonObject == null) {
-            jsonObject = new JSONObject();
-            int heightInt = Integer.parseInt(height);
-
-            if (losterService.modifyLosterByLosterUuid(userUuid, losterUuid, losterName, losterBirthday, gender,
-                    heightInt, lostDate, picture, lostLocation, remarks)) {
-                jsonObject.put("result", Constants.MODIFY_LOSTER_SUCCESS);
-                jsonObject.put("msg", Msgs.MODIFY_LOSTER_SUCCESS);
-            } else {
-                jsonObject.put("result", Constants.MODIFY_LOSTER_FAIL);
-                jsonObject.put("msg", Msgs.MODIFY_LOSTER_FAIL);
-            }
-        }
-
-        return jsonObject;
-    }
-
-    // 新增丢失者信息
-    @RequestMapping(value = "/deleteLoster", method = RequestMethod.POST)
-    @ResponseBody
-    public Map<String, Object> deleteLoster(String userUuid, String losterUuid) {
-        JSONObject jsonObject = userService.validationUserUuid(userUuid);
-
-        if (jsonObject == null) {
-            jsonObject = new JSONObject();
-
-            if (losterService.deleteLoster(userUuid, losterUuid)) {
-                jsonObject.put("result", Constants.DELETE_LOSTER_SUCCESS);
-                jsonObject.put("msg", Msgs.DELETE_LOSTER_SUCCESS);
-            } else {
-                jsonObject.put("result", Constants.DELETE_LOSTER_FAIL);
-                jsonObject.put("msg", Msgs.DELETE_LOSTER_FAIL);
             }
         }
 
