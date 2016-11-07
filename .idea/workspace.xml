@@ -3,6 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="11.7 修改ant配置build.xml">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/build.xml" afterPath="$PROJECT_DIR$/src/main/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/BefounderServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/BefounderServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/LosterServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/LosterServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/PhotoController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/PhotoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/LosterDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/LosterDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,16 +39,89 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="232">
               <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="170">
+              <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BefounderDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LosterServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/LosterServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhotoController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/PhotoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="108" column="8" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BefounderDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
+              <folding>
+                <marker date="1478519874654" expanded="true" signature="253:583" ph="INSERT INTO befounder... " />
+                <marker date="1478519874654" expanded="true" signature="641:725" ph="DELETE FROM " />
+                <marker date="1478519874654" expanded="true" signature="787:949" ph="UPDATE befou... " />
+                <marker date="1478519874654" expanded="true" signature="1008:1204" ph="UPDATE befou... " />
+                <marker date="1478519874654" expanded="true" signature="1306:1542" ph="SELECT uuid,... befounder" />
+                <marker date="1478519874654" expanded="true" signature="1637:1697" ph="SELECT * FRO... befounder" />
+                <marker date="1478519874654" expanded="true" signature="1813:1969" ph="SELECT pictu... befounder" />
+                <marker date="1478519874654" expanded="true" signature="2071:2150" ph="SELECT * FRO... befounder" />
+                <marker date="1478519874654" expanded="true" signature="2268:2403" ph="SELECT * FRO... befounder" />
+                <marker date="1478519874654" expanded="true" signature="2520:2655" ph="SELECT * FRO... befounder" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Befounder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/entity/Befounder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-290">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -89,15 +174,15 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/web/PhotoController.java" />
         <option value="$PROJECT_DIR$/src/main/build.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/LosterDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/LosterServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/BefounderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/LosterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/web/PhotoController.java" />
       </list>
     </option>
   </component>
@@ -243,7 +328,7 @@
   </component>
   <component name="Push.Settings">
     <excluded-roots>
-      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/src/main" />
     </excluded-roots>
   </component>
   <component name="RecentsManager">
@@ -823,7 +908,7 @@
       <workItem from="1478344707150" duration="2524000" />
       <workItem from="1478405343963" duration="764000" />
       <workItem from="1478406473340" duration="295000" />
-      <workItem from="1478417312972" duration="18445000" />
+      <workItem from="1478417312972" duration="18800000" />
     </task>
     <task id="LOCAL-00001" summary="11.3 修改代码结构，增加注释">
       <created>1478177774145</created>
@@ -1070,7 +1155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478521590300</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="11.7 修改ant配置build.xml">
+      <created>1478521817131</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1478521817131</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1106,7 +1198,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40201000" />
+    <option name="totallyTimeSpent" value="40556000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1187,6 +1279,7 @@
     <MESSAGE value="11.5 新增首页联合三表查询接口" />
     <MESSAGE value="11.7 修改ant配置build.xml" />
     <option name="LAST_COMMIT_MESSAGE" value="11.7 修改ant配置build.xml" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1325,13 +1418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/entity/Befounder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="127" column="35" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -1402,14 +1488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/PhotoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="188" column="46" selection-start-line="188" selection-start-column="46" selection-end-line="188" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-379">
@@ -1448,14 +1526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1516,22 +1586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/LosterServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="46" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="60" column="92" selection-start-line="60" selection-start-column="92" selection-end-line="60" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/LosterDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -1551,25 +1605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
-          <folding>
-            <marker date="1478519874654" expanded="true" signature="253:583" ph="INSERT INTO befounder... " />
-            <marker date="1478519874654" expanded="true" signature="641:725" ph="DELETE FROM " />
-            <marker date="1478519874654" expanded="true" signature="787:949" ph="UPDATE befou... " />
-            <marker date="1478519874654" expanded="true" signature="1008:1204" ph="UPDATE befou... " />
-            <marker date="1478519874654" expanded="true" signature="1306:1542" ph="SELECT uuid,... befounder" />
-            <marker date="1478519874654" expanded="true" signature="1637:1697" ph="SELECT * FRO... befounder" />
-            <marker date="1478519874654" expanded="true" signature="1813:1969" ph="SELECT pictu... befounder" />
-            <marker date="1478519874654" expanded="true" signature="2071:2150" ph="SELECT * FRO... befounder" />
-            <marker date="1478519874654" expanded="true" signature="2268:2403" ph="SELECT * FRO... befounder" />
-            <marker date="1478519874654" expanded="true" signature="2520:2655" ph="SELECT * FRO... befounder" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/BefounderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1740">
@@ -1582,7 +1617,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1598,6 +1635,65 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/entity/Befounder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
+          <folding>
+            <marker date="1478519874654" expanded="true" signature="253:583" ph="INSERT INTO befounder... " />
+            <marker date="1478519874654" expanded="true" signature="641:725" ph="DELETE FROM " />
+            <marker date="1478519874654" expanded="true" signature="787:949" ph="UPDATE befou... " />
+            <marker date="1478519874654" expanded="true" signature="1008:1204" ph="UPDATE befou... " />
+            <marker date="1478519874654" expanded="true" signature="1306:1542" ph="SELECT uuid,... befounder" />
+            <marker date="1478519874654" expanded="true" signature="1637:1697" ph="SELECT * FRO... befounder" />
+            <marker date="1478519874654" expanded="true" signature="1813:1969" ph="SELECT pictu... befounder" />
+            <marker date="1478519874654" expanded="true" signature="2071:2150" ph="SELECT * FRO... befounder" />
+            <marker date="1478519874654" expanded="true" signature="2268:2403" ph="SELECT * FRO... befounder" />
+            <marker date="1478519874654" expanded="true" signature="2520:2655" ph="SELECT * FRO... befounder" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/LosterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/PhotoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="108" column="8" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
           <folding />
         </state>
       </provider>
