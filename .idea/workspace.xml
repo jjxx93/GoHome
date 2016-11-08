@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="11.7 修改ant配置build.xml，添加修改密码接口，统一返回码">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+    <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Msgs.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Msgs.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/dao/BefounderDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/dao/BefounderDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/dao/LosterDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/dao/LosterDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/entity/Status.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/entity/Status.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/BefounderServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/BefounderServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/CommonServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/CommonServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/LosterServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/LosterServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/GohomeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/GohomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/PhotoController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/PhotoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/RelativeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/RelativeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/TalksController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/TalksController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/UserController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/VolunteerController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/VolunteerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Msgs.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Msgs.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/BefounderDao.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/BefounderDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/LosterDao.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/LosterDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/entity/Status.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/entity/Status.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/UserService.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/BefounderServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/BefounderServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/CommonServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/CommonServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/LosterServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/LosterServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/GohomeController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/GohomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/PhotoController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/PhotoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/RelativeController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/RelativeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/TalksController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/TalksController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/UserController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/VolunteerController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/VolunteerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4d5157f4-043d-4b8b-a7a8-1983d69c27e5.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/4d5157f4-043d-4b8b-a7a8-1983d69c27e5.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/build.xml" afterPath="$PROJECT_DIR$/src/main/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Msgs.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Msgs.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/BefounderDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/UserDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/entity/Status.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/entity/Status.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java" />
@@ -25,6 +59,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/index.html" afterPath="$PROJECT_DIR$/target/classes/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/BefounderDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/BefounderDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/LosterDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/LosterDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/index.html" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/BefounderDao.xml" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/BefounderDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/LosterDao.xml" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/LosterDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/UserDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/index.html" afterPath="$PROJECT_DIR$/target/gohome/index.html" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,132 +95,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="134" column="69" selection-start-line="134" selection-start-column="69" selection-end-line="134" selection-end-column="69" />
+            <state relative-caret-position="301">
+              <caret line="128" column="43" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="TalksController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/TalksController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="44" column="54" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LosterDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/LosterDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="22" column="61" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="61" />
-              <folding>
-                <marker date="1478519594782" expanded="true" signature="247:654" ph="INSERT INTO loster... " />
-                <marker date="1478519594782" expanded="true" signature="709:797" ph="DELETE FROM " />
-                <marker date="1478519594782" expanded="true" signature="853:1223" ph="UPDATE loste... " />
-                <marker date="1478519594782" expanded="true" signature="1313:1410" ph="SELECT Loste... loster" />
-                <marker date="1478519594782" expanded="true" signature="1523:1659" ph="SELECT pictu... loster" />
-                <marker date="1478519594782" expanded="true" signature="1755:1894" ph="SELECT loste... loster" />
-                <marker date="1478519594782" expanded="true" signature="1992:2062" ph="SELECT * FRO... loster" />
-                <marker date="1478519594782" expanded="true" signature="2158:2257" ph="SELECT * FRO... loster" />
-                <marker date="1478519594782" expanded="true" signature="2369:2514" ph="SELECT * FRO... loster" />
-                <marker date="1478519594782" expanded="true" signature="2625:2778" ph="SELECT * FRO... loster" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LosterDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BefounderDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BefounderDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-              <folding>
-                <marker date="1478519874654" expanded="true" signature="253:583" ph="INSERT INTO befounder... " />
-                <marker date="1478519874654" expanded="true" signature="641:725" ph="DELETE FROM " />
-                <marker date="1478519874654" expanded="true" signature="787:949" ph="UPDATE befou... " />
-                <marker date="1478519874654" expanded="true" signature="1008:1204" ph="UPDATE befou... " />
-                <marker date="1478519874654" expanded="true" signature="1306:1542" ph="SELECT uuid,... befounder" />
-                <marker date="1478519874654" expanded="true" signature="1637:1697" ph="SELECT * FRO... befounder" />
-                <marker date="1478519874654" expanded="true" signature="1813:1969" ph="SELECT pictu... befounder" />
-                <marker date="1478519874654" expanded="true" signature="2071:2150" ph="SELECT * FRO... befounder" />
-                <marker date="1478519874654" expanded="true" signature="2268:2403" ph="SELECT * FRO... befounder" />
-                <marker date="1478519874654" expanded="true" signature="2520:2655" ph="SELECT * FRO... befounder" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-              <folding>
-                <marker date="1478571349950" expanded="true" signature="267:377" ph="INSERT INTO user... " />
-                <marker date="1478571349950" expanded="true" signature="456:539" ph="UPDATE user " />
-                <marker date="1478571349950" expanded="true" signature="620:737" ph="UPDATE user " />
-                <marker date="1478571349950" expanded="true" signature="802:1004" ph="UPDATE user " />
-                <marker date="1478571349950" expanded="true" signature="1121:1203" ph="SELECT user_... user" />
-                <marker date="1478571349950" expanded="true" signature="1320:1384" ph="SELECT * FRO... user" />
-                <marker date="1478571349950" expanded="true" signature="1512:1630" ph="SELECT user_... user" />
-                <marker date="1478571349950" expanded="true" signature="1758:1867" ph="SELECT user_... user" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+            <state relative-caret-position="116">
+              <caret line="155" column="40" selection-start-line="155" selection-start-column="40" selection-end-line="155" selection-end-column="108" />
               <folding />
             </state>
           </provider>
@@ -197,7 +129,7 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/main" />
     <option name="FORCE_PUSH_ALLOWED" value="true" />
     <option name="PUSH_TAGS">
       <GitPushTagMode />
@@ -242,8 +174,8 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java" />
       </list>
     </option>
   </component>
@@ -394,6 +326,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoHome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GoHome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gohome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1047,7 +1009,7 @@
       <workItem from="1478344707150" duration="2524000" />
       <workItem from="1478405343963" duration="764000" />
       <workItem from="1478406473340" duration="295000" />
-      <workItem from="1478417312972" duration="30949000" />
+      <workItem from="1478417312972" duration="31767000" />
     </task>
     <task id="LOCAL-00001" summary="11.3 修改代码结构，增加注释">
       <created>1478177774145</created>
@@ -1336,7 +1298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478528486829</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="- 11.8 添加修改用户信息接口">
+      <created>1478573217583</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1478573217583</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1372,7 +1341,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52705000" />
+    <option name="totallyTimeSpent" value="53523000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1454,7 +1423,8 @@
     <MESSAGE value="11.7 修改ant配置build.xml" />
     <MESSAGE value="11.7 修改ant配置build.xml，添加修改密码接口" />
     <MESSAGE value="11.7 修改ant配置build.xml，添加修改密码接口，统一返回码" />
-    <option name="LAST_COMMIT_MESSAGE" value="11.7 修改ant配置build.xml，添加修改密码接口，统一返回码" />
+    <MESSAGE value="- 11.8 添加修改用户信息接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="- 11.8 添加修改用户信息接口" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1475,13 +1445,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-test-4.0.2.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunAfterTestClassCallbacks.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files/Maven Repository/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/runner/JUnitCore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -1565,14 +1528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/VolunteerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="769">
-          <caret line="291" column="22" selection-start-line="291" selection-start-column="22" selection-end-line="291" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1704,14 +1659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-830">
           <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/TalksController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1877,26 +1824,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+    <entry file="dbDummy://dbtable:/dfc98dc5/4d5157f4-043d-4b8b-a7a8-1983d69c27e5/gohome.loster">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="174">
+          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -1909,18 +1853,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="134" column="69" selection-start-line="134" selection-start-column="69" selection-end-line="134" selection-end-column="69" />
+        <state relative-caret-position="264">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="235">
+          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/VolunteerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6598">
+          <caret line="291" column="22" selection-start-line="291" selection-start-column="22" selection-end-line="291" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/TalksController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="155" column="40" selection-start-line="155" selection-start-column="40" selection-end-line="155" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="128" column="43" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="43" />
           <folding />
         </state>
       </provider>
