@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Msgs.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Msgs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/dao/BefounderDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/dao/BefounderDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/dao/LosterDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/dao/LosterDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/dao/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/entity/Status.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/entity/Status.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/BefounderServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/BefounderServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/CommonServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/CommonServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/LosterServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/LosterServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/GohomeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/GohomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/PhotoController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/PhotoController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/RelativeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/RelativeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/TalksController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/TalksController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/UserController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/VolunteerController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/VolunteerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Msgs.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Msgs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/BefounderDao.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/BefounderDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/LosterDao.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/LosterDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/entity/Status.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/entity/Status.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/UserService.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/BefounderServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/BefounderServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/CommonServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/CommonServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/LosterServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/LosterServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/GohomeController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/GohomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/PhotoController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/PhotoController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/RelativeController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/RelativeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/TalksController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/TalksController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/UserController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/VolunteerController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/VolunteerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4d5157f4-043d-4b8b-a7a8-1983d69c27e5.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/4d5157f4-043d-4b8b-a7a8-1983d69c27e5.xml" />
+    <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="- 11.8 添加修改用户信息接口">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/build.xml" afterPath="$PROJECT_DIR$/src/main/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" />
@@ -59,15 +23,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/index.html" afterPath="$PROJECT_DIR$/target/classes/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/BefounderDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/BefounderDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/LosterDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/LosterDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/index.html" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/BefounderDao.xml" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/BefounderDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/LosterDao.xml" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/LosterDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/UserDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/index.html" afterPath="$PROJECT_DIR$/target/gohome/index.html" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -98,8 +53,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="128" column="43" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="43" />
+            <state relative-caret-position="214">
+              <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -1009,7 +964,7 @@
       <workItem from="1478344707150" duration="2524000" />
       <workItem from="1478405343963" duration="764000" />
       <workItem from="1478406473340" duration="295000" />
-      <workItem from="1478417312972" duration="31767000" />
+      <workItem from="1478417312972" duration="31922000" />
     </task>
     <task id="LOCAL-00001" summary="11.3 修改代码结构，增加注释">
       <created>1478177774145</created>
@@ -1305,7 +1260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478573217583</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="- 11.8 添加修改用户信息接口">
+      <created>1478574034789</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1478574034789</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1341,7 +1303,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53523000" />
+    <option name="totallyTimeSpent" value="53678000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1895,8 +1857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="128" column="43" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="43" />
+        <state relative-caret-position="214">
+          <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
           <folding />
         </state>
       </provider>
