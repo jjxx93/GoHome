@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/FaceppUtils.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/FaceppUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Msgs.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Msgs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/BefounderServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/BefounderServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/LosterServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/LosterServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/GohomeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/GohomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/UserController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/VolunteerController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/VolunteerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/FaceppUtils.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/FaceppUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Msgs.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Msgs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/BefounderServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/BefounderServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/LosterServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/LosterServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/GohomeController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/GohomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/UserController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/VolunteerController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/VolunteerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/build.xml" afterPath="$PROJECT_DIR$/src/main/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" />
@@ -1004,7 +988,7 @@
       <workItem from="1478406473340" duration="295000" />
       <workItem from="1478417312972" duration="34598000" />
       <workItem from="1478589256815" duration="1001000" />
-      <workItem from="1478677798912" duration="3438000" />
+      <workItem from="1478677798912" duration="3479000" />
     </task>
     <task id="LOCAL-00001" summary="11.3 修改代码结构，增加注释">
       <created>1478177774145</created>
@@ -1357,7 +1341,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60793000" />
+    <option name="totallyTimeSpent" value="60834000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
