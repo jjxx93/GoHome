@@ -3,6 +3,7 @@ package cn.gohome.service.impl;
 import cn.gohome.common.Constants;
 import cn.gohome.common.FaceppUtils;
 import cn.gohome.common.GetUUIDNumber;
+import cn.gohome.common.Msgs;
 import cn.gohome.dao.BefounderDao;
 import cn.gohome.dao.MatchesDao;
 import cn.gohome.entity.Befounder;
@@ -13,11 +14,12 @@ import com.alibaba.fastjson.JSONObject;
 import com.facepp.error.FaceppParseException;
 import com.facepp.http.HttpRequests;
 import com.facepp.http.PostParameters;
-import cn.gohome.common.Msgs;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -37,8 +39,13 @@ public class BefounderServiceImpl implements BefounderService {
                                 int ageRange, String gender, String remarks, String state) {
         String uuid = GetUUIDNumber.createUUIDNumber();
 
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        String updateTime = sd.format(new Date());
+        sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String createTime = sd.format(new Date());
+
         if (befounderDao.insertBefounder(uuid, founderUuid, foundLocation, foundTime, picture, age, ageRange, gender,
-                remarks, state) > 0) {
+                remarks, state, createTime, updateTime) > 0) {
             return true;
         }
         return false;
@@ -65,7 +72,10 @@ public class BefounderServiceImpl implements BefounderService {
 
     @Override
     public Boolean modifyBefounder(String uuid, int age, int ageRange, String gender, String remarks, String state) {
-        if (befounderDao.uploadBefounder(uuid, age, ageRange, gender, remarks, state) > 0) {
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        String currentTime = sd.format(new Date());
+
+        if (befounderDao.uploadBefounder(uuid, age, ageRange, gender, remarks, state, currentTime) > 0) {
             return true;
         }
         return false;
@@ -73,7 +83,10 @@ public class BefounderServiceImpl implements BefounderService {
 
     @Override
     public Boolean modifyAgeAndGender(String uuid, int age, int ageRange, String gender, String state) {
-        if (befounderDao.uploadAgeAndGender(uuid, age, ageRange, gender, state) > 0) {
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        String currentTime = sd.format(new Date());
+
+        if (befounderDao.uploadAgeAndGender(uuid, age, ageRange, gender, state, currentTime) > 0) {
             return true;
         }
         return false;
@@ -133,9 +146,9 @@ public class BefounderServiceImpl implements BefounderService {
                     }
                 }
 
-                if (jsonArray == null) {    // 数据库中无相似度大于50的匹配信息
-                    jsonObject.put("result", Constants.MATCH_BEFOUNDER_NOLOSTER);
-                    jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_NOLOSTER);
+                if (jsonArray.isEmpty()) {    // 数据库中无相似度大于50的匹配信息
+                    jsonObject.put("result", Constants.MATCH_BEFOUNDER_NOGOODLOSTER);
+                    jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_NOGOODLOSTER);
                     return jsonObject;
                 } else {
                     jsonObject.put("arrayLength", jsonArray.size());

@@ -30,7 +30,7 @@ public interface LosterDao {
                      @Param("losterBirthday") String losterBirthday, @Param("gender") String gender, @Param("height") int height,
                      @Param("lostDate") String lostDate, @Param("picture") String picture, @Param("lostLocation") String lostLocation,
                      @Param("remarks") String remarks, @Param("datasource") Character datasource, @Param("sourceId") String sourceId,
-                     @Param("updateTime") String updateTime);
+                     @Param("createTime") String createTime, @Param("updateTime") String updateTime);
 
     /**
      * 删：根据uuid删除数据

@@ -48,7 +48,7 @@ public class CommonServiceImpl implements CommonService {
         for (int i = 0; i < statusSetSize && i < rows; i++) {
             Status status = statusSet.pollFirst();
             User user = userDao.queryByUserUuid(status.getUserUuid());  // 添加user数据
-            status.setUserName(user.getNickName());
+            status.setUserNickName(user.getNickName());
             status.setUserHeadImg(user.getHeadImg());
 
             jsonArray.add(status);
@@ -74,7 +74,7 @@ public class CommonServiceImpl implements CommonService {
         for (int i = 0; i < statusSetSize && i < rows; i++) {
             Status status = statusSet.pollFirst();
             User user = userDao.queryByUserUuid(status.getUserUuid());  // 添加user数据
-            status.setUserName(user.getNickName());
+            status.setUserNickName(user.getNickName());
             status.setUserHeadImg(user.getHeadImg());
 
             jsonArray.add(status);
@@ -100,7 +100,7 @@ public class CommonServiceImpl implements CommonService {
         for (int i = 0; i < statusSetSize && i < rows; i++) {
             Status status = statusSet.pollFirst();
             User user = userDao.queryByUserUuid(status.getUserUuid());  // 添加user数据
-            status.setUserName(user.getNickName());
+            status.setUserNickName(user.getNickName());
             status.setUserHeadImg(user.getHeadImg());
 
             jsonArray.add(status);

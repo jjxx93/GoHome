@@ -2,11 +2,11 @@ package cn.gohome.service.impl;
 
 import cn.gohome.common.Constants;
 import cn.gohome.common.GetUUIDNumber;
+import cn.gohome.common.Msgs;
 import cn.gohome.dao.UserDao;
 import cn.gohome.entity.User;
-import com.alibaba.fastjson.JSONObject;
-import cn.gohome.common.Msgs;
 import cn.gohome.service.UserService;
+import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +31,31 @@ public class UserServiceImpl implements UserService {
         user.setUserName(userName);
         user.setUserUuid(UserUuid);
         return user;
+    }
+
+    @Override
+    public Boolean changeHeadImg(String userUuid, String headImg) {
+        if (userDao.updateHeadImg(userUuid, headImg) > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean changePassword(String userUuid, String oldPassword, String newPassword) {
+        if (userDao.updatePassword(userUuid, oldPassword, newPassword) > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean changeInformation(String userUuid, String telephone, String nickName, String realName,
+                                     String sex, String birthday, String city) {
+        if (userDao.updateUserInformation(userUuid, telephone, nickName, realName, sex, birthday, city) > 0) {
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -66,14 +91,6 @@ public class UserServiceImpl implements UserService {
         } else {
             return false;
         }
-    }
-
-    @Override
-    public Boolean changeHeadImg(String userUuid, String headImg) {
-        if (userDao.updateHeadImg(userUuid, headImg) > 0) {
-            return true;
-        }
-        return false;
     }
 
     @Override

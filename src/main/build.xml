@@ -3,23 +3,68 @@
 <!-- 定义一个工程，默认任务为build。 -->
 <project name="gohome" default="build" basedir="." >
 
-    <!-- 定义属性，目标文件夹 -->
-    <property name="targetPath" value="./gohome"/>
+    <!-- 定义属性，目标文件夹1 -->
+    <property name="sourcePath" value="${basedir}/gohome"/>
+    <property name="targetPath" value="${basedir}/gohome/gohome"/>
 
     <!-- 定义路径，编译java文件时用到的jar包。 -->
     <path id="project.lib">
-        <fileset dir="${basedir}/webapp/WEB-INF/lib">
+        <fileset dir="${sourcePath}/webapp/WEB-INF/lib">
             <include name="**/*.jar"/>
         </fileset>
     </path>
 
+    <!--定义git命令-->
+    <macrodef name = "git">
+        <attribute name = "command" />
+        <attribute name = "dir" default = "" />
+        <element name = "args" optional = "true" />
+
+        <sequential>
+            <echo message = "git @{command}" />
+            <exec executable = "git" dir = "@{dir}">
+                <arg value = "@{command}" />
+                <args/>
+            </exec>
+        </sequential>
+    </macrodef>
+
+    <macrodef name = "git-clone-pull">
+        <attribute name = "repository" />
+        <attribute name = "dest" />
+
+        <sequential>
+            <git command = "clone">
+                <args>
+                    <arg value = "@{repository}" />
+                    <arg value = "@{dest}" />
+                </args>
+            </git>
+            <git command = "pull" dir = "@{dest}" />
+        </sequential>
+    </macrodef>
+
+    <!--清空clone目标文件夹-->
+    <target name="clean" >
+        <delete dir="${sourcePath}" />
+    </target>
+
+    <!--定义git-clone任务-->
+    <target name="git-clone"  depends="clean">
+        <git command = "clone">
+            <args>
+                <arg value = "/home/git/repositories/gohome.git" />
+                <arg value = "${sourcePath}" />
+            </args>
+        </git>
+    </target>
+
     <!-- 定义任务：创建新的目标文件夹target,复制web文件夹到target -->
-    <target name="create">
-        <delete dir="${targetPath}" />
+    <target name="create" depends="git-clone">
         <mkdir dir="${targetPath}" />
 
         <copy todir="${targetPath}">
-            <fileset dir="${basedir}/webapp"/>
+            <fileset dir="${sourcePath}/webapp"/>
         </copy>
 
         <mkdir dir="${targetPath}/WEB-INF/classes" />
@@ -27,19 +72,31 @@
 
     <!-- 定义任务，编译src文件夹中的java文件，编译后的class文件放到创建的文件夹下 -->
     <target name="build" depends="create">
-        <javac srcdir="${basedir}/java" destdir="${targetPath}/WEB-INF/classes" includeantruntime="false" source="1.8" target="1.8">
-            <classpath refid="project.lib">
-            </classpath>
+        <javac srcdir="${sourcePath}/java" destdir="${targetPath}/WEB-INF/classes" includeantruntime="false"
+               encoding="UTF-8" source="1.8" target="1.8" debug="true">  <!--编译时生成所有debug的信息-->
+            <classpath refid="project.lib"/>
         </javac>
 
         <!--复制src/main/resources下非java文件到targetPath/WEB-INF/classes-->
         <copy todir="${targetPath}/WEB-INF/classes">
-            <fileset dir="${basedir}/resources">
+            <fileset dir="${sourcePath}/resources">
                 <include name="**/**.*" />
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
+
+        <!--复制编译好的文件到tomcat部署文件夹下，进行部署-->
+        <copy todir="/home/ubuntu/tomcat8/webapps/gohome" >
+            <fileset dir="${targetPath}" />
+        </copy>
     </target>
+
+    <!--<target name="deploy" depends="build">-->
+        <!--&lt;!&ndash;复制src/main/resources下非java文件到targetPath/WEB-INF/classes&ndash;&gt;-->
+        <!--<copy todir="/home/ubuntu/tomcat8/webapps" >-->
+            <!--<fileset dir="${targetPath}" />-->
+        <!--</copy>-->
+    <!--</target>-->
 
     <!-- 定义默认任务，将class文件集合成jar包。 -->
     <!--<target name="warFile" depends="build">-->

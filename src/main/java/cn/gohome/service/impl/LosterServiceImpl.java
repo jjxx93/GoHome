@@ -1,18 +1,19 @@
 package cn.gohome.service.impl;
 
+import cn.gohome.common.Constants;
 import cn.gohome.common.FaceppUtils;
 import cn.gohome.common.GetUUIDNumber;
+import cn.gohome.common.Msgs;
+import cn.gohome.dao.LosterDao;
 import cn.gohome.entity.Face;
 import cn.gohome.entity.Loster;
+import cn.gohome.exception.NotFaceException;
+import cn.gohome.service.LosterService;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.facepp.error.FaceppParseException;
 import com.facepp.http.HttpRequests;
 import com.facepp.http.PostParameters;
-import cn.gohome.common.Constants;
-import cn.gohome.common.Msgs;
-import cn.gohome.dao.LosterDao;
-import cn.gohome.service.LosterService;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,13 +44,38 @@ public class LosterServiceImpl implements LosterService {
 
         Character datasource = '5';     // 用户上传为5
 
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        String updateTime = sd.format(new Date());
+        sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String createTime = sd.format(new Date());
+
+        if (losterDao.insertLoster(losterUuid, losterName, age, losterBirthday, gender, height, lostDate,
+                picture, lostLocation, remarks, datasource, userUuid, createTime, updateTime) > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean modifyLosterByLosterUuid(String userUuid, String losterUuid, String losterName, String losterBirthday, String gender, int height, String lostDate,
+                                            String picture, String lostLocation, String remarks) {
+        int age = Calendar.getInstance().get(Calendar.YEAR) - Integer.valueOf(losterBirthday.substring(0, 4)) + 1;
+
         Date date = new Date();
-        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss-SSS");
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         String updateTime = sd.format(date);
         System.out.println(updateTime);
 
-        if (losterDao.insertLoster(losterUuid, losterName, age, losterBirthday, gender, height, lostDate,
-                picture, lostLocation, remarks, datasource, userUuid, updateTime) > 0) {
+        if (losterDao.updateLoster(losterUuid, losterName, age, losterBirthday, gender, height, lostDate,
+                picture, lostLocation, remarks, userUuid, updateTime) > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean deleteLoster(String userUuid, String losterUuid) {
+        if (losterDao.deleteLoster(losterUuid, userUuid) > 0) {
             return true;
         }
         return false;
@@ -111,9 +137,9 @@ public class LosterServiceImpl implements LosterService {
                     }
                 }
 
-                if (jsonArray == null) {    // 数据库中无相似度大于50的匹配信息
-                    jsonObject.put("result", Constants.MATCH_BEFOUNDER_NOLOSTER);
-                    jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_NOLOSTER);
+                if (jsonArray.isEmpty()) {    // 数据库中无相似度大于50的匹配信息
+                    jsonObject.put("result", Constants.MATCH_BEFOUNDER_NOGOODLOSTER);
+                    jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_NOGOODLOSTER);
                     return jsonObject;
                 } else {
                     jsonObject.put("result", Constants.MATCH_BEFOUNDER_SUCCESS);
@@ -129,6 +155,10 @@ public class LosterServiceImpl implements LosterService {
             jsonObject.put("result", Constants.MATCH_BEFOUNDER_FAIL);
             jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_FAIL);
             return jsonObject;
+        } catch (NotFaceException e) {      // 没有人脸
+            jsonObject.put("result", Constants.MATCH_BEFOUNDER_NOTFACE);
+            jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_NOTFACE);
+            return jsonObject;
         }
 
         //return jsonObject;
@@ -142,31 +172,6 @@ public class LosterServiceImpl implements LosterService {
     @Override
     public Loster getLosterByLosterUuid(String losterUuid) {
         return losterDao.queryByLosterUuid(losterUuid);
-    }
-
-    @Override
-    public Boolean modifyLosterByLosterUuid(String userUuid, String losterUuid, String losterName, String losterBirthday, String gender, int height, String lostDate,
-                                            String picture, String lostLocation, String remarks) {
-        int age = Calendar.getInstance().get(Calendar.YEAR) - Integer.valueOf(losterBirthday.substring(0, 4)) + 1;
-
-        Date date = new Date();
-        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss-SSS");
-        String updateTime = sd.format(date);
-        System.out.println(updateTime);
-
-        if (losterDao.updateLoster(losterUuid, losterName, age, losterBirthday, gender, height, lostDate,
-                picture, lostLocation, remarks, userUuid, updateTime) > 0) {
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public Boolean deleteLoster(String userUuid, String losterUuid) {
-        if (losterDao.deleteLoster(losterUuid, userUuid) > 0) {
-            return true;
-        }
-        return false;
     }
 
     @Override

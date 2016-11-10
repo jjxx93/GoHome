@@ -16,6 +16,19 @@
         WHERE user_uuid = #{userUuid};
     </update>
 
+    <update id="updatePassword" parameterType="String">
+        UPDATE user
+        SET password = #{newPassword}
+        WHERE user_uuid = #{userUuid} AND password = #{oldPassword};
+    </update>
+
+    <update id="updateUserInformation">
+        UPDATE user
+        SET telephone = #{telephone}, nick_name = #{nickName}, real_name = #{realName},
+            sex = #{sex}, birthday = #{birthday}, city = #{city}
+        WHERE user_uuid = #{userUuid};
+    </update>
+
     <select id="queryByUserName" parameterType="String" resultType="cn.gohome.entity.User">
         SELECT user_uuid,user_name
         FROM user

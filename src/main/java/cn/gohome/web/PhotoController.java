@@ -1,19 +1,19 @@
 package cn.gohome.web;
 
+import cn.gohome.common.Constants;
 import cn.gohome.common.FaceppUtils;
 import cn.gohome.entity.Face;
-import com.qiniu.common.QiniuException;
-import com.qiniu.http.Response;
-import com.qiniu.storage.UploadManager;
-import cn.gohome.common.Constants;
+import cn.gohome.service.LosterService;
+import cn.gohome.service.UserService;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.facepp.error.FaceppParseException;
 import com.facepp.http.HttpRequests;
 import com.facepp.http.PostParameters;
+import com.qiniu.common.QiniuException;
+import com.qiniu.http.Response;
+import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
-import cn.gohome.service.LosterService;
-import cn.gohome.service.UserService;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,7 +27,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 与图片有关的操作，现在没用
@@ -165,7 +166,7 @@ public class PhotoController {
             Response r = e.response;
 
             // 请求失败时打印的异常的信息
-            System.out.println(r.toString());
+            //System.out.println(r.toString());
             try {
                 if (r.bodyString().contains("bad token")) {
                     Auth auth = Auth.create(Constants.Qiniu_ACCESS_KEY, Constants.Qiniu_SECRET_KEY);
@@ -186,7 +187,7 @@ public class PhotoController {
      */
     @RequestMapping(value = "/getUploadToken", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String, Object> getUploadToken(String userUuid) {
+    public Map<String, Object> getUploadToken(@RequestParam(value = "userUuid") String userUuid) {
         JSONObject jsonObject = userService.validationUserUuid(userUuid);
 
         if (jsonObject == null) {

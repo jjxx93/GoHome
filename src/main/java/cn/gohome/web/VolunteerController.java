@@ -1,17 +1,17 @@
 package cn.gohome.web;
 
+import cn.gohome.common.Constants;
 import cn.gohome.common.FaceppUtils;
+import cn.gohome.common.Msgs;
+import cn.gohome.entity.Befounder;
 import cn.gohome.entity.Face;
 import cn.gohome.entity.Matches;
 import cn.gohome.service.BefounderService;
+import cn.gohome.service.LosterService;
 import cn.gohome.service.MatchesService;
+import cn.gohome.service.UserService;
 import com.alibaba.fastjson.JSONObject;
 import com.facepp.error.FaceppParseException;
-import cn.gohome.common.Constants;
-import cn.gohome.common.Msgs;
-import cn.gohome.entity.Befounder;
-import cn.gohome.service.LosterService;
-import cn.gohome.service.UserService;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -277,32 +277,6 @@ public class VolunteerController {
                 jsonObject.put("msg", Msgs.GET_MATCCHES_SUCCESS);
                 jsonObject.put("length", matchesList.size());
                 jsonObject.put("matchesList", matchesList);
-            }
-        }
-
-        return jsonObject;
-    }
-
-    /**
-     * 匹配信息
-     * 家人操作：根据走失者照片、年龄、性别等信息 匹配 疑似走失者
-     * 志愿者操作：根据疑似走失者照片、年龄、性别等信息 匹配 走失者
-     * @param userUuid
-     * @param picture
-     * @param userType
-     * @return
-     */
-    @RequestMapping(value = "/match", method = RequestMethod.POST)
-    @ResponseBody
-    public Map<String, Object> match(String userUuid, String picture, String userType) {
-        // 检查用户uuid
-        JSONObject jsonObject = userService.validationUserUuid(userUuid);
-
-        if (jsonObject == null) {   // 检查用户uuid通过
-            if (userType.equals("0")) {     // 家人操作
-                return losterService.matchLosterByPictureAgeAndGender(picture, losterService);
-            } else {                        // 志愿者操作
-                return befounderService.matchBefounderByPictureAgeAndGender(picture, befounderService);
             }
         }
 

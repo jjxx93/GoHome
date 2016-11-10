@@ -1,9 +1,10 @@
 package cn.gohome.common;
 
+import cn.gohome.entity.Face;
+import cn.gohome.exception.NotFaceException;
 import com.facepp.error.FaceppParseException;
 import com.facepp.http.HttpRequests;
 import com.facepp.http.PostParameters;
-import cn.gohome.entity.Face;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,9 +19,10 @@ public class FaceppUtils {
         PostParameters postParameters = new PostParameters().setUrl(url);
 
         JSONObject result = httpRequests.detectionDetect(postParameters);
-        if (result.getJSONArray("face").isNull(0)) {
-            return null;
+        if (result.getJSONArray("face").isNull(0)) {        // face序列是否为空，为空则表示图片内无人脸
+            throw new NotFaceException("Not A Face");
         }
+
         JSONObject faceJson = result.getJSONArray("face").getJSONObject(0);
         JSONObject attributeJson = faceJson.getJSONObject("attribute");
         JSONObject genderJson = attributeJson.getJSONObject("gender");

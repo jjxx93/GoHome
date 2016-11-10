@@ -1,7 +1,6 @@
 package cn.gohome.dao;
 
 import cn.gohome.entity.Befounder;
-import cn.gohome.entity.Loster;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -22,8 +21,8 @@ public interface BefounderDao {
      */
     int insertBefounder(@Param("uuid") String uuid, @Param("founderUuid") String founderUuid, @Param("foundLocation") String foundLocation,
                         @Param("foundTime") String foundTime, @Param("picture") String picture, @Param("age") int age,
-                        @Param("ageRange") int ageRange, @Param("gender") String gender,
-                        @Param("remarks") String remarks, @Param("state") String state);
+                        @Param("ageRange") int ageRange, @Param("gender") String gender, @Param("remarks") String remarks,
+                        @Param("state") String state, @Param("createTime") String createTime, @Param("updateTime") String updateTime);
 
     /**
      * 删：删除一条疑似走失者数据
@@ -43,7 +42,7 @@ public interface BefounderDao {
      * @return
      */
     int uploadAgeAndGender(@Param("uuid") String uuid, @Param("age") int age, @Param("ageRange") int ageRange,
-                           @Param("gender") String gender, @Param("state") String state);
+                           @Param("gender") String gender, @Param("state") String state, @Param("updateTime") String updateTime);
 
     /**
      * 改：更新信息
@@ -57,7 +56,8 @@ public interface BefounderDao {
      * @return
      */
     int uploadBefounder(@Param("uuid") String uuid, @Param("age") int age, @Param("ageRange") int ageRange,
-                        @Param("gender") String gender, @Param("remarks") String remarks, @Param("state") String state);
+                        @Param("gender") String gender, @Param("remarks") String remarks,
+                        @Param("state") String state, @Param("updateTime") String updateTime);
 
     /**
      * 查：根据用户uuid查找疑似走失者信息

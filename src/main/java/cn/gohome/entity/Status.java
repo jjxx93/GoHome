@@ -17,20 +17,20 @@ public class Status implements Comparable{
     private String remarks;         //备注
 
     private String userUuid;        //用户uuid
-    private String userName;        //用户名
+    private String userNickName;    //用户昵称
     private String userHeadImg;     //用户头像
 
     public Status() {
     }
 
-    public Status(int type, String updateTime, String uuid, String picture, String remarks, String userUuid, String userName, String userHeadImg) {
+    public Status(int type, String updateTime, String uuid, String picture, String remarks, String userUuid, String userNickName, String userHeadImg) {
         this.type = type;
         this.updateTime = updateTime;
         this.uuid = uuid;
         this.picture = picture;
         this.remarks = remarks;
         this.userUuid = userUuid;
-        this.userName = userName;
+        this.userNickName = userNickName;
         this.userHeadImg = userHeadImg;
     }
 
@@ -82,12 +82,12 @@ public class Status implements Comparable{
         this.userUuid = userUuid;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUserNickName() {
+        return userNickName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserNickName(String userNickName) {
+        this.userNickName = userNickName;
     }
 
     public String getUserHeadImg() {

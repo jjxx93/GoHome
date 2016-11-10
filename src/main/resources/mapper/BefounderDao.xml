@@ -5,9 +5,9 @@
 <mapper namespace="cn.gohome.dao.BefounderDao">
     <insert id="insertBefounder">
         INSERT INTO befounder
-        (uuid, founder_uuid, found_location, found_time, picture, age, age_range, gender, remarks, state) VALUES
+        (uuid, founder_uuid, found_location, found_time, picture, age, age_range, gender, remarks, state, create_time, update_time) VALUES
         (#{uuid}, #{founderUuid}, #{foundLocation}, #{foundTime}, #{picture}, #{age}, #{ageRange}, #{gender},
-        #{remarks}, #{state})
+        #{remarks}, #{state}, #{createTime}, #{updateTime})
     </insert>
 
     <delete id="deleteBefounder">
@@ -17,13 +17,14 @@
 
     <update id="uploadAgeAndGender">
         UPDATE befounder
-        SET age = #{age}, age_range = #{ageRange}, gender = #{gender}, state = #{state}
+        SET age = #{age}, age_range = #{ageRange}, gender = #{gender}, state = #{state}, update_time = #{updateTime}
         WHERE uuid = #{uuid};
     </update>
 
     <update id="uploadBefounder">
         UPDATE befounder
-        SET age = #{age}, age_range = #{ageRange}, gender = #{gender}, remarks = #{remarks}, state = #{state}
+        SET age = #{age}, age_range = #{ageRange}, gender = #{gender}, remarks = #{remarks},
+            state = #{state}, update_time = #{updateTime}
         WHERE uuid = #{uuid};
     </update>
 

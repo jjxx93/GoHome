@@ -6,9 +6,9 @@
     <insert id="insertLoster">
         INSERT INTO loster
         (loster_uuid, loster_name, age, loster_birthday, gender, height, lost_date, picture, lost_location,
-        remarks, datasource, source_id, update_time) VALUES
+        remarks, datasource, source_id, create_time, update_time) VALUES
         (#{losterUuid}, #{losterName}, #{age}, #{losterBirthday}, #{gender}, #{height}, #{lostDate}, #{picture},
-        #{lostLocation}, #{remarks}, #{datasource}, #{sourceId}, #{updateTime})
+        #{lostLocation}, #{remarks}, #{datasource}, #{sourceId}, #{createTime}, #{updateTime})
     </insert>
 
     <delete id="deleteLoster">
