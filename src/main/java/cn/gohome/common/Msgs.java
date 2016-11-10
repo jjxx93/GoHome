@@ -109,4 +109,12 @@ public class Msgs {
     // 查找新状态消息
     public final static String GET_STATUS_SUCCESS = "查找新状态成功";
     public final static String GET_STATUS_FAIL = "查找新状态失败";
+
+    // 上传Report
+    public final static String ADD_REPORT_SUCCESS = "上传举报成功";
+    public final static String ADD_REPORT_FAILURE = "上传举报失败";
+
+    // 查找Report
+    public final static String GET_REPORT_SUCCESS = "查找到举报数据";
+    public final static String GET_REPORT_FAILURE = "查找不到举报数据";
 }

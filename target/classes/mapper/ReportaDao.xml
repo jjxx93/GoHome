@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gohome.dao.ReportDao">
+    <!-- 为DAO接口方法提供sql语句配置 -->
+    <insert id="insertReport">
+        INSERT INTO report
+        (uuid, aim_type, aim_uuid, fake_num, illegal_num, harmful_num, trashy_num) VALUES
+        (#{uuid}, #{aimType}, #{aimUuid}, #{fakeNum}, #{illegalNum}, #{harmfulNum}, #{trashyNum});
+    </insert>
+
+    <update id="updateReport">
+        UPDATE report
+        SET
+            fake_num = fake_num + ${fakeNum}, illegal_num = illegal_num + ${illegalNum},
+            harmful_num = harmful_num + ${harmfulNum}, trashy_num = trashy_num + ${trashyNum}
+        WHERE aim_type = #{aimType} AND aim_uuid = #{aimUuid};
+    </update>
+
+    <select id="queryReportByAimTypeAndAimUuid" resultType="cn.gohome.entity.Report">
+        SELECT *
+        FROM report
+        WHERE aim_type = #{aimType} AND aim_uuid = #{aimUuid};
+    </select>
+
+    <select id="queryReportByUuid" resultType="cn.gohome.entity.Report">
+        SELECT *
+        FROM report
+        WHERE uuid = #{uuid};
+    </select>
+</mapper>

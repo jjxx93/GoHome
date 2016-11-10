@@ -122,6 +122,14 @@ public class Constants {
     public final static int GET_STATUS_SUCCESS = 0;
     public final static int GET_STATUS_FAIL = 1;
 
+    // 上传Report
+    public final static int ADD_REPORT_SUCCESS = 0;
+    public final static int ADD_REPORT_FAILURE = 1;
+
+    // 查找Report
+    public final static int GET_REPORT_SUCCESS = 0;
+    public final static int GET_REPORT_FAILURE = 1;
+
     // 优图账号信息
     public static final String APP_ID = "10034230";
     public static final String SECRET_ID = "AKIDcwnh2zRMOmTg8ZGLngGRUwxaimYKtKwV";
