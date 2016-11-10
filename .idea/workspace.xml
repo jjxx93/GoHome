@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Msgs.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Msgs.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Msgs.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Msgs.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Msgs.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Msgs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/ReportDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/ReportDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/ReportService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/ReportService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/ReportServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/ReportServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/ReportController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/ReportController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/cn/gohome/dao/ReportDaoTest.java" afterPath="$PROJECT_DIR$/src/test/cn/gohome/dao/ReportDaoTest.java" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,107 +40,7 @@
     <favorites_list name="GoHome" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Report.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/entity/Report.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
-              <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
-              <folding>
-                <element signature="e#1284#1285#0" expanded="true" />
-                <element signature="e#1314#1315#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReportDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/dao/ReportDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="43" column="41" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReportService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/ReportService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReportServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/ReportServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="18" column="122" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="122" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1318#1319#0" expanded="true" />
-                <element signature="e#1374#1375#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReportController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/ReportController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="61" column="91" selection-start-line="61" selection-start-column="83" selection-end-line="61" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VolunteerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/VolunteerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="71" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Msgs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/common/Msgs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="118" column="49" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="130" column="46" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -192,15 +102,15 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/LosterServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/BefounderServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ReportaDao.xml" />
-        <option value="$PROJECT_DIR$/src/test/cn/gohome/dao/ReportDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/dao/ReportDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/ReportService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/ReportServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/common/Msgs.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/web/ReportController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/gohome/entity/Report.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/ReportServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/service/ReportService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/dao/ReportDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/gohome/web/ReportController.java" />
+        <option value="$PROJECT_DIR$/src/test/cn/gohome/dao/ReportDaoTest.java" />
       </list>
     </option>
   </component>
@@ -377,7 +287,7 @@
   </component>
   <component name="Push.Settings">
     <excluded-roots>
-      <path value="$PROJECT_DIR$/src/main" />
+      <path value="$PROJECT_DIR$" />
     </excluded-roots>
   </component>
   <component name="RecentsManager">
@@ -1044,10 +954,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ReportDaoTest.queryReportByUuid" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ReportDaoTest.queryReportByAimTypeAndAimUuid" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ReportDaoTest.updateReport" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ReportDaoTest.insertReport" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ReportDaoTest.insertReport" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ReportDaoTest.queryReportByUuid" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ReportDaoTest.queryReportByAimTypeAndAimUuid" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ReportDaoTest.updateReport" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.CommonServiceTest.getList" />
       </list>
     </recent_temporary>
@@ -1076,7 +986,7 @@
       <workItem from="1478417312972" duration="34598000" />
       <workItem from="1478589256815" duration="1001000" />
       <workItem from="1478677798912" duration="5386000" />
-      <workItem from="1478742949524" duration="10633000" />
+      <workItem from="1478742949524" duration="11164000" />
     </task>
     <task id="LOCAL-00001" summary="11.3 修改代码结构，增加注释">
       <created>1478177774145</created>
@@ -1407,11 +1317,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478779593357</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="- 11.10 添加上传举报及查找举报操作">
+      <created>1478779643618</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1478779643618</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ReportDaoTest_insertReport - 2016.11.10 at 14h 07m 49s.xml">
+    <history-entry file="ReportDaoTest_insertReport - 2016.11.10 at 20h 14m 20s.xml">
       <configuration name="ReportDaoTest.insertReport" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ReportDaoTest_queryReportByAimTypeAndAimUuid - 2016.11.10 at 14h 15m 05s.xml">
@@ -1443,7 +1360,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73374000" />
+    <option name="totallyTimeSpent" value="73905000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1456,7 +1373,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1527,7 +1444,8 @@
     <MESSAGE value="11.7 修改ant配置build.xml，添加修改密码接口，统一返回码" />
     <MESSAGE value="- 11.8 添加修改用户信息接口" />
     <MESSAGE value="- 11.9 检测用户上传照片是否有人脸" />
-    <option name="LAST_COMMIT_MESSAGE" value="- 11.9 检测用户上传照片是否有人脸" />
+    <MESSAGE value="- 11.10 添加上传举报及查找举报操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="- 11.10 添加上传举报及查找举报操作" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1883,14 +1801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/cn/gohome/dao/ReportDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="928">
-          <caret line="40" column="92" selection-start-line="40" selection-start-column="92" selection-end-line="40" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/dao/LosterDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
@@ -1908,24 +1818,6 @@
             <marker date="1478758424517" expanded="true" signature="540:810" ph="UPDATE repor... " />
             <marker date="1478758424517" expanded="true" signature="921:1011" ph="SELECT * FRO... report" />
             <marker date="1478758424517" expanded="true" signature="1109:1166" ph="SELECT * FRO... report" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/ReportService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/dao/ReportDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="43" column="41" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1954,18 +1846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/ReportServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="18" column="122" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="122" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1318#1319#0" expanded="true" />
-            <element signature="e#1374#1375#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -1990,14 +1870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/ReportController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="61" column="91" selection-start-line="61" selection-start-column="83" selection-end-line="61" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/entity/Report.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="745">
@@ -2013,6 +1885,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/dao/ReportDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-313">
+          <caret line="20" column="74" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/ReportService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/service/impl/ReportServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/gohome/web/ReportController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1421">
+          <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/cn/gohome/dao/ReportDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
           <folding />
         </state>
       </provider>
