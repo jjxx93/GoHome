@@ -1,6 +1,5 @@
 package cn.gohome.service;
 
-import cn.gohome.entity.Status;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
@@ -8,8 +7,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by jiax on 2016/11/5.
@@ -22,14 +19,16 @@ public class CommonServiceTest {
 
     @Test
     public void getList() throws Exception {
-        JSONArray jsonArray = commonService.getList(3);
+        JSONArray jsonArray = commonService.getList(3, null, null);
 
         for (int i = 0; i < jsonArray.size(); i++) {
             JSONObject jsonObject = jsonArray.getJSONObject(i);
-//            System.out.print(jsonObject.getString("type") + "   ");
-//            System.out.println(jsonObject.getString("updateTime"));
             System.out.println(jsonObject);
         }
+
+//        for (Status status:jsonArray) {
+//            System.out.println(status);
+//        }
     }
 
     @Test

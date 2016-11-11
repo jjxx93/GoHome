@@ -21,17 +21,12 @@ public class ReportDaoTest {
     @Test
     public void insertReport() throws Exception {
         System.out.println(reportDao.insertReport(GetUUIDNumber.createUUIDNumber(), "1",
-                "b033991d088d426faf38cc40c2996ff7", 1, 0, 0, 0));
-    }
-
-    @Test
-    public void updateReport() throws Exception {
-        reportDao.updateReport("1", "b033991d088d426faf38cc40c2996ff7", 1, 0, 0, 0);
+                "b033991d088d426faf38cc40c2996ff7", "9d7068b3f1b94b21960b9fabb601b65a", "0"));
     }
 
     @Test
     public void queryReportByAimTypeAndAimUuid() throws Exception {
-        System.out.println(reportDao.queryReportByAimTypeAndAimUuid("1", "b033991d088d426faf38cc40c2996ff7"));
+        System.out.println(reportDao.queryReportByAimTypeAndAimUuid("0", "b033991d088d426faf38cc40c2996ff7"));
     }
 
     @Test
