@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="- 11.10 添加上传举报及查找举报操作">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/common/Utils.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/common/Utils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/dao/ReportDao.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/dao/ReportDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/entity/Report.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/entity/Report.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/entity/Status.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/entity/Status.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/CommonService.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/CommonService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/ReportService.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/ReportService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/CommonServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/service/impl/CommonServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/GohomeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/GohomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/gohome/web/ReportController.class" afterPath="$PROJECT_DIR$/target/classes/cn/gohome/web/ReportController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Utils.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/common/Utils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/ReportDao.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/dao/ReportDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/entity/Report.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/entity/Report.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/entity/Status.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/entity/Status.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/CommonService.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/CommonService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/ReportService.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/ReportService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/CommonServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/CommonServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/ReportServiceImpl.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/service/impl/ReportServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/GohomeController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/GohomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/ReportController.class" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/cn/gohome/web/ReportController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cn/gohome/dao/ReportDaoTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cn/gohome/dao/ReportDaoTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cn/gohome/service/CommonServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cn/gohome/service/CommonServiceTest.class" />
+    <list default="true" id="157682d3-c570-42ce-abc1-b5c64d13e39b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/common/Utils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/ReportDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/dao/ReportDao.java" />
@@ -39,8 +15,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/GohomeController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/GohomeController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/gohome/web/ReportController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/gohome/web/ReportController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ReportaDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ReportaDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/ReportaDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ReportaDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/ReportaDao.xml" afterPath="$PROJECT_DIR$/target/gohome/WEB-INF/classes/mapper/ReportaDao.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/" />
@@ -1083,7 +1057,7 @@
       <workItem from="1478417312972" duration="34598000" />
       <workItem from="1478589256815" duration="1001000" />
       <workItem from="1478677798912" duration="5386000" />
-      <workItem from="1478742949524" duration="20170000" />
+      <workItem from="1478742949524" duration="20413000" />
     </task>
     <task id="LOCAL-00004" summary="11.5 新增首页联合三表查询接口">
       <created>1478343834140</created>
@@ -1458,7 +1432,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82911000" />
+    <option name="totallyTimeSpent" value="83154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1531,7 +1505,8 @@
     <MESSAGE value="- 11.8 添加修改用户信息接口" />
     <MESSAGE value="- 11.9 检测用户上传照片是否有人脸" />
     <MESSAGE value="- 11.10 添加上传举报及查找举报操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="- 11.10 添加上传举报及查找举报操作" />
+    <MESSAGE value="- 11.11 修改举报数据库，记录举报者信息，首页信息显示举报数量" />
+    <option name="LAST_COMMIT_MESSAGE" value="- 11.11 修改举报数据库，记录举报者信息，首页信息显示举报数量" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
