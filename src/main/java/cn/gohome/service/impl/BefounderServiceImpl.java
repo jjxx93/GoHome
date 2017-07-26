@@ -33,7 +33,10 @@ public class BefounderServiceImpl implements BefounderService {
     @Autowired      //自动注入
     private MatchesDao matchesDao;
 
-
+    /**
+     * 添加流浪者
+     * @return
+     */
     @Override
     public Boolean addBefounder(String founderUuid, String foundLocation, String foundTime, String picture, int age,
                                 int ageRange, String gender, String remarks, String state) {
@@ -44,11 +47,8 @@ public class BefounderServiceImpl implements BefounderService {
         sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String createTime = sd.format(new Date());
 
-        if (befounderDao.insertBefounder(uuid, founderUuid, foundLocation, foundTime, picture, age, ageRange, gender,
-                remarks, state, createTime, updateTime) > 0) {
-            return true;
-        }
-        return false;
+        return befounderDao.insertBefounder(uuid, founderUuid, foundLocation, foundTime, picture, age, ageRange, gender,
+                remarks, state, createTime, updateTime) > 0;
     }
 
     @Override
@@ -75,10 +75,8 @@ public class BefounderServiceImpl implements BefounderService {
         SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         String currentTime = sd.format(new Date());
 
-        if (befounderDao.uploadBefounder(uuid, age, ageRange, gender, remarks, state, currentTime) > 0) {
-            return true;
-        }
-        return false;
+        return befounderDao.uploadBefounder(uuid, age, ageRange, gender, remarks, state,
+                currentTime) > 0;
     }
 
     @Override
@@ -86,10 +84,8 @@ public class BefounderServiceImpl implements BefounderService {
         SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         String currentTime = sd.format(new Date());
 
-        if (befounderDao.uploadAgeAndGender(uuid, age, ageRange, gender, state, currentTime) > 0) {
-            return true;
-        }
-        return false;
+        return befounderDao.uploadAgeAndGender(uuid, age, ageRange, gender, state,
+                currentTime) > 0;
     }
 
     @Override

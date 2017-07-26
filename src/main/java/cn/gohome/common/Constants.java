@@ -4,7 +4,7 @@ package cn.gohome.common;
  * Created by jiax on 2016/9/19.
  */
 public class Constants {
-    //常量
+    // 数字常量
     public final static int ZERO = 0;
     public final static int ONE = 1;
     public final static int TWO = 2;

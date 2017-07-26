@@ -24,40 +24,44 @@ public class Utils {
         TreeSet<Status> statusSet = new TreeSet<>();
 
         for (Loster loster:losterList) {
-            Status status = new Status();
-            status.setType(Constants.LOSTER);
-            status.setUpdateTime(loster.getUpdateTime());
+            Status status = new Status(Constants.LOSTER, loster.getUpdateTime(), loster.getLosterUuid(),
+                    loster.getPicture(), loster.getRemarks(), loster.getSourceId());
 
-            status.setUuid(loster.getLosterUuid());
-            status.setPicture(loster.getPicture());
-            status.setRemarks(loster.getRemarks());
-            status.setUserUuid(loster.getSourceId());
+//            status.setType(Constants.LOSTER);
+//            status.setUpdateTime(loster.getUpdateTime());
+//
+//            status.setUuid(loster.getLosterUuid());
+//            status.setPicture(loster.getPicture());
+//            status.setRemarks(loster.getRemarks());
+//            status.setUserUuid(loster.getSourceId());
 
             statusSet.add(status);
         }
 
         for (Befounder befounder:befounderList) {
-            Status status = new Status();
-            status.setType(Constants.BEFOUNDER);
-            status.setUpdateTime(befounder.getUpdateTime());
-
-            status.setUuid(befounder.getUuid());
-            status.setPicture(befounder.getPicture());
-            status.setRemarks(befounder.getRemarks());
-            status.setUserUuid(befounder.getFounderUuid());
+            Status status = new Status(Constants.BEFOUNDER, befounder.getUpdateTime(), befounder.getUuid(),
+                    befounder.getPicture(), befounder.getRemarks(), befounder.getFounderUuid());
+//            status.setType(Constants.BEFOUNDER);
+//            status.setUpdateTime(befounder.getUpdateTime());
+//
+//            status.setUuid(befounder.getUuid());
+//            status.setPicture(befounder.getPicture());
+//            status.setRemarks(befounder.getRemarks());
+//            status.setUserUuid(befounder.getFounderUuid());
 
             statusSet.add(status);
         }
 
         for (Talks talks:talksList) {
-            Status status = new Status();
-            status.setType(Constants.TALKS);
-            status.setUpdateTime(talks.getUpdateTime());
-
-            status.setUuid(talks.getUuid());
-            status.setPicture(talks.getPicture());
-            status.setRemarks(talks.getTexts());
-            status.setUserUuid(talks.getUserUuid());
+            Status status = new Status(Constants.TALKS, talks.getUpdateTime(), talks.getUuid(),
+                    talks.getPicture(), talks.getTexts(), talks.getUserUuid());
+//            status.setType(Constants.TALKS);
+//            status.setUpdateTime(talks.getUpdateTime());
+//
+//            status.setUuid(talks.getUuid());
+//            status.setPicture(talks.getPicture());
+//            status.setRemarks(talks.getTexts());
+//            status.setUserUuid(talks.getUserUuid());
 
             statusSet.add(status);
         }

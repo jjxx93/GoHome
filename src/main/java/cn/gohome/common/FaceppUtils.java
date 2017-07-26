@@ -12,6 +12,8 @@ import java.io.File;
 
 /**
  * Created by jiax on 2016/9/21.
+ *
+ * Face++提供的接口
  */
 public class FaceppUtils {
     public static Face detectUrl(String url) throws FaceppParseException, JSONException {

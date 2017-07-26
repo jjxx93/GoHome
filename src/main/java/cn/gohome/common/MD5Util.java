@@ -2,7 +2,16 @@ package cn.gohome.common;
 
 import java.security.MessageDigest;
 
+/**
+ * MD5工具
+ */
 public class MD5Util {
+    /**
+     * 对输入的字符串进行MD5编码
+     * @param inStr 输入字符串
+     * @return
+     * @throws Exception
+     */
     public static String md5Encode(String inStr) throws Exception {
         MessageDigest md5 = null;
         try {
