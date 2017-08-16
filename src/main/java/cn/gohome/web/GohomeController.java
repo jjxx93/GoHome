@@ -52,6 +52,8 @@ public class GohomeController {
     public Map<String, Object> getLosterList(@RequestParam(value = "latestTime", required = false) String latestTime,
                                              @RequestParam(value = "earliestTime", required = false) String earliestTime,
                                              @RequestParam(value = "rows", required = false, defaultValue = "10") int rows) {
+        logger.info("GohomeController.getLosterList latestTime={}, earliestTime={}, rows={}",
+                latestTime, earliestTime, rows);
         JSONObject jsonObject = new JSONObject();
         JSONArray jsonArray;
 
@@ -63,7 +65,7 @@ public class GohomeController {
             jsonArray = commonService.getList(rows);
         }
 
-        if (jsonArray.isEmpty()) {        // 未获取到消息
+        if (jsonArray == null || jsonArray.isEmpty()) {        // 未获取到消息
             jsonObject.put("result", Constants.GET_STATUS_FAIL);
             jsonObject.put("msg", Msgs.GET_STATUS_FAIL);
         } else {                           // 获取到消息
@@ -88,6 +90,8 @@ public class GohomeController {
     @RequestMapping(value = "/match", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> match(String userUuid, String picture, String userType) {
+        logger.info("GohomeController.match userUuid={}, picture={}, userType={}",
+                userUuid, picture, userType);
         // 检查用户uuid
         JSONObject jsonObject = userService.validationUserUuid(userUuid);
 

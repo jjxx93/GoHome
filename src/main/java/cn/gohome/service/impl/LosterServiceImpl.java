@@ -15,6 +15,8 @@ import com.facepp.error.FaceppParseException;
 import com.facepp.http.HttpRequests;
 import com.facepp.http.PostParameters;
 import org.json.JSONException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +30,8 @@ import java.util.List;
  */
 @Service
 public class LosterServiceImpl implements LosterService {
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @Autowired      //自动注入
     private LosterDao losterDao;
 
@@ -83,6 +87,9 @@ public class LosterServiceImpl implements LosterService {
 
     @Override
     public List<Loster> matchLosterByAgeAndGender(int age, int ageRange, int gender) {
+        logger.info("LosterServiceImpl.matchLosterByAgeAndGender age={}, ageRange={}, gender={}",
+                age, ageRange, gender);
+
         // 计算待查找年龄范围
         int minAge = age - ageRange;
         if (minAge < 1) {
@@ -99,6 +106,9 @@ public class LosterServiceImpl implements LosterService {
 
     @Override
     public JSONObject matchLosterByPictureAgeAndGender(String picture, LosterService losterService) {
+        logger.info("LosterServiceImpl.matchLosterByPictureAgeAndGender picture={}, losterService={}",
+                picture, losterService);
+
         JSONObject jsonObject = new JSONObject();
 
         try {
@@ -154,10 +164,12 @@ public class LosterServiceImpl implements LosterService {
             e.printStackTrace();
             jsonObject.put("result", Constants.MATCH_BEFOUNDER_FAIL);
             jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_FAIL);
+            logger.error("LosterServiceImpl.matchLosterByPictureAgeAndGender error", e);
             return jsonObject;
         } catch (NotFaceException e) {      // 没有人脸
             jsonObject.put("result", Constants.MATCH_BEFOUNDER_NOTFACE);
             jsonObject.put("msg", Msgs.MATCH_BEFOUNDER_NOTFACE);
+            logger.error("LosterServiceImpl.matchLosterByPictureAgeAndGender error", e);
             return jsonObject;
         }
 

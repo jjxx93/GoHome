@@ -25,6 +25,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User addUser(String userName, String password) {
+        logger.info("UserServiceImpl.addUser userName={}, password={}", userName, password);
+
         String UserUuid = GetUUIDNumber.createUUIDNumber();
         userDao.insertUser(userName, password, GetUUIDNumber.createUUIDNumber());
         User user = new User();
@@ -35,6 +37,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean changeHeadImg(String userUuid, String headImg) {
+        logger.info("UserServiceImpl.changeHeadImg userUuid={}, headImg={}", userUuid, headImg);
         if (userDao.updateHeadImg(userUuid, headImg) > 0) {
             return true;
         }
@@ -43,19 +46,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean changePassword(String userUuid, String oldPassword, String newPassword) {
-        if (userDao.updatePassword(userUuid, oldPassword, newPassword) > 0) {
-            return true;
-        }
-        return false;
+        logger.info("UserServiceImpl.changePassword userUuid={}", userUuid);
+        return userDao.updatePassword(userUuid, oldPassword, newPassword) > 0;
     }
 
     @Override
     public Boolean changeInformation(String userUuid, String telephone, String nickName, String realName,
                                      String sex, String birthday, String city) {
-        if (userDao.updateUserInformation(userUuid, telephone, nickName, realName, sex, birthday, city) > 0) {
-            return true;
-        }
-        return false;
+        return userDao.updateUserInformation(userUuid, telephone, nickName, realName, sex, birthday, city) > 0;
     }
 
     @Override
@@ -86,11 +84,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean isUserNameExisted(String userName) {
-        if (userDao.queryByUserName(userName) != null) {
-            return true;
-        } else {
-            return false;
-        }
+        return userDao.queryByUserName(userName) != null;
     }
 
     @Override
